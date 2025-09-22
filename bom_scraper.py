@@ -120,6 +120,37 @@ def scraper(stem, out_path, combo_path, urlo):
             
             dumper(combo_path, stem, cat)
 
+            # If stem is Melbourne, also save as observations.json
+            if stem == "Melbourne":
+                from pathlib import Path
+
+                # Process Melbourne data for daily summaries
+                melb_processed = cat.copy()
+
+                # Group by Date and get daily summaries
+                daily_summary = melb_processed.groupby('Date').agg({
+                    'Temp (°C)': 'max',  # Max temp of the day
+                    'Rainfall since 9 am (mm)': 'max',  # Cumulative rainfall
+                    'Wind Gust (km/h) (knots)': lambda x: x.str.extract('(\d+)').astype(float).max() if x.notna().any() else None  # Max wind gust
+                }).reset_index()
+
+                # Rename columns
+                daily_summary = daily_summary.rename(columns={
+                    'Date': 'Date',
+                    'Temp (°C)': 'Temp',
+                    'Rainfall since 9 am (mm)': 'Rain',
+                    'Wind Gust (km/h) (knots)': 'Wind'
+                })
+
+                # Drop rows with all null values for the weather data
+                daily_summary = daily_summary.dropna(subset=['Temp', 'Rain', 'Wind'], how='all')
+
+                json_dir = Path("melbs/static")
+                json_dir.mkdir(parents=True, exist_ok=True)
+                json_file = json_dir / "observations.json"
+                daily_summary.to_json(json_file, orient='records', indent=2)
+                print(f"Melbourne daily summary saved as {json_file}")
+
             day_counter += 1
         # else:
         #     print(tabs[i].columns.tolist())

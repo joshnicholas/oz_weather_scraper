@@ -1,15 +1,15 @@
-name: Scraper
+name: Grab Melbourne Data
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5 19-23,0-12 * * *"
+    - cron: "0 19 * * 4"  # Friday 5am Melbourne time (Thursday 7pm UTC)
 
 permissions:
   contents: write
 
 jobs:
-  scrape:
+  grab-melbs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repo
@@ -23,10 +23,10 @@ jobs:
 
       - name: 💿 Install Requirements
         run: pip install -r requirements.txt
-        
-      - name: 🍳 Scrape bom
-        run: python bom_scraper.py
-        
+
+      - name: 🌡️ Grab Melbourne weather data
+        run: python grab_melbs.py
+
       - name: 🚀 Commit and push if it changed
         run: |
           git config user.name "${GITHUB_ACTOR}"
@@ -34,7 +34,7 @@ jobs:
           git add -A
           if ! git diff --staged --quiet; then
             timestamp=$(date -u)
-            git commit -m "Latest data: ${timestamp}"
+            git commit -m "Weekly Melbourne data update: ${timestamp}"
             git push
           else
             echo "No changes to commit"
