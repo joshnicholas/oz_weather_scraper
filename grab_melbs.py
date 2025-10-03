@@ -5,10 +5,16 @@ import shutil
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
+from bs4 import BeautifulSoup
 
 import pytz
 today = datetime.now()
 scrape_date_stemmo = today.astimezone(pytz.timezone("Australia/Brisbane")).strftime('%Y_%m_%d_%H')
+current_year = today.year
+p_c_value = -int(today.timestamp())  # Negative timestamp in seconds
+
+
+
 
 
 def grab_melbs(bom_url, stemmo, value_column):
@@ -33,6 +39,13 @@ def grab_melbs(bom_url, stemmo, value_column):
     zip_path = output_dir / "temp_weather_data.zip"
     with open(zip_path, 'wb') as f:
         f.write(response.content)
+
+    # Check if response is actually a zip file
+    if response.content[:4] != b'PK\x03\x04':  # ZIP file magic number
+        print(f"Error: BOM returned HTML instead of ZIP file")
+        print(f"URL used: {bom_url}")
+        print(f"Response preview: {response.text[:500]}")
+        raise ValueError("BOM service returned an error page instead of data")
 
     # Extract zip file to temporary location
     temp_dir = output_dir / "temp_extract"
@@ -147,11 +160,48 @@ def fetch_climate_data():
     print(f"Climate JSON exported as {json_file}")
 
 
-bom_url = "https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_display_type=dailyZippedDataFile&p_stn_num=086338&p_c=-1490972741&p_nccObsCode=136&p_startYear=2025"
+def get_link(bom_page_url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+    }
+
+    response = requests.get(bom_page_url, headers=headers)
+    response.raise_for_status()
+
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    link = soup.find('a', string='All years of data')
+
+    if link and link.get('href'):
+        href = link.get('href')
+        if href.startswith('http'):
+            return href
+        else:
+            from urllib.parse import urljoin
+            return urljoin(bom_page_url, href)
+
+    return None
+
+
+# bom_url = f"https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_display_type=dailyZippedDataFile&p_stn_num=086338&p_c=-1490983453&p_nccObsCode=136&p_startYear={current_year}"
+
+bom_url = get_link('https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_nccObsCode=136&p_display_type=dailyDataFile&p_startYear=&p_c=&p_stn_num=086338')
 
 grab_melbs(bom_url, "rain", "Rainfall amount (millimetres)")
 
-bom_url = 'https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_display_type=dailyZippedDataFile&p_stn_num=086338&p_c=-1490969851&p_nccObsCode=122&p_startYear=2025'
-grab_melbs(bom_url, 'temp', 'Maximum temperature (Degree C)')
+# bom_url = f"https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_display_type=dailyZippedDataFile&p_stn_num=086338&p_c=-1490969851&p_nccObsCode=122&p_startYear={current_year}"
+bom_url = get_link('https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_nccObsCode=122&p_display_type=dailyDataFile&p_startYear=&p_c=&p_stn_num=086338')
+grab_melbs(bom_url, "temp", "Maximum temperature (Degree C)")
 
 fetch_climate_data()
+
+
+
+# linko = get_link('https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_nccObsCode=136&p_display_type=dailyDataFile&p_startYear=&p_c=&p_stn_num=086338')
+
+# print(linko)
