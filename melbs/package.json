@@ -11,6 +11,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"autoprefixer": "^10.4.21",
@@ -18,5 +19,12 @@
 		"svelte": "^5.0.0",
 		"tailwindcss": "^4.1.13",
 		"vite": "^7.0.4"
+	},
+	"dependencies": {
+		"@tailwindcss/postcss": "^4.1.14",
+		"d3-force": "^3.0.0",
+		"d3-interpolate": "^3.0.1",
+		"d3-scale": "^4.0.2",
+		"d3-time-format": "^4.1.0"
 	}
 }

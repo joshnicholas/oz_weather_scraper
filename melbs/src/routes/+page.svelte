@@ -43,6 +43,7 @@
                 />
             </div>
 
+            <hr class="chart-divider" />
 
             <div class="chart-section">
                 <h2>Humidity</h2>
@@ -59,6 +60,8 @@
                 />
             </div>
 
+            <hr class="chart-divider" />
+
             <div class="chart-section">
                 <h2>Wind speed</h2>
                 <ClimateChart
@@ -74,6 +77,8 @@
                     leftMargin={50}
                 />
             </div>
+
+            <hr class="chart-divider" />
 
             <div class="chart-section">
                 <h2>Rainfall</h2>
@@ -98,6 +103,11 @@
 
         </div>
     {/if}
+</div>
+
+<div class="footer">
+    <p>Data from the <a href="http://www.bom.gov.au/" target="_blank" rel="noopener noreferrer">Australian Bureau of Meteorology</a></p>
+    <p>By  <a href="https://joshnicholas.com" target="_blank" rel="noopener noreferrer">Josh</a></p>
 </div>
 </div>
 
@@ -169,5 +179,33 @@
 
     .scale-toggle:hover {
         background: rgba(0, 0, 0, 0.05);
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 0.75em;
+        color: #000;
+        margin-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .footer p {
+        margin: 8px 0;
+    }
+
+    .footer a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    .footer a:hover {
+        opacity: 0.7;
+    }
+
+    .chart-divider {
+        width: 25%;
+        margin: 20px auto;
+        border: none;
+        border-top: 1px solid #000;
     }
 </style>
