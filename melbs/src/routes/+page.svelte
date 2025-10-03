@@ -3,7 +3,7 @@
     import ClimateChart from '$lib/ClimateChart.svelte';
 
     let { data } = $props();
-    let containerWidth = $state(0);
+    let containerWidth = $state(800);
     let isLogarithmic = $state(true);
 
     // Get latest observation date and format it
@@ -22,7 +22,6 @@
 
 <div class="mx-auto max-w-[800px] min-h-[600px]">
 <div class="dashboard" bind:clientWidth={containerWidth}>
-    {#if containerWidth > 0}
         <div class="header">
             <h1>Melb Olympic park</h1>
             <p class="latest-update">Latest data from {latestUpdate()}</p>
@@ -102,7 +101,6 @@
 
 
         </div>
-    {/if}
 </div>
 
 <div class="footer">

@@ -6,7 +6,6 @@
     let { historicData = [], recentData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', logarithmic = false, yMinDefault = null, subtitle = '', chartHeight = 200 } = $props();
 
     let chartContainer;
-    let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
 
     let margin = $derived({
         top: 20,
@@ -14,6 +13,8 @@
         bottom: containerWidth < 500 ? 35 : 50,
         left: containerWidth < 500 ? 25 : 25
     });
+
+    let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
 
     let chartWidth = $derived(containerWidth - margin.right - margin.left)
 
@@ -29,9 +30,6 @@
     let tooltipX = $state(0);
     let tooltipY = $state(0);
     let tooltipContent = $state('');
-
-    let innerWidth = $derived(chartWidth - margin.left - margin.right);
-    let innerHeight = $derived(chartHeight);
 
     // Helper function to get date string in Brisbane time
     function getDateString(date) {
@@ -146,10 +144,57 @@
             .interpolate(interpolateRgb);
     });
 
-    // Beeswarm simulation
-    let beeswarmNodes = $state([]);
+    // Scales and positioning functions
+    let innerWidth = $derived(chartWidth - margin.left - margin.right);
+    let innerHeight = $derived(chartHeight);
 
-    $effect(() => {
+    const xScale = (dayIndex) => (dayIndex * innerWidth) / 7 + innerWidth / 14;
+
+    // Function to get x position for historic data (based on matching day numbers)
+    const getXForHistoricDay = (dayNumber) => {
+        const targetDayNumbers = sevenDayRange().map(day => day.dayNumber);
+        const dayIndex = targetDayNumbers.indexOf(dayNumber);
+        return dayIndex >= 0 ? xScale(dayIndex) : null;
+    };
+
+    // Function to get x position for a specific date
+    const getXForDate = (dateString) => {
+        const dayIndex = sevenDayRange().findIndex(day => day.dateString === dateString);
+        return dayIndex >= 0 ? xScale(dayIndex) : null;
+    };
+
+    let allValues = $derived([...processedHistoric, ...processedRecent].map(d => parseFloat(d.Value)).filter(v => !isNaN(v) && (logarithmic ? v > 0 : true)));
+    let yMin = $derived(() => {
+        if (yMinDefault !== null) return yMinDefault;
+
+        if (allValues.length === 0) return logarithmic ? 0.1 : 0;
+        const minValue = Math.min(...allValues);
+
+        if (logarithmic) {
+            return Math.max(0.1, minValue * 0.5);
+        }
+
+        if (unit === 'mm') {
+            // For rainfall, ensure minimum is at least a bit below the lowest value to accommodate beeswarm
+            return Math.max(0, minValue - (Math.max(...allValues) * 0.05));
+        }
+        return minValue;
+    });
+    let yMax = $derived(Math.max(...allValues) * 1.1 || 100);
+
+    const yScale = (value) => {
+        const v = parseFloat(value);
+        if (logarithmic) {
+            const logMin = Math.log10(yMin());
+            const logMax = Math.log10(yMax);
+            const logValue = Math.log10(Math.max(0.1, v));
+            return innerHeight - ((logValue - logMin) / (logMax - logMin) * innerHeight);
+        }
+        return innerHeight - ((v - yMin()) / (yMax - yMin()) * innerHeight);
+    };
+
+    // Beeswarm simulation
+    let beeswarmNodes = $derived.by(() => {
         const nodes = matchingDaysHistoric()
             .filter(point => !isNaN(parseFloat(point.Value)))
             .map(point => ({
@@ -162,8 +207,7 @@
             .filter(node => node.targetX !== null);
 
         if (nodes.length === 0) {
-            beeswarmNodes = [];
-            return;
+            return [];
         }
 
         const collisionRadius = containerWidth < 500 ? 1.8 : 3.5;
@@ -182,7 +226,7 @@
             node.y = Math.min(node.y, innerHeight - 2);
         });
 
-        beeswarmNodes = nodes;
+        return nodes;
     });
 
     // Extract monthly average from climate data
@@ -221,52 +265,6 @@
     let sevenDayRangeRecent = $derived(processedRecent.filter(d =>
         sevenDayRange().some(day => day.dateString === d.dateString)
     ));
-
-    // Scales
-    const xScale = (dayIndex) => (dayIndex * innerWidth) / 7 + innerWidth / 14;
-
-    // Function to get x position for a specific date
-    const getXForDate = (dateString) => {
-        const dayIndex = sevenDayRange().findIndex(day => day.dateString === dateString);
-        return dayIndex >= 0 ? xScale(dayIndex) : null;
-    };
-
-    // Function to get x position for historic data (based on matching day numbers)
-    const getXForHistoricDay = (dayNumber) => {
-        const targetDayNumbers = sevenDayRange().map(day => day.dayNumber);
-        const dayIndex = targetDayNumbers.indexOf(dayNumber);
-        return dayIndex >= 0 ? xScale(dayIndex) : null;
-    };
-
-    let allValues = $derived([...processedHistoric, ...processedRecent].map(d => parseFloat(d.Value)).filter(v => !isNaN(v) && (logarithmic ? v > 0 : true)));
-    let yMin = $derived(() => {
-        if (yMinDefault !== null) return yMinDefault;
-
-        if (allValues.length === 0) return logarithmic ? 0.1 : 0;
-        const minValue = Math.min(...allValues);
-
-        if (logarithmic) {
-            return Math.max(0.1, minValue * 0.5);
-        }
-
-        if (unit === 'mm') {
-            // For rainfall, ensure minimum is at least a bit below the lowest value to accommodate beeswarm
-            return Math.max(0, minValue - (Math.max(...allValues) * 0.05));
-        }
-        return minValue;
-    });
-    let yMax = $derived(Math.max(...allValues) * 1.1 || 100);
-
-    const yScale = (value) => {
-        const v = parseFloat(value);
-        if (logarithmic) {
-            const logMin = Math.log10(yMin());
-            const logMax = Math.log10(yMax);
-            const logValue = Math.log10(Math.max(0.1, v));
-            return innerHeight - ((logValue - logMin) / (logMax - logMin) * innerHeight);
-        }
-        return innerHeight - ((v - yMin()) / (yMax - yMin()) * innerHeight);
-    };
 
     // Tooltip functions
     function showTooltip(event, point) {

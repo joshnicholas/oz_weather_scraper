@@ -3,13 +3,14 @@
 
     let { observationData = [], climateStats = [], containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', subtitle = '', unit = '%', chartHeight = 200, metric = 'Mean_9am_RH', dataKey = 'Humidity', leftMargin = 40 } = $props();
 
-    let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
     let margin = $derived({
         top: 20,
         right: containerWidth < 500 ? 25 : 10,
         bottom: containerWidth < 500 ? 35 : 50,
         left: containerWidth < 500 ? leftMargin : leftMargin
     });
+
+    let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
 
     // Tooltip state
     let tooltipVisible = $state(false);
