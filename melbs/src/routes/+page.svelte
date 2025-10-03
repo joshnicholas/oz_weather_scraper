@@ -65,7 +65,7 @@
                 <h2>Wind speed</h2>
                 <ClimateChart
                     observationData={data.observations}
-                    subtitle = {"Using 9am wind gust"}
+                    subtitle = {"Using 9am wind speed"}
                     climateStats={data.climateStats}
                     {containerWidth}
                     unitColour={'#7A9AFA'}
