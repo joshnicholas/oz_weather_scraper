@@ -2,10 +2,8 @@ name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    paths:
-      - 'melbs/static/observations.json'
-      - 'melbs/static/last_updated.json'
-      - 'melbs/static/climate_stats.json'
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
