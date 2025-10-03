@@ -24,7 +24,9 @@
 <div class="dashboard" bind:clientWidth={containerWidth}>
         <div class="header">
             <h1>Melb Olympic park</h1>
-            <p class="latest-update">Latest data from {latestUpdate()}</p>
+            {#if latestUpdate()}
+                <p class="latest-update">Latest data from {latestUpdate()}</p>
+            {/if}
         </div>
 
         <div class="charts">

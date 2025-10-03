@@ -309,10 +309,10 @@
 
             <!-- X-axis labels (last 4 days + next 3 days) -->
             {#each sevenDayRange() as day, i}
-                <line x1={xScale(i)} y1={innerHeight} x2={xScale(i)} y2={innerHeight + 5} stroke="#333"/>
+                <line x1={xScale(i)} y1={innerHeight + 5} x2={xScale(i)} y2={innerHeight + 10} stroke="#333"/>
                 <text
                     x={xScale(i)}
-                    y={innerHeight + (chartWidth < 500 ? 15 : 20)}
+                    y={innerHeight + (chartWidth < 500 ? 20 : 25)}
                     text-anchor="middle"
                     font-size={chartWidth < 500 ? "10" : "12"}
                     fill="#000"
