@@ -1,9 +1,10 @@
 # %%
-import pandas as pd 
-import os 
+import pandas as pd
+import os
 import requests
+from io import StringIO
 
-import time 
+import time
 
 import datetime
 import pytz
@@ -70,7 +71,7 @@ def scraper(stem, out_path, combo_path, urlo):
 
 
     # print("R status: ", r.status_code)
-    tabs = pd.read_html(r.text)[1:]
+    tabs = pd.read_html(StringIO(r.text))[1:]
 
     # driver.get(urlo)
 
@@ -131,7 +132,8 @@ def scraper(stem, out_path, combo_path, urlo):
                 daily_summary = melb_processed.groupby('Date').agg({
                     'Temp (°C)': 'max',  # Max temp of the day
                     'Rainfall since 9 am (mm)': 'max',  # Cumulative rainfall
-                    'Wind Gust (km/h) (knots)': lambda x: x.str.extract('(\d+)').astype(float).max() if x.notna().any() else None  # Max wind gust
+                    'Wind Speed (km/h) (knots)': lambda x: x.str.extract('(\d+)').astype(float).max() if x.notna().any() else None,  # Max wind speed
+                    'Humidity(%)': 'mean'  # Average humidity
                 }).reset_index()
 
                 # Rename columns
@@ -139,11 +141,12 @@ def scraper(stem, out_path, combo_path, urlo):
                     'Date': 'Date',
                     'Temp (°C)': 'Temp',
                     'Rainfall since 9 am (mm)': 'Rain',
-                    'Wind Gust (km/h) (knots)': 'Wind'
+                    'Wind Speed (km/h) (knots)': 'Wind',
+                    'Humidity(%)': 'Humidity'
                 })
 
                 # Drop rows with all null values for the weather data
-                daily_summary = daily_summary.dropna(subset=['Temp', 'Rain', 'Wind'], how='all')
+                daily_summary = daily_summary.dropna(subset=['Temp', 'Rain', 'Wind', 'Humidity'], how='all')
 
                 json_dir = Path("melbs/static")
                 json_dir.mkdir(parents=True, exist_ok=True)
@@ -177,6 +180,21 @@ scraper("Darwin", 'data/raw','data',  'http://www.bom.gov.au/places/nt/darwin/')
 
 # driver.quit()
 
+# Save script run time to melbs/static
+from pathlib import Path
+import json
+
+script_run_time = datetime.datetime.now(pytz.timezone("Australia/Melbourne"))
+run_time_data = {
+    "lastUpdated": script_run_time.isoformat()
+}
+
+json_dir = Path("melbs/static")
+json_dir.mkdir(parents=True, exist_ok=True)
+run_time_file = json_dir / "last_updated.json"
+with open(run_time_file, 'w') as f:
+    json.dump(run_time_data, f, indent=2)
+print(f"Script run time saved to {run_time_file}")
 
 # %%
 

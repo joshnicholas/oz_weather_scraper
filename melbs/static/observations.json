@@ -3,24 +3,28 @@
     "Date":"2025-10-01",
     "Temp":17.2,
     "Rain":1.2,
-    "Wind":48.0
+    "Wind":28.0,
+    "Humidity":53.1515151515
   },
   {
     "Date":"2025-10-02",
     "Temp":14.8,
     "Rain":3.6,
-    "Wind":50.0
+    "Wind":22.0,
+    "Humidity":63.56
   },
   {
     "Date":"2025-10-03",
     "Temp":18.4,
     "Rain":0.6,
-    "Wind":35.0
+    "Wind":17.0,
+    "Humidity":71.5
   },
   {
     "Date":"2025-10-04",
     "Temp":13.8,
     "Rain":0.0,
-    "Wind":9.0
+    "Wind":9.0,
+    "Humidity":96.1875
   }
 ]
