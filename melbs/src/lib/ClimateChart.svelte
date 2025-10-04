@@ -276,7 +276,7 @@
         font-size: 0.8em;
         font-style: italic;
         color: #000;
-        margin: 0 0 5px 0;
+        margin: 0 0 3px 0;
         text-align: center;
     }
 

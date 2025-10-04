@@ -23,7 +23,7 @@
 <div class="mx-auto max-w-[800px] min-h-[700px]">
 <div class="dashboard" bind:clientWidth={containerWidth}>
         <div class="header">
-            <h1>Melb Olympic park</h1>
+            <h1>Melbourne Olympic park</h1>
             {#if latestUpdate()}
                 <p class="latest-update">Latest data from {latestUpdate()}</p>
             {/if}
@@ -125,6 +125,8 @@
 </div>
 <div class="footer">
     <p>Data from the <a href="http://www.bom.gov.au/" target="_blank" rel="noopener noreferrer">Australian Bureau of Meteorology</a></p>
+    <p>Historic data includes records from the Melbourne Regional Office</p>
+
     <p>By  <a href="https://joshnicholas.com" target="_blank" rel="noopener noreferrer">Josh</a></p>
 </div>
 
@@ -170,7 +172,7 @@
 
     h2 {
         margin-top: 0;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         color: #000;
         text-align: center;
         font-weight: bold;
