@@ -36,6 +36,16 @@ jobs:
             timestamp=$(date -u)
             git commit -m "Latest data: ${timestamp}"
             git push
+            echo "changes_made=true" >> $GITHUB_OUTPUT
           else
             echo "No changes to commit"
+            echo "changes_made=false" >> $GITHUB_OUTPUT
           fi
+        id: commit_changes
+
+      - name: Trigger deployment
+        if: steps.commit_changes.outputs.changes_made == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: deploy-site

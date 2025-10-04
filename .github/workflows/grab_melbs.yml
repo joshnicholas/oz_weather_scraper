@@ -27,19 +27,6 @@ jobs:
       - name: 🌡️ Grab Melbourne weather data
         run: python grab_melbs.py
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: melbs/package-lock.json
-
-      - name: Install dependencies
-        run: cd melbs && npm ci
-
-      - name: Build site
-        run: cd melbs && NODE_ENV=production npm run build
-
       - name: 🚀 Commit and push if it changed
         run: |
           git config user.name "${GITHUB_ACTOR}"
@@ -49,6 +36,16 @@ jobs:
             timestamp=$(date -u)
             git commit -m "Weekly Melbourne data update: ${timestamp}"
             git push
+            echo "changes_made=true" >> $GITHUB_OUTPUT
           else
             echo "No changes to commit"
+            echo "changes_made=false" >> $GITHUB_OUTPUT
           fi
+        id: commit_changes
+
+      - name: Trigger deployment
+        if: steps.commit_changes.outputs.changes_made == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: deploy-site

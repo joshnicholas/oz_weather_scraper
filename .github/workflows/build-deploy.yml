@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'melbs/**'
   workflow_dispatch:
+  repository_dispatch:
+    types: [deploy-site]
 
 permissions:
   contents: read
