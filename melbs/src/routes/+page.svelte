@@ -24,9 +24,13 @@
 <div class="dashboard" bind:clientWidth={containerWidth}>
         <div class="header">
             <h1>Melbourne Olympic park</h1>
-            {#if latestUpdate()}
-                <p class="latest-update">Latest data from {latestUpdate()}</p>
-            {/if}
+            <p class="latest-update">
+                {#if containerWidth > 0 && latestUpdate()}
+                    Latest data from {latestUpdate()}
+                {:else}
+                    &nbsp;
+                {/if}
+            </p>
             <div class="legend">
                 <svg width="12" height="12" style="vertical-align: middle;">
                     <circle cx="6" cy="6" r="4" fill="#7A9AFA" opacity="0.8" />
@@ -123,9 +127,9 @@
 
 
 </div>
-<div class="footer">
+<div class="footer mx-auto max-w-[800px]">
     <p>Data from the <a href="http://www.bom.gov.au/" target="_blank" rel="noopener noreferrer">Australian Bureau of Meteorology</a></p>
-    <p>Historic data includes records from the Melbourne Regional Office</p>
+    <p>Historic data includes the Melbourne Regional Office</p>
 
     <p>By  <a href="https://joshnicholas.com" target="_blank" rel="noopener noreferrer">Josh</a></p>
 </div>
