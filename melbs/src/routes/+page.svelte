@@ -27,6 +27,16 @@
             {#if latestUpdate()}
                 <p class="latest-update">Latest data from {latestUpdate()}</p>
             {/if}
+            <div class="legend">
+                <svg width="12" height="12" style="vertical-align: middle;">
+                    <circle cx="6" cy="6" r="4" fill="#7A9AFA" opacity="0.8" />
+                </svg>
+                <span>Historic data</span>
+                <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
+                    <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" opacity="0.8" />
+                </svg>
+                <span>Recent observations</span>
+            </div>
         </div>
 
         <div class="charts">
@@ -207,5 +217,15 @@
         margin: 20px auto;
         border: none;
         border-top: 1px solid #000;
+    }
+
+    .legend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+        font-size: 0.5em;
+        color: #000;
     }
 </style>

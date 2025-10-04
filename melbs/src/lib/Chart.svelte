@@ -120,11 +120,16 @@
         };
     }));
 
-    // Filter historic data for the same day-of-month values as the 7-day range
+    // Filter historic data for the same day-of-month AND month values as the 7-day range
     let matchingDaysHistoric = $derived(() => {
-        const targetDayNumbers = sevenDayRange().map(day => day.dayNumber);
+        const targetDays = sevenDayRange().map(day => ({
+            dayNumber: day.dayNumber,
+            month: day.date.getMonth()
+        }));
         return processedHistoric.filter(d =>
-            targetDayNumbers.includes(d.dayNumber)
+            targetDays.some(target =>
+                target.dayNumber === d.dayNumber && target.month === d.month
+            )
         );
     });
 
@@ -217,7 +222,8 @@
             .force('collide', forceCollide(collisionRadius))
             .stop();
 
-        for (let i = 0; i < 120; i++) {
+        // Reduce iterations for faster rendering (60 is usually sufficient)
+        for (let i = 0; i < 60; i++) {
             simulation.tick();
         }
 

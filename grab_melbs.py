@@ -17,7 +17,7 @@ p_c_value = -int(today.timestamp())  # Negative timestamp in seconds
 
 
 
-def grab_melbs(bom_url, stemmo, value_column):
+def grab_melbs(bom_url, stemmo, value_column, regional_file=None):
     # Create data/melbs directory
     output_dir = Path("data/melbs")
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -72,6 +72,22 @@ def grab_melbs(bom_url, stemmo, value_column):
         # Keep only Date and Value columns
         processed_df = df[['Date', 'Value']]
 
+        # If regional file provided, combine with regional data
+        if regional_file and Path(regional_file).exists():
+            df_regional = pd.read_csv(regional_file)
+            df_regional['Date'] = pd.to_datetime(df_regional[['Year', 'Month', 'Day']])
+            df_regional['Date'] = df_regional['Date'].dt.strftime('%Y-%m-%d')
+            df_regional = df_regional.rename(columns={value_column: 'Value'})
+            df_regional = df_regional[['Date', 'Value']]
+
+            # Combine both dataframes
+            processed_df = pd.concat([processed_df, df_regional], ignore_index=True)
+            print(f"Combined with regional data from {regional_file}")
+
+        # Remove duplicates, keeping first occurrence
+        processed_df.drop_duplicates(subset=['Date'], keep='first', inplace=True)
+        processed_df.sort_values(by='Date', inplace=True)
+
         # Save processed CSV
         final_csv = output_dir / f"{stemmo}.csv"
         processed_df.to_csv(final_csv, index=False)
@@ -84,7 +100,7 @@ def grab_melbs(bom_url, stemmo, value_column):
         json_df.to_json(json_file, orient='records', indent=2)
 
         print(f"Processed CSV saved as {final_csv}")
-        print(f"JSON exported as {json_file}")
+        print(f"JSON exported as {json_file} ({len(json_df)} records)")
     else:
         print("No CSV file found in extracted data")
 
@@ -192,16 +208,12 @@ def get_link(bom_page_url):
 
 bom_url = get_link('https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_nccObsCode=136&p_display_type=dailyDataFile&p_startYear=&p_c=&p_stn_num=086338')
 
-grab_melbs(bom_url, "rain", "Rainfall amount (millimetres)")
+grab_melbs(bom_url, "rain", "Rainfall amount (millimetres)",
+           regional_file="data/historic_regional/IDCJAC0009_086071_1800/IDCJAC0009_086071_1800_Data.csv")
 
 # bom_url = f"https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_display_type=dailyZippedDataFile&p_stn_num=086338&p_c=-1490969851&p_nccObsCode=122&p_startYear={current_year}"
 bom_url = get_link('https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_nccObsCode=122&p_display_type=dailyDataFile&p_startYear=&p_c=&p_stn_num=086338')
-grab_melbs(bom_url, "temp", "Maximum temperature (Degree C)")
+grab_melbs(bom_url, "temp", "Maximum temperature (Degree C)",
+           regional_file="data/historic_regional/IDCJAC0010_086071_1800/IDCJAC0010_086071_1800_Data.csv")
 
 fetch_climate_data()
-
-
-
-# linko = get_link('https://www.bom.gov.au/jsp/ncc/cdio/weatherData/av?p_nccObsCode=136&p_display_type=dailyDataFile&p_startYear=&p_c=&p_stn_num=086338')
-
-# print(linko)

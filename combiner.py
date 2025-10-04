@@ -64,3 +64,37 @@ for city in ['Adelaide', 'Brisbane', 'Canberra', 'Hobart', 'Melbourne', 'Perth',
 
 
 #%%
+
+# Process historic regional data for Melbourne
+def process_historic_regional():
+    """Process historic regional rainfall and temperature data"""
+
+    # Process rainfall data (IDCJAC0009)
+    rain_file = 'data/historic_regional/IDCJAC0009_086071_1800/IDCJAC0009_086071_1800_Data.csv'
+    if os.path.exists(rain_file):
+        df_rain = pd.read_csv(rain_file)
+        df_rain['Date'] = pd.to_datetime(df_rain[['Year', 'Month', 'Day']])
+        df_rain['Date'] = df_rain['Date'].dt.strftime('%Y-%m-%d')
+        df_rain = df_rain.rename(columns={'Rainfall amount (millimetres)': 'Value'})
+        df_rain = df_rain[['Date', 'Value']].dropna()
+
+        # Save to melbs/static
+        df_rain.to_json('melbs/static/historic_rain.json', orient='records', indent=2)
+        print(f"Processed historic rainfall: {len(df_rain)} records")
+
+    # Process temperature data (IDCJAC0010)
+    temp_file = 'data/historic_regional/IDCJAC0010_086071_1800/IDCJAC0010_086071_1800_Data.csv'
+    if os.path.exists(temp_file):
+        df_temp = pd.read_csv(temp_file)
+        df_temp['Date'] = pd.to_datetime(df_temp[['Year', 'Month', 'Day']])
+        df_temp['Date'] = df_temp['Date'].dt.strftime('%Y-%m-%d')
+        df_temp = df_temp.rename(columns={'Maximum temperature (Degree C)': 'Value'})
+        df_temp = df_temp[['Date', 'Value']].dropna()
+
+        # Save to melbs/static
+        df_temp.to_json('melbs/static/historic_temp.json', orient='records', indent=2)
+        print(f"Processed historic temperature: {len(df_temp)} records")
+
+process_historic_regional()
+
+#%%
