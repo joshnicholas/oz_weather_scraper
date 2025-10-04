@@ -3,7 +3,7 @@
     import { interpolateRgb } from 'd3-interpolate';
     import { forceSimulation, forceX, forceY, forceCollide } from 'd3-force';
 
-    let { historicData = [], recentData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', logarithmic = false, yMinDefault = null, subtitle = '', chartHeight = 200 } = $props();
+    let { historicData = [], recentData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', logarithmic = false, yMinDefault = null, subtitle = '', chartHeight = 200, leftMargin = 25 } = $props();
 
     let chartContainer;
 
@@ -11,7 +11,7 @@
         top: 20,
         right: containerWidth < 500 ? 25 : 10,
         bottom: containerWidth < 500 ? 35 : 50,
-        left: containerWidth < 500 ? 25 : 25
+        left: containerWidth < 500 ? leftMargin : leftMargin
     });
 
     let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
@@ -370,7 +370,7 @@
                         <circle
                             cx={getXForDate(point.dateString)}
                             cy={yScale(point.Value)}
-                            r={containerWidth < 500 ? "5" : "10"}
+                            r={containerWidth < 500 ? "5" : "8"}
                             fill={recentColour}
                             stroke="black"
                             stroke-width="1"

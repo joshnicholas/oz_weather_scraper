@@ -3,7 +3,7 @@
     import ClimateChart from '$lib/ClimateChart.svelte';
 
     let { data } = $props();
-    let containerWidth = $state(800);
+    let containerWidth = $state(0);
     let isLogarithmic = $state(true);
 
     // Get latest observation date and format it
@@ -20,7 +20,7 @@
     });
 </script>
 
-<div class="mx-auto max-w-[800px] min-h-[600px]">
+<div class="mx-auto max-w-[800px] min-h-[700px]">
 <div class="dashboard" bind:clientWidth={containerWidth}>
         <div class="header">
             <h1>Melb Olympic park</h1>
@@ -40,6 +40,7 @@
         </div>
 
         <div class="charts">
+            {#if containerWidth > 0}
             <div class="chart-section">
                 <h2>Max temp</h2>
                 <Chart
@@ -108,17 +109,23 @@
                     logarithmic={isLogarithmic}
                     yMinDefault={isLogarithmic ? 0.1 : 0}
                     chartHeight={175}
+                    leftMargin={30}
                 />
             </div>
-
+            {:else}
+            <div class="chart-section">
+                <p class="loading-text">Loading...</p>
+            </div>
+            {/if}
 
         </div>
 </div>
 
+
+</div>
 <div class="footer">
     <p>Data from the <a href="http://www.bom.gov.au/" target="_blank" rel="noopener noreferrer">Australian Bureau of Meteorology</a></p>
     <p>By  <a href="https://joshnicholas.com" target="_blank" rel="noopener noreferrer">Josh</a></p>
-</div>
 </div>
 
 <style>
@@ -178,12 +185,12 @@
     }
 
     .scale-toggle {
-        font-size: 0.8em;
+        font-size: 0.5em;
         color: #000;
         background: transparent;
         border: 1px solid #000;
         border-radius: 4px;
-        padding: 4px 12px;
+        padding: 3px 10px;
         cursor: pointer;
     }
 
@@ -227,5 +234,12 @@
         margin-top: 5px;
         font-size: 0.5em;
         color: #000;
+    }
+
+    .loading-text {
+        text-align: center;
+        font-size: 0.85em;
+        color: #000;
+        margin: 20px 0;
     }
 </style>
