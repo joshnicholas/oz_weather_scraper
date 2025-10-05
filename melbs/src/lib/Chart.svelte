@@ -31,21 +31,21 @@
     let tooltipY = $state(0);
     let tooltipContent = $state('');
 
-    // Helper function to get date string in Brisbane time
+    // Helper function to get date string in Melbourne time
     function getDateString(date) {
         return date.toLocaleDateString('en-AU', {
-            timeZone: 'Australia/Brisbane',
+            timeZone: 'Australia/Melbourne',
             year: 'numeric',
             month: '2-digit',
             day: '2-digit'
         }).split('/').reverse().join('-');
     }
 
-    // Get current date in Brisbane time
+    // Get current date in Melbourne time
     let today = $derived(() => {
         const now = new Date();
-        const brisbaneDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Brisbane' }));
-        return brisbaneDate;
+        const melbDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
+        return melbDate;
     });
 
     let currentMonth = $derived(today().getMonth());
@@ -168,12 +168,33 @@
         return dayIndex >= 0 ? xScale(dayIndex) : null;
     };
 
-    let allValues = $derived([...processedHistoric, ...processedRecent].map(d => parseFloat(d.Value)).filter(v => !isNaN(v) && (logarithmic ? v > 0 : true)));
+    // Get values only for the 7 days being displayed
+    let displayedValues = $derived(() => {
+        const targetDays = sevenDayRange().map(day => ({
+            dayNumber: day.dayNumber,
+            month: day.date.getMonth(),
+            dateString: day.dateString
+        }));
+
+        const historicValues = processedHistoric
+            .filter(d => targetDays.some(target =>
+                target.dayNumber === d.dayNumber && target.month === d.month
+            ))
+            .map(d => parseFloat(d.Value));
+
+        const recentValues = processedRecent
+            .filter(d => targetDays.some(target => target.dateString === d.dateString))
+            .map(d => parseFloat(d.Value));
+
+        return [...historicValues, ...recentValues]
+            .filter(v => !isNaN(v) && (logarithmic ? v > 0 : true));
+    });
+
     let yMin = $derived(() => {
         if (yMinDefault !== null) return yMinDefault;
 
-        if (allValues.length === 0) return logarithmic ? 0.1 : 0;
-        const minValue = Math.min(...allValues);
+        if (displayedValues().length === 0) return logarithmic ? 0.1 : 0;
+        const minValue = Math.min(...displayedValues());
 
         if (logarithmic) {
             return Math.max(0.1, minValue * 0.5);
@@ -181,11 +202,11 @@
 
         if (unit === 'mm') {
             // For rainfall, ensure minimum is at least a bit below the lowest value to accommodate beeswarm
-            return Math.max(0, minValue - (Math.max(...allValues) * 0.05));
+            return Math.max(0, minValue - (Math.max(...displayedValues()) * 0.05));
         }
         return minValue;
     });
-    let yMax = $derived(Math.max(...allValues) * 1.1 || 100);
+    let yMax = $derived(Math.max(...displayedValues()) * 1.1 || 100);
 
     const yScale = (value) => {
         const v = parseFloat(value);
@@ -324,7 +345,7 @@
                     fill="#000"
                     font-style={day.isFuture ? 'italic' : 'normal'}
                 >
-                    {`${day.dayNumber}${getOrdinalSuffix(day.dayNumber)}`}
+                    {day.date.toLocaleDateString('en-US', { weekday: 'short' })}
                 </text>
             {/each}
 

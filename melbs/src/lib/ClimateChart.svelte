@@ -189,7 +189,7 @@
                     fill="#000"
                     font-style={day.isFuture ? 'italic' : 'normal'}
                 >
-                    {`${day.dayNumber}${getOrdinalSuffix(day.dayNumber)}`}
+                    {day.date.toLocaleDateString('en-US', { weekday: 'short' })}
                 </text>
             {/each}
 
