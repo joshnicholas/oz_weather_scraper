@@ -3,7 +3,7 @@
     import { interpolateRgb } from 'd3-interpolate';
     import { forceSimulation, forceX, forceY, forceCollide } from 'd3-force';
 
-    let { historicData = [], recentData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', logarithmic = false, yMinDefault = null, subtitle = '', chartHeight = 200, leftMargin = 25 } = $props();
+    let { historicData = [], recentData = [], forecastData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', forecastColour = '#FFFFFF', logarithmic = false, yMinDefault = null, subtitle = '', chartHeight = 200, leftMargin = 25 } = $props();
 
     let chartContainer;
 
@@ -120,6 +120,18 @@
         };
     }));
 
+    let processedForecast = $derived(forecastData.map(d => {
+        const date = new Date(d.Date);
+        return {
+            ...d,
+            date: date,
+            dayNumber: date.getDate(),
+            month: date.getMonth(),
+            year: date.getFullYear(),
+            dateString: d.Date
+        };
+    }));
+
     // Filter historic data for the same day-of-month AND month values as the 7-day range
     let matchingDaysHistoric = $derived(() => {
         const targetDays = sevenDayRange().map(day => ({
@@ -186,7 +198,11 @@
             .filter(d => targetDays.some(target => target.dateString === d.dateString))
             .map(d => parseFloat(d.Value));
 
-        return [...historicValues, ...recentValues]
+        const forecastValues = processedForecast
+            .filter(d => targetDays.some(target => target.dateString === d.dateString))
+            .map(d => parseFloat(d.Value));
+
+        return [...historicValues, ...recentValues, ...forecastValues]
             .filter(v => !isNaN(v) && (logarithmic ? v > 0 : true));
     });
 
@@ -290,6 +306,11 @@
 
     // Filter recent data for the 7-day range
     let sevenDayRangeRecent = $derived(processedRecent.filter(d =>
+        sevenDayRange().some(day => day.dateString === d.dateString)
+    ));
+
+    // Filter forecast data for the 7-day range
+    let sevenDayRangeForecast = $derived(processedForecast.filter(d =>
         sevenDayRange().some(day => day.dateString === d.dateString)
     ));
 
@@ -414,6 +435,29 @@
                                 {point.Value}{unit}
                             </text>
                         {/if}
+                    {/if}
+                {/if}
+            {/each}
+
+            <!-- Forecast data points for 7-day range (white circles) -->
+            {#each sevenDayRangeForecast as point}
+                {#if !isNaN(parseFloat(point.Value))}
+                    {#if getXForDate(point.dateString) !== null}
+                        {@const dayInfo = sevenDayRange().find(d => d.dateString === point.dateString)}
+                        <circle
+                            cx={getXForDate(point.dateString)}
+                            cy={yScale(point.Value)}
+                            r={containerWidth < 500 ? "5" : "8"}
+                            fill={forecastColour}
+                            stroke="black"
+                            stroke-width="1"
+                            opacity="0.8"
+                            style="cursor: pointer; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); outline: none;"
+                            onmouseenter={(e) => showTooltip(e, point)}
+                            onmouseleave={hideTooltip}
+                            ontouchstart={(e) => showTooltip(e.touches[0], point)}
+                            ontouchend={hideTooltip}
+                        />
                     {/if}
                 {/if}
             {/each}

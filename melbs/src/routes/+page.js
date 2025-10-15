@@ -9,6 +9,9 @@ export async function load({ fetch }) {
         // Load recent observations
         const observationsResponse = await fetch('/observations.json');
 
+        // Load forecasts
+        const forecastsResponse = await fetch('/forecasts.json');
+
         // Load climate data
         const climateResponse = await fetch('/climate.json');
 
@@ -21,6 +24,7 @@ export async function load({ fetch }) {
         const historicTemp = await historicTempResponse.json();
         const historicRain = await historicRainResponse.json();
         const observations = await observationsResponse.json();
+        const forecasts = await forecastsResponse.json();
         const climate = await climateResponse.json();
         const lastUpdated = await lastUpdatedResponse.json();
         const climateStats = await climateStatsResponse.json();
@@ -29,6 +33,7 @@ export async function load({ fetch }) {
             historicTemp,
             historicRain,
             observations,
+            forecasts,
             climate,
             lastUpdated: lastUpdated.lastUpdated,
             climateStats
@@ -39,6 +44,7 @@ export async function load({ fetch }) {
             historicTemp: [],
             historicRain: [],
             observations: [],
+            forecasts: [],
             climate: [],
             lastUpdated: null,
             climateStats: []

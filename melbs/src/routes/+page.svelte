@@ -40,6 +40,10 @@
                     <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" opacity="0.8" />
                 </svg>
                 <span>Recent observations</span>
+                <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
+                    <circle cx="6" cy="6" r="5" fill="#FFFFFF" stroke="black" stroke-width="1" opacity="0.8" />
+                </svg>
+                <span>Forecasts</span>
             </div>
         </div>
 
@@ -50,6 +54,7 @@
                 <Chart
                     historicData={data.historicTemp}
                     recentData={data.observations.map(d => ({ ...d, Value: d.Temp }))}
+                    forecastData={data.forecasts.map(d => ({ ...d, Value: d.Max_temp }))}
                     climateData={data.climate}
                     unit="°C"
                     {containerWidth}
@@ -106,6 +111,7 @@
                 <Chart
                     historicData={data.historicRain}
                     recentData={data.observations.map(d => ({ ...d, Value: d.Rain }))}
+                    forecastData={data.forecasts.map(d => ({ ...d, Value: d.Rain }))}
                     climateData={data.climate}
                     unit="mm"
                     {containerWidth}
