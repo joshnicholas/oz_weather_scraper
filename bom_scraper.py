@@ -249,7 +249,12 @@ def forecast_scraper(urlo, stem, out_path):
     json_file = "melbs/static/forecasts.json"
     cat.to_json(json_file, orient='records', indent=2)
 
-forecast_scraper('https://www.bom.gov.au/places/vic/melbourne/forecast/', "melbs", 'data/melbs/forecasts', )
-
+# Only run forecast scraper once per day at 9am Brisbane time
+if scrape_hour == '09':
+    try:
+        forecast_scraper('https://www.bom.gov.au/places/vic/melbourne/forecast/', "melbs", 'data/melbs/forecasts', )
+    except Exception as e:
+        print(f"Forecast scraper failed: {e}")
+        pass
 
 # %%

@@ -1,17 +1,12 @@
 [
   {
-    "Date":"2025-10-16",
-    "Max_temp":31,
-    "Rain":4
-  },
-  {
     "Date":"2025-10-17",
-    "Max_temp":19,
+    "Max_temp":20,
     "Rain":1
   },
   {
     "Date":"2025-10-18",
-    "Max_temp":20,
+    "Max_temp":19,
     "Rain":0
   },
   {
@@ -21,17 +16,22 @@
   },
   {
     "Date":"2025-10-20",
-    "Max_temp":22,
-    "Rain":7
+    "Max_temp":21,
+    "Rain":6
   },
   {
     "Date":"2025-10-21",
-    "Max_temp":18,
-    "Rain":2
+    "Max_temp":20,
+    "Rain":3
   },
   {
     "Date":"2025-10-22",
     "Max_temp":16,
-    "Rain":6
+    "Rain":20
+  },
+  {
+    "Date":"2025-10-23",
+    "Max_temp":15,
+    "Rain":2
   }
 ]
