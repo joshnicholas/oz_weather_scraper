@@ -404,7 +404,30 @@
                 />
             {/each}
 
-            <!-- Recent data points for 7-day range (higher opacity, drawn last) -->
+            <!-- Forecast data points for 7-day range (white circles, drawn before observations) -->
+            {#each sevenDayRangeForecast as point}
+                {#if !isNaN(parseFloat(point.Value))}
+                    {#if getXForDate(point.dateString) !== null}
+                        {@const dayInfo = sevenDayRange().find(d => d.dateString === point.dateString)}
+                        <circle
+                            cx={getXForDate(point.dateString)}
+                            cy={yScale(point.Value)}
+                            r={containerWidth < 500 ? "5" : "8"}
+                            fill={forecastColour}
+                            stroke="black"
+                            stroke-width="1"
+                            opacity={dayInfo?.isToday ? "0.3" : "0.8"}
+                            style="cursor: pointer; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); outline: none;"
+                            onmouseenter={(e) => showTooltip(e, point)}
+                            onmouseleave={hideTooltip}
+                            ontouchstart={(e) => showTooltip(e.touches[0], point)}
+                            ontouchend={hideTooltip}
+                        />
+                    {/if}
+                {/if}
+            {/each}
+
+            <!-- Recent data points for 7-day range (higher opacity, drawn last to sit on top) -->
             {#each sevenDayRangeRecent as point}
                 {#if !isNaN(parseFloat(point.Value))}
                     {#if getXForDate(point.dateString) !== null}
@@ -430,34 +453,11 @@
                                 text-anchor="middle"
                                 font-size="0.75em"
                                 fill="#000"
-                                style="filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));"
+                                style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"
                             >
                                 {point.Value}{unit}
                             </text>
                         {/if}
-                    {/if}
-                {/if}
-            {/each}
-
-            <!-- Forecast data points for 7-day range (white circles) -->
-            {#each sevenDayRangeForecast as point}
-                {#if !isNaN(parseFloat(point.Value))}
-                    {#if getXForDate(point.dateString) !== null}
-                        {@const dayInfo = sevenDayRange().find(d => d.dateString === point.dateString)}
-                        <circle
-                            cx={getXForDate(point.dateString)}
-                            cy={yScale(point.Value)}
-                            r={containerWidth < 500 ? "5" : "8"}
-                            fill={forecastColour}
-                            stroke="black"
-                            stroke-width="1"
-                            opacity="0.8"
-                            style="cursor: pointer; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); outline: none;"
-                            onmouseenter={(e) => showTooltip(e, point)}
-                            onmouseleave={hideTooltip}
-                            ontouchstart={(e) => showTooltip(e.touches[0], point)}
-                            ontouchend={hideTooltip}
-                        />
                     {/if}
                 {/if}
             {/each}
