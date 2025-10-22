@@ -23,6 +23,7 @@
 <div class="mx-auto max-w-[800px] min-h-[700px]">
 <div class="dashboard" bind:clientWidth={containerWidth}>
         <div class="header">
+            <h1>Dashboard paused due to BOM site redesign</h1>
             <h1>Melbourne Olympic park</h1>
             <p class="latest-update">
                 {#if containerWidth > 0 && latestUpdate()}

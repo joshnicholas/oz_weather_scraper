@@ -2,8 +2,8 @@ name: Grab Melbourne Data
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 19 * * 4"  # Friday 5am Melbourne time (Thursday 7pm UTC)
+  # schedule:
+  #   - cron: "0 19 * * 4"  # Friday 5am Melbourne time (Thursday 7pm UTC)
 
 permissions:
   contents: write
