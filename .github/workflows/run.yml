@@ -2,8 +2,8 @@ name: Scraper
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "5 19-23,0-12 * * *"
+  schedule:
+    - cron: "5 17-23,0-12 * * *"  # Every hour at 5 past, 4am-11pm Melbourne time (AEDT UTC+11)
 
 permissions:
   contents: write
@@ -23,9 +23,9 @@ jobs:
 
       - name: 💿 Install Requirements
         run: pip install -r requirements.txt
-        
+
       - name: 🍳 Scrape bom
-        run: python bom_scraper.py
+        run: python bom_data.py
         
       - name: 🚀 Commit and push if it changed
         run: |

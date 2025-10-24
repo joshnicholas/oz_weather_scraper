@@ -197,7 +197,7 @@ json_dir.mkdir(parents=True, exist_ok=True)
 run_time_file = json_dir / "last_updated.json"
 with open(run_time_file, 'w') as f:
     json.dump(run_time_data, f, indent=2)
-print(f"Script run time saved to {run_time_file}")
+# print(f"Script run time saved to {run_time_file}")
 
 # %%
 
