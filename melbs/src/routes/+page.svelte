@@ -1,7 +1,7 @@
 <script>
     import Chart from '$lib/Chart.svelte';
     import ClimateChart from '$lib/ClimateChart.svelte';
-    import Ghostlines from '$lib/Ghostlines.svelte';
+    import Shapeline from '$lib/Shapeline.svelte';
 
     let { data } = $props();
     let containerWidth = $state(0);
@@ -79,10 +79,11 @@
 
             <div class="chart-section">
                 <h2>Hourly temps</h2>
-                    <Ghostlines
+                    <Shapeline
                         data={data.last30}
                         {containerWidth}
                         headline=""
+                        subtitle="*The shape will look a little weird til 30 days of data has been collected"
                         chartHeight={150}
                     />
             </div>
