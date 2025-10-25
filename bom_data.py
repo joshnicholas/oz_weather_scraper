@@ -418,6 +418,6 @@ run_time_data = {
 }
 
 
-run_time_file = "melbs/staticlast_updated.json"
+run_time_file = "melbs/static/last_updated.json"
 with open(run_time_file, 'w') as f:
     json.dump(run_time_data, f, indent=2)
