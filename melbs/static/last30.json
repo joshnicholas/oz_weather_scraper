@@ -666,9 +666,49 @@
   {
     "Date":"2025-10-25",
     "Hour":23.0,
-    "Temp":14.3,
+    "Temp":14.2,
     "Rain":0.2,
     "Wind":0.0,
-    "Humidity":83.0
+    "Humidity":84.0
+  },
+  {
+    "Date":"2025-10-26",
+    "Hour":0.0,
+    "Temp":14.0,
+    "Rain":0.6,
+    "Wind":0.0,
+    "Humidity":88.0
+  },
+  {
+    "Date":"2025-10-26",
+    "Hour":1.0,
+    "Temp":13.3,
+    "Rain":2.0,
+    "Wind":6.0,
+    "Humidity":94.0
+  },
+  {
+    "Date":"2025-10-26",
+    "Hour":2.0,
+    "Temp":12.8,
+    "Rain":5.0,
+    "Wind":6.0,
+    "Humidity":100.0
+  },
+  {
+    "Date":"2025-10-26",
+    "Hour":3.0,
+    "Temp":12.8,
+    "Rain":5.6,
+    "Wind":4.0,
+    "Humidity":100.0
+  },
+  {
+    "Date":"2025-10-26",
+    "Hour":4.0,
+    "Temp":12.8,
+    "Rain":5.8,
+    "Wind":9.0,
+    "Humidity":100.0
   }
 ]
