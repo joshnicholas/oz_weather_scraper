@@ -1,6 +1,7 @@
 <script>
     import { scaleLinear } from 'd3-scale';
     import { line } from 'd3-shape';
+    import { onMount } from 'svelte';
 
     let { data = [], containerWidth, headline = '', subtitle = '', chartHeight = 300 } = $props();
 
@@ -17,10 +18,13 @@
     let innerHeight = $derived(chartHeight);
 
     // Helper function to get today's date in Melbourne time
-    let today = $derived.by(() => {
+    // Initialize with empty string and update on mount to ensure client-side calculation
+    let today = $state('');
+
+    onMount(() => {
         const now = new Date();
         const melbDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-        return melbDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+        today = melbDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
     });
 
     // Group data by date
