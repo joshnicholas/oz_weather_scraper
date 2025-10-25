@@ -75,7 +75,7 @@ def save_data(df, folder_path, dropcol):
     Args:
         df: pandas DataFrame to save
         folder_path: path to folder where parquet files are stored
-        city_name: name of city (used in filename)
+        dropcol: column name to use for deduplication
     """
     # Get current year-month for filename
     current_month = today.astimezone(pytz.timezone("Australia/Brisbane")).strftime('%Y-%m')
@@ -93,13 +93,63 @@ def save_data(df, folder_path, dropcol):
         combined_df = pd.concat([existing_df, df], ignore_index=True)
         # Drop duplicates based on timestamp
         combined_df = combined_df.drop_duplicates(subset=[dropcol], keep='last')
+        # Sort by the deduplication column
+        combined_df = combined_df.sort_values(by=dropcol)
         # Save back to file
         combined_df.to_parquet(filepath, index=False)
 
     else:
+        # Sort before creating new file
+        df = df.sort_values(by=dropcol)
         # Create new file
         df.to_parquet(filepath, index=False)
         print(f"Created new file: {filepath} ({len(df)} rows)")
+
+    # If Melbourne, create last 30 days JSON (only for observation data)
+    if "Melbourne" in folder_path and 'local_date_time_full[80]' in df.columns:
+        # Read all parquet files in the folder
+        parquet_files = sorted([f for f in os.listdir(folder_path) if f.endswith('.parquet')])
+
+        if parquet_files:
+            # Read all parquet files and combine
+            all_data = []
+            for pf in parquet_files:
+                pf_path = os.path.join(folder_path, pf)
+                all_data.append(pd.read_parquet(pf_path))
+
+            full_df = pd.concat(all_data, ignore_index=True)
+
+            # Check if this is observation data (has required columns)
+            required_cols = ['local_date_time_full[80]', 'air_temp', 'rain_trace[80]', 'wind_spd_kmh', 'rel_hum']
+            if all(col in full_df.columns for col in required_cols):
+                # Convert timestamp to datetime and extract date/hour
+                full_df['datetime'] = pd.to_datetime(full_df['local_date_time_full[80]'], format='%Y%m%d%H%M%S')
+                full_df['Date'] = full_df['datetime'].dt.strftime('%Y-%m-%d')
+                full_df['Hour'] = full_df['datetime'].dt.hour
+
+                # Filter last 30 days (make cutoff timezone-naive to match datetime column)
+                cutoff_date = today.replace(tzinfo=None) - datetime.timedelta(days=30)
+                full_df = full_df[full_df['datetime'] >= cutoff_date]
+
+                # Select and rename columns
+                last30 = full_df[['Date', 'Hour', 'air_temp', 'rain_trace[80]', 'wind_spd_kmh', 'rel_hum']].copy()
+                last30.rename(columns={
+                    'air_temp': 'Temp',
+                    'rain_trace[80]': 'Rain',
+                    'wind_spd_kmh': 'Wind',
+                    'rel_hum': 'Humidity'
+                }, inplace=True)
+
+                # Drop duplicates based on Date + Hour (keep most recent)
+                last30 = last30.drop_duplicates(subset=['Date', 'Hour'], keep='last')
+
+                # Sort by Date and Hour
+                last30 = last30.sort_values(['Date', 'Hour'])
+
+                # Save to melbs/static/last30.json
+                os.makedirs('melbs/static', exist_ok=True)
+                last30.to_json('melbs/static/last30.json', orient='records', indent=2)
+                print(f"Last 30 days data saved to melbs/static/last30.json ({len(last30)} rows)")
 
 def dumper(path, name, frame):
     with open(f'{path}/{name}.csv', 'w') as f:

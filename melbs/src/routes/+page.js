@@ -21,6 +21,9 @@ export async function load({ fetch }) {
         // Load climate statistics
         const climateStatsResponse = await fetch('/climate_stats.json');
 
+        // Load last 30 days data
+        const last30Response = await fetch('/last30.json');
+
         const historicTemp = await historicTempResponse.json();
         const historicRain = await historicRainResponse.json();
         const observations = await observationsResponse.json();
@@ -28,6 +31,7 @@ export async function load({ fetch }) {
         const climate = await climateResponse.json();
         const lastUpdated = await lastUpdatedResponse.json();
         const climateStats = await climateStatsResponse.json();
+        const last30 = await last30Response.json();
 
         return {
             historicTemp,
@@ -36,7 +40,8 @@ export async function load({ fetch }) {
             forecasts,
             climate,
             lastUpdated: lastUpdated.lastUpdated,
-            climateStats
+            climateStats,
+            last30
         };
     } catch (error) {
         console.error('Error loading data:', error);
@@ -47,7 +52,8 @@ export async function load({ fetch }) {
             forecasts: [],
             climate: [],
             lastUpdated: null,
-            climateStats: []
+            climateStats: [],
+            last30: []
         };
     }
 }

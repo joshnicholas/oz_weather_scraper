@@ -1,6 +1,7 @@
 <script>
     import Chart from '$lib/Chart.svelte';
     import ClimateChart from '$lib/ClimateChart.svelte';
+    import Ghostlines from '$lib/Ghostlines.svelte';
 
     let { data } = $props();
     let containerWidth = $state(0);
@@ -64,6 +65,18 @@
                     chartHeight={150}
                 />
             </div>
+    
+            <hr class="chart-divider" />
+
+            <div class="chart-section">
+                <h2>Hourly temps</h2>
+                    <Ghostlines
+                        data={data.last30}
+                        {containerWidth}
+                        headline=""
+                        chartHeight={150}
+                    />
+            </div>
 
             <hr class="chart-divider" />
 
@@ -99,6 +112,7 @@
                     leftMargin={50}
                 />
             </div>
+
 
             <hr class="chart-divider" />
 
