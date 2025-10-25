@@ -46,6 +46,15 @@
                     <circle cx="6" cy="6" r="5" fill="#FFFFFF" stroke="black" stroke-width="1" opacity="0.8" />
                 </svg>
                 <span>Forecasts</span>
+                <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
+                    <defs>
+                        <pattern id="legendStripes" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+                            <line x1="0" y1="0" x2="0" y2="4" stroke="#888888" stroke-width="2" />
+                        </pattern>
+                    </defs>
+                    <rect x="1" y="1" width="10" height="10" fill="url(#legendStripes)" opacity="0.8" />
+                </svg>
+                <span>Last 30 days</span>
             </div>
         </div>
 
