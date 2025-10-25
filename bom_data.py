@@ -91,6 +91,15 @@ def save_data(df, folder_path, dropcol):
         existing_df = pd.read_parquet(filepath)
         # Append new data
         combined_df = pd.concat([existing_df, df], ignore_index=True)
+        # Ensure dropcol is string type for consistent sorting and remove any .0 suffix
+        combined_df[dropcol] = combined_df[dropcol].astype(str).str.replace(r'\.0$', '', regex=True)
+        # Ensure numeric columns are properly typed
+        numeric_cols = ['sort_order', 'wmo', 'lat', 'lon', 'air_temp', 'apparent_t',
+                        'rel_hum', 'wind_spd_kmh', 'wind_spd_kt', 'gust_kmh',
+                        'gust_kt', 'press_qnh', 'rain_trace[80]']
+        for col in numeric_cols:
+            if col in combined_df.columns:
+                combined_df[col] = pd.to_numeric(combined_df[col], errors='coerce')
         # Drop duplicates based on timestamp
         combined_df = combined_df.drop_duplicates(subset=[dropcol], keep='last')
         # Sort by the deduplication column
@@ -103,7 +112,6 @@ def save_data(df, folder_path, dropcol):
         df = df.sort_values(by=dropcol)
         # Create new file
         df.to_parquet(filepath, index=False)
-        print(f"Created new file: {filepath} ({len(df)} rows)")
 
     # If Melbourne, create last 30 days JSON (only for observation data)
     if "Melbourne" in folder_path and 'local_date_time_full[80]' in df.columns:
@@ -149,7 +157,6 @@ def save_data(df, folder_path, dropcol):
                 # Save to melbs/static/last30.json
                 os.makedirs('melbs/static', exist_ok=True)
                 last30.to_json('melbs/static/last30.json', orient='records', indent=2)
-                print(f"Last 30 days data saved to melbs/static/last30.json ({len(last30)} rows)")
 
 def dumper(path, name, frame):
     with open(f'{path}/{name}.csv', 'w') as f:
@@ -250,7 +257,6 @@ def fetch_forecast(xml_url, city_name):
             break
 
     if city_area is None:
-        print(f"City '{city_name}' not found in XML feed")
         return pd.DataFrame()
 
     # Extract forecast periods
@@ -343,7 +349,6 @@ def fetch_forecast(xml_url, city_name):
 
 def grab_observations(csv_pathos, stem):
     r = requests.get(csv_pathos)
-    print(r.text)
     tab = pd.read_csv(StringIO(r.text), skiprows=19)
 
     if_no_fold_create('data/new', stem)
@@ -363,8 +368,6 @@ def grab_observations(csv_pathos, stem):
 
     if stem == "Melbourne":
         melbs_observations = convert_observations_to_melbs_format(outty)
-        print(melbs_observations)
-
         melbs_observations.to_json('melbs/static/observations.json', orient='records', indent=2)
 
 
