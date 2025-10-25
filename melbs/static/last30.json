@@ -602,9 +602,17 @@
   {
     "Date":"2025-10-25",
     "Hour":15.0,
-    "Temp":15.4,
+    "Temp":16.1,
     "Rain":0.0,
-    "Wind":4.0,
-    "Humidity":68.0
+    "Wind":6.0,
+    "Humidity":66.0
+  },
+  {
+    "Date":"2025-10-25",
+    "Hour":16.0,
+    "Temp":15.8,
+    "Rain":0.0,
+    "Wind":7.0,
+    "Humidity":66.0
   }
 ]

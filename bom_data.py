@@ -211,14 +211,14 @@ def convert_forecast_to_melbs_format(df):
 
     # Extract max temp (remove " Celsius" suffix if present)
     if 'air_temperature_maximum' in df.columns:
-        melbs_forecast['Max_temp'] = df['air_temperature_maximum'].str.replace(' Celsius', '').astype(float).astype(int)
+        melbs_forecast['Max_temp'] = pd.to_numeric(df['air_temperature_maximum'].str.replace(' Celsius', ''), errors='coerce')
 
     # Extract rain amount from precipitation_range (e.g., "0 to 3 mm" -> 3)
     if 'precipitation_range' in df.columns:
         # Extract the upper bound of the range
-        melbs_forecast['Rain'] = df['precipitation_range'].str.extract(r'to (\d+)').astype(float).fillna(0).astype(int)
+        melbs_forecast['Rain'] = pd.to_numeric(df['precipitation_range'].str.extract(r'to (\d+)')[0], errors='coerce')
     else:
-        melbs_forecast['Rain'] = 0
+        melbs_forecast['Rain'] = None
 
     return melbs_forecast
 
