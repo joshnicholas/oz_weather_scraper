@@ -22,9 +22,15 @@
     let today = $state('');
 
     onMount(() => {
-        const now = new Date();
-        const melbDate = new Date(now.toLocaleString('en-US', { timeZone: 'Australia/Melbourne' }));
-        today = melbDate.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+        // Get date in Melbourne timezone properly
+        const formatter = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'Australia/Melbourne',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+        today = formatter.format(new Date()); // Format: YYYY-MM-DD
+        console.log('Today calculated as:', today);
     });
 
     // Group data by date
