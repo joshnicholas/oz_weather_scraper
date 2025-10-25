@@ -77,7 +77,7 @@
     // Scales
     let xScale = $derived.by(() => {
         return scaleLinear()
-            .domain([0, 24]) // 0 to 24 hours (midnight to midnight)
+            .domain([0, 23]) // 0 to 23 hours (midnight to 11pm)
             .range([0, innerWidth]);
     });
 
@@ -115,8 +115,8 @@
         return Array.from({ length: tickCount }, (_, i) => Math.round(min + (i * step)));
     });
 
-    // X-axis ticks (Midnight, 6am, Midday, 6pm, Midnight)
-    let xTicks = $derived([0, 6, 12, 18, 24]);
+    // X-axis ticks (Midnight, 6am, Midday, 6pm, 11pm)
+    let xTicks = $derived([0, 6, 12, 18, 23]);
 
     // Calculate min/max envelope for previous days (not today)
     let previousDaysEnvelope = $derived.by(() => {
@@ -215,7 +215,7 @@
                         font-size="11"
                         fill="#333"
                     >
-                        {hour === 0 ? 'Midnight' : hour === 6 ? '6am' : hour === 12 ? 'Midday' : hour === 18 ? '6pm' : 'Midnight'}
+                        {hour === 0 ? 'Midnight' : hour === 6 ? '6am' : hour === 12 ? 'Midday' : hour === 18 ? '6pm' : '11pm'}
                     </text>
                 </g>
             {/each}
