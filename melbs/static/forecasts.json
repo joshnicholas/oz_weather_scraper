@@ -2,7 +2,7 @@
   {
     "Date":"2025-10-27",
     "Max_temp":14,
-    "Rain":3.0
+    "Rain":null
   },
   {
     "Date":"2025-10-28",
@@ -21,17 +21,17 @@
   },
   {
     "Date":"2025-10-31",
-    "Max_temp":25,
-    "Rain":8.0
+    "Max_temp":24,
+    "Rain":10.0
   },
   {
     "Date":"2025-11-01",
-    "Max_temp":22,
+    "Max_temp":21,
     "Rain":null
   },
   {
     "Date":"2025-11-02",
-    "Max_temp":30,
+    "Max_temp":31,
     "Rain":6.0
   }
 ]
