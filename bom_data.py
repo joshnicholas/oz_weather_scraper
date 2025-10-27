@@ -176,7 +176,7 @@ def convert_observations_to_melbs_format(df):
     # Group by Date and aggregate
     daily_summary = df.groupby('Date').agg({
         'Temp (°C)': 'max',  # Max temp of the day
-        'Rainfall since 9 am (mm)': 'max',  # Cumulative rainfall
+        'Rainfall since 9 am (mm)': 'last',  # Latest rain observation
         'Wind Speed (km/h) (knots)': lambda x: x.str.extract(r'(\d+)').astype(float).max() if x.notna().any() else None,  # Max wind speed
         'Humidity(%)': 'mean'  # Average humidity
     }).reset_index()
