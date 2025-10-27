@@ -1114,9 +1114,17 @@
   {
     "Date":"2025-10-28",
     "Hour":7.0,
-    "Temp":6.1,
+    "Temp":6.5,
     "Rain":0.2,
     "Wind":9.0,
-    "Humidity":71.0
+    "Humidity":69.0
+  },
+  {
+    "Date":"2025-10-28",
+    "Hour":8.0,
+    "Temp":7.9,
+    "Rain":0.2,
+    "Wind":7.0,
+    "Humidity":66.0
   }
 ]
