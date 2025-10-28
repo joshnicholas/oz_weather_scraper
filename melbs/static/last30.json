@@ -1322,9 +1322,17 @@
   {
     "Date":"2025-10-29",
     "Hour":9.0,
-    "Temp":13.2,
+    "Temp":13.6,
+    "Rain":0.0,
+    "Wind":7.0,
+    "Humidity":69.0
+  },
+  {
+    "Date":"2025-10-29",
+    "Hour":10.0,
+    "Temp":14.7,
     "Rain":0.0,
     "Wind":2.0,
-    "Humidity":73.0
+    "Humidity":62.0
   }
 ]
