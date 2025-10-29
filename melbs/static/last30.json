@@ -1514,9 +1514,17 @@
   {
     "Date":"2025-10-30",
     "Hour":9.0,
-    "Temp":13.7,
+    "Temp":14.9,
     "Rain":0.0,
-    "Wind":4.0,
-    "Humidity":76.0
+    "Wind":9.0,
+    "Humidity":67.0
+  },
+  {
+    "Date":"2025-10-30",
+    "Hour":10.0,
+    "Temp":16.2,
+    "Rain":0.0,
+    "Wind":6.0,
+    "Humidity":64.0
   }
 ]
