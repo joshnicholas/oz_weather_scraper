@@ -1,42 +1,37 @@
 [
   {
-    "Date":"2025-10-29",
-    "Max_temp":null,
-    "Rain":null
-  },
-  {
     "Date":"2025-10-30",
-    "Max_temp":24.0,
+    "Max_temp":24,
     "Rain":null
   },
   {
     "Date":"2025-10-31",
-    "Max_temp":21.0,
-    "Rain":15.0
+    "Max_temp":21,
+    "Rain":10.0
   },
   {
     "Date":"2025-11-01",
-    "Max_temp":20.0,
+    "Max_temp":20,
     "Rain":null
   },
   {
     "Date":"2025-11-02",
-    "Max_temp":29.0,
+    "Max_temp":29,
     "Rain":6.0
   },
   {
     "Date":"2025-11-03",
-    "Max_temp":18.0,
+    "Max_temp":18,
     "Rain":35.0
   },
   {
     "Date":"2025-11-04",
-    "Max_temp":18.0,
+    "Max_temp":18,
     "Rain":20.0
   },
   {
     "Date":"2025-11-05",
-    "Max_temp":17.0,
+    "Max_temp":17,
     "Rain":8.0
   }
 ]
