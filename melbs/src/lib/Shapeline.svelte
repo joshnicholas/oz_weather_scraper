@@ -359,7 +359,7 @@
                     fill="none"
                     stroke="black"
                     stroke-width={2}
-                    opacity={0.9}
+                    opacity={0.6}
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-dasharray="5,5"
