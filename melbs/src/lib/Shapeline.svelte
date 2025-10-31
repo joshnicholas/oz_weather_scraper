@@ -3,7 +3,7 @@
     import { line } from 'd3-shape';
     import { onMount } from 'svelte';
 
-    let { data = [], containerWidth, headline = '', subtitle = '', chartHeight = 300 } = $props();
+    let { data = [], forecastData = [], containerWidth, headline = '', subtitle = '', chartHeight = 300 } = $props();
 
     let margin = $derived({
         top: 20,
@@ -225,6 +225,55 @@
             };
         }).filter(l => l !== null);
     });
+
+    // Process forecast data for today
+    let todayForecast = $derived.by(() => {
+        if (!forecastData || forecastData.length === 0 || !today) return [];
+
+        // Filter forecast data for today only
+        return forecastData
+            .filter(d => d.Date === today)
+            .map(d => ({
+                hour: parseInt(d.Hour),
+                temp: parseFloat(d.Temperature)
+            }))
+            .sort((a, b) => a.hour - b.hour);
+    });
+
+    let forecastPath = $derived.by(() => {
+        if (todayForecast.length === 0) return null;
+        return lineGenerator(todayForecast);
+    });
+
+    // Find max forecast temp and position
+    let forecastMaxPoint = $derived.by(() => {
+        if (todayForecast.length === 0) return null;
+
+        const maxPoint = todayForecast.reduce((max, point) =>
+            point.temp > max.temp ? point : max
+        , todayForecast[0]);
+
+        return {
+            temp: maxPoint.temp,
+            x: xScale(maxPoint.hour),
+            y: yScale(maxPoint.temp)
+        };
+    });
+
+    // Find max observed temp for today
+    let todayObservedMax = $derived.by(() => {
+        if (!today || !dataByDate[today]) return -Infinity;
+
+        const todayData = dataByDate[today];
+        if (todayData.length === 0) return -Infinity;
+
+        return Math.max(...todayData.map(d => d.temp));
+    });
+
+    // Show forecast max label only if it's higher than observed max
+    let showForecastMaxLabel = $derived(() => {
+        return forecastMaxPoint && forecastMaxPoint.temp > todayObservedMax;
+    });
 </script>
 
 <div class="chart-container">
@@ -303,6 +352,22 @@
                 </path>
             {/each}
 
+            <!-- Forecast line for today (white) -->
+            {#if forecastPath}
+                <path
+                    d={forecastPath}
+                    fill="none"
+                    stroke="white"
+                    stroke-width={3}
+                    opacity={0.9}
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-dasharray="4,4"
+                >
+                    <title>Forecast</title>
+                </path>
+            {/if}
+
             <!-- Date labels at end of historic lines -->
             {#each historicLineLabels as label}
                 <text
@@ -329,6 +394,19 @@
                     style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"
                 >
                     {todayLatestPoint.temp.toFixed(1)}°C
+                </text>
+            {/if}
+
+            <!-- Forecast max label (only if higher than observed) -->
+            {#if showForecastMaxLabel && forecastMaxPoint}
+                <text
+                    x={forecastMaxPoint.x}
+                    y={forecastMaxPoint.y - 15}
+                    text-anchor="middle"
+                    font-size="0.75em"
+                    fill="white"
+                >
+                    {forecastMaxPoint.temp.toFixed(1)}°C
                 </text>
             {/if}
         </g>

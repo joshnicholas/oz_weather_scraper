@@ -17,6 +17,8 @@ today = datetime.datetime.now()
 scrape_date_stemmo = today.astimezone(pytz.timezone("Australia/Brisbane")).strftime('%Y%m%d')
 scrape_hour = today.astimezone(pytz.timezone("Australia/Brisbane")).strftime('%H')
 today_for_loop = today.astimezone(pytz.timezone("Australia/Brisbane"))
+scrape_time = datetime.datetime.now(pytz.timezone('Australia/Melbourne'))
+format_scrape_time = scrape_time.strftime('%Y-%m-%d %H:%M')
 
 def if_no_fold_create(pathos, to_check):
     if pathos[-1] != '/':
@@ -347,6 +349,178 @@ def fetch_forecast(xml_url, city_name):
 
     # return df
 
+def fetch_hourly_forecast_api():
+    """
+    Fetch hourly forecast data from BOM API endpoints and process it.
+    Combines 1-hourly and 3-hourly data into a single dataset.
+    """
+
+    # BOM weather icon code to text mapping
+    icon_descriptions = {
+        1: 'Sunny',
+        2: 'Mostly sunny',
+        3: 'Partly cloudy',
+        4: 'Cloudy',
+        6: 'Hazy',
+        8: 'Light rain',
+        9: 'Wind',
+        10: 'Fog',
+        11: 'Shower',
+        12: 'Rain',
+        13: 'Dusty',
+        14: 'Frost',
+        15: 'Snow',
+        16: 'Storm',
+        17: 'Light shower',
+        18: 'Heavy shower'
+    }
+
+    headers = {
+        'accept': 'application/json',
+        'origin': 'https://www.bom.gov.au',
+        'referer': 'https://www.bom.gov.au/',
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+    }
+
+    # Fetch 1-hourly data (temp, humidity, wind)
+    hourly_url = 'https://api.bom.gov.au/apikey/v1/forecasts/1hourly/553/144?timezone=Australia%2FMelbourne'
+    hourly_response = requests.get(hourly_url, headers=headers)
+    hourly_data = hourly_response.json()
+
+    # Fetch 3-hourly data (rain, UV, cloud cover)
+    three_hourly_url = 'https://api.bom.gov.au/apikey/v1/forecasts/3hourly/553/144?timezone=Australia%2FMelbourne'
+    three_hourly_response = requests.get(three_hourly_url, headers=headers)
+    three_hourly_data = three_hourly_response.json()
+
+    # Parse 1-hourly data
+    hourly_records = []
+    for day in hourly_data.get('fcst', []):
+        for hour_data in day.get('1hourly', []):
+            time_utc = hour_data['time_utc']
+            dt = pd.to_datetime(time_utc).tz_convert('Australia/Melbourne')
+
+            atm = hour_data.get('atm', {}).get('surf_air', {})
+            wind = atm.get('wind', {})
+
+            record = {
+                'time_utc': time_utc,
+                'Date': dt.strftime('%Y-%m-%d'),
+                'Hour': dt.hour,
+                'Temperature': int(round(atm.get('temp_cel', 0))),
+                'Feels like': int(round(atm.get('temp_apparent_cel', 0))),
+                'Humidity': int(round(atm.get('hum_relative_percent', 0))),
+                'Wind_speed_kts': wind.get('speed_10m_avg_kts'),
+                'Wind_direction': wind.get('dirn_10m_deg_t'),
+                'Gust_kts': wind.get('gust_speed_10m_max_kts'),
+                'Dew_point': atm.get('temp_dew_pt_cel'),
+                'Mixing_height': wind.get('mixing_height_m')
+            }
+            hourly_records.append(record)
+
+    hourly_df = pd.DataFrame(hourly_records)
+
+    # Parse 3-hourly data
+    three_hourly_records = []
+    for day in three_hourly_data.get('fcst', []):
+        for period_data in day.get('3hourly', []):
+            start_time_utc = period_data['start_time_utc']
+            dt = pd.to_datetime(start_time_utc).tz_convert('Australia/Melbourne')
+
+            atm = period_data.get('atm', {}).get('surf_air', {})
+            precip = atm.get('precip', {})
+            weather = atm.get('weather', {})
+            terr = period_data.get('terr', {}).get('surf_land', {})
+
+            # Get weather description from icon code
+            icon_code = int(weather.get('icon_code', 0))
+            summary = icon_descriptions.get(icon_code, '')
+
+            record = {
+                'time_utc': start_time_utc,
+                'Summary': summary,
+                'Rain - 50%': int(precip.get('exceeding_50percentchance_total_mm', 0)),
+                'Rain - 25%': int(precip.get('exceeding_25percentchance_total_mm', 0)),
+                'Rain - 10%': int(precip.get('exceeding_10percentchance_total_mm', 0)),
+                'UV Index': int(atm.get('radiation', {}).get('uv_clear_sky_code', 0)),
+                'Cloud cover': int(atm.get('cloud_amt_avg_percent', 0)),
+                'Fire_danger': terr.get('fire_danger', {}).get('forest_fuel_dryness_factor_avg_code')
+            }
+            three_hourly_records.append(record)
+
+    three_hourly_df = pd.DataFrame(three_hourly_records)
+
+    # Merge dataframes - forward fill 3-hourly data to match hourly timestamps
+    merged_df = hourly_df.copy()
+    merged_df['time_utc'] = pd.to_datetime(merged_df['time_utc'])
+    three_hourly_df['time_utc'] = pd.to_datetime(three_hourly_df['time_utc'])
+
+    # Sort both by time
+    merged_df = merged_df.sort_values('time_utc')
+    three_hourly_df = three_hourly_df.sort_values('time_utc')
+
+    # Merge and forward fill the 3-hourly data
+    merged_df = pd.merge_asof(merged_df, three_hourly_df, on='time_utc', direction='backward')
+
+    # Add scraped_datetime and dedup_key
+    merged_df['scraped_datetime'] = format_scrape_time
+    merged_df['dedup_key'] = merged_df['Date'].astype(str) + '_' + merged_df['Hour'].astype(str) + '_' + merged_df['scraped_datetime'].astype(str)
+
+    # Save to parquet
+    folder_path = os.path.join(pathos, 'data', 'melbs', 'hourly_forecasts')
+    os.makedirs(folder_path, exist_ok=True)
+
+    current_month = scrape_time.strftime('%Y-%m')
+    filename = f"{current_month}.parquet"
+    filepath = os.path.join(folder_path, filename)
+
+    if os.path.exists(filepath):
+        existing_df = pd.read_parquet(filepath)
+
+        # Check if existing data needs cleaning (has string values in numeric columns)
+        needs_cleaning = False
+        if 'Temperature' in existing_df.columns:
+            if existing_df['Temperature'].dtype == 'object':
+                needs_cleaning = True
+
+        if needs_cleaning:
+            raise ValueError(
+                "Existing parquet file contains old string format data. "
+                "Please run clean_existing_parquet() from hourly_foreast.py first"
+            )
+
+        combined_df = pd.concat([existing_df, merged_df], ignore_index=True)
+        combined_df = combined_df.drop_duplicates(subset=['dedup_key'], keep='last')
+        combined_df = combined_df.sort_values(by=['Date', 'Hour'])
+        combined_df.to_parquet(filepath, index=False)
+    else:
+        merged_df = merged_df.sort_values(by=['Date', 'Hour'])
+        merged_df.to_parquet(filepath, index=False)
+
+    # Always save CSV for inspection
+    csv_filepath = filepath.replace('.parquet', '.csv')
+    final_df = pd.read_parquet(filepath)
+    final_df.to_csv(csv_filepath, index=False)
+
+    # Create hourly_forecasts.json with today's data only
+    today_date_str = scrape_time.strftime('%Y-%m-%d')
+    today_df = merged_df[merged_df['Date'] == today_date_str].copy()
+
+    if len(today_df) > 0:
+        json_cols = ['Date', 'Hour', 'Summary', 'Temperature', 'Feels like',
+                     'Rain - 50%', 'Rain - 25%', 'Rain - 10%',
+                     'Humidity', 'UV Index', 'Cloud cover']
+
+        json_df = today_df[json_cols].copy()
+        # Fill any missing summaries with empty string
+        json_df['Summary'] = json_df['Summary'].fillna('')
+        json_output = json_df.to_dict('records')
+
+        json_path = os.path.join(pathos, 'melbs', 'static', 'hourly_forecasts.json')
+        with open(json_path, 'w') as f:
+            json.dump(json_output, f, indent=2)
+
+    return merged_df
+
 # %%
 
 # https://reg.bom.gov.au/catalogue/data-feeds.shtml
@@ -447,6 +621,7 @@ fetch_forecast('ftp://ftp.bom.gov.au/anon/gen/fwo/IDQ11295.xml', 'Brisbane')
 
 fetch_forecast("ftp://ftp.bom.gov.au/anon/gen/fwo/IDN11060.xml", "Canberra")
 
+fetch_hourly_forecast_api()
 
 
 script_run_time = datetime.datetime.now(pytz.timezone("Australia/Melbourne"))

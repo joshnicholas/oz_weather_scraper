@@ -57,6 +57,22 @@
         <div class="charts">
             {#if containerWidth > 0}
             <div class="chart-section">
+
+
+            <div class="chart-section">
+                <h2>Hourly temps</h2>
+                    <Shapeline
+                        data={data.last30}
+                        forecastData={data.hourlyForecasts}
+                        {containerWidth}
+                        headline=""
+                        subtitle=""
+                        chartHeight={150}
+                    />
+            </div>
+
+            <hr class="chart-divider" />
+
                 <h2>Max temp</h2>
                 <Chart
                     historicData={data.historicTemp}
@@ -71,18 +87,7 @@
                 />
             </div>
     
-            <hr class="chart-divider" />
 
-            <div class="chart-section">
-                <h2>Hourly temps</h2>
-                    <Shapeline
-                        data={data.last30}
-                        {containerWidth}
-                        headline=""
-                        subtitle=""
-                        chartHeight={150}
-                    />
-            </div>
 
             <hr class="chart-divider" />
 
