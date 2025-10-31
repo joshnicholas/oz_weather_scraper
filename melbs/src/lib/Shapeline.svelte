@@ -389,6 +389,8 @@
                     cx={todayLatestPoint.x}
                     cy={todayLatestPoint.y}
                     r="6"
+                    stroke="black"
+                    stroke-width="1"
                     fill="#FA9A7A"
                 />
                 <text
