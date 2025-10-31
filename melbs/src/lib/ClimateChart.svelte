@@ -1,7 +1,7 @@
 <script>
     import { scaleTime, scaleLinear } from 'd3-scale';
 
-    let { observationData = [], climateStats = [], containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', subtitle = '', unit = '%', chartHeight = 200, metric = 'Mean_9am_RH', dataKey = 'Humidity', leftMargin = 40 } = $props();
+    let { observationData = [], climateStats = [], containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', subtitle = '', unit = '%', chartHeight = 200, metric9am = 'Mean_9am_RH', metric3pm = 'Mean_3pm_RH', dataKey = 'Humidity', leftMargin = 40 } = $props();
 
     let margin = $derived({
         top: 20,
@@ -85,17 +85,29 @@
         return days;
     });
 
-    // Get current month's mean value for the specified metric
-    let monthlyMean = $derived(() => {
+    // Get current month's mean values for 9am and 3pm metrics
+    let monthlyMean9am = $derived(() => {
         const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                            'July', 'August', 'September', 'October', 'November', 'December'];
         const currentMonthName = monthNames[currentMonth];
 
         const statRow = climateStats.find(row =>
-            row.Metric === metric
+            row.Metric === metric9am
         );
 
         return statRow ? statRow[currentMonthName] : 65;
+    });
+
+    let monthlyMean3pm = $derived(() => {
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                           'July', 'August', 'September', 'October', 'November', 'December'];
+        const currentMonthName = monthNames[currentMonth];
+
+        const statRow = climateStats.find(row =>
+            row.Metric === metric3pm
+        );
+
+        return statRow ? statRow[currentMonthName] : null;
     });
 
     // Filter observation data for the 7-day range
@@ -112,16 +124,22 @@
     // Scales
     const xScale = (dayIndex) => (dayIndex * innerWidth) / 7 + innerWidth / 14;
 
-    // Y scale - center around the monthly mean
+    // Y scale - include both mean values and observations
     let yExtent = $derived(() => {
         const values = sevenDayData().map(d => d.value);
-        const maxDiff = Math.max(
-            Math.abs(Math.max(...values) - monthlyMean()),
-            Math.abs(Math.min(...values) - monthlyMean())
-        );
+        const meanValues = [monthlyMean9am()];
+        if (monthlyMean3pm() !== null) {
+            meanValues.push(monthlyMean3pm());
+        }
+
+        const allValues = [...values, ...meanValues];
+        const min = Math.min(...allValues);
+        const max = Math.max(...allValues);
+        const padding = (max - min) * 0.2; // 20% padding
+
         return {
-            min: monthlyMean() - maxDiff - 10,
-            max: monthlyMean() + maxDiff + 10
+            min: min - padding,
+            max: max + padding
         };
     });
 
@@ -131,8 +149,9 @@
             .range([innerHeight, 0]);
     });
 
-    // Get y position for the mean line
-    let meanY = $derived(yScale()(monthlyMean()));
+    // Get y positions for the mean lines
+    let mean9amY = $derived(yScale()(monthlyMean9am()));
+    let mean3pmY = $derived(monthlyMean3pm() !== null ? yScale()(monthlyMean3pm()) : null);
 
     // Tooltip functions
     function showTooltip(event, point) {
@@ -172,11 +191,17 @@
     <svg width={chartWidth} height={totalHeight} style="background: transparent;">
         <g transform="translate({margin.left}, {margin.top})">
 
-            <!-- Y-axis ticks -->
+            <!-- Y-axis ticks for both means -->
             <g>
-                <line x1="-5" y1={yScale()(monthlyMean())} x2="0" y2={yScale()(monthlyMean())} stroke="#333"/>
-                <text x="-10" y={yScale()(monthlyMean())} dy="0.3em" text-anchor="end" font-size="12">{monthlyMean().toFixed(0)}{unit}</text>
+                <line x1="-5" y1={mean9amY} x2="0" y2={mean9amY} stroke="#333"/>
+                <text x="-10" y={mean9amY} dy="0.3em" text-anchor="end" font-size="12">{monthlyMean9am().toFixed(0)}{unit}</text>
             </g>
+            {#if mean3pmY !== null}
+                <g>
+                    <line x1="-5" y1={mean3pmY} x2="0" y2={mean3pmY} stroke="#333"/>
+                    <text x="-10" y={mean3pmY} dy="0.3em" text-anchor="end" font-size="12">{monthlyMean3pm().toFixed(0)}{unit}</text>
+                </g>
+            {/if}
 
             <!-- X-axis labels -->
             {#each sevenDayRange() as day, i}
@@ -193,25 +218,53 @@
                 </text>
             {/each}
 
-            <!-- Monthly mean line -->
-            <line
-                x1="0"
-                y1={meanY}
-                x2={innerWidth}
-                y2={meanY}
-                stroke="#000"
-                stroke-width="1"
-                stroke-dasharray="5,5"
-            />
-            <text
-                x={innerWidth - 5}
-                y={meanY - 5}
-                text-anchor="end"
-                font-size="10"
-                fill="#000"
-            >
-                Monthly average
-            </text>
+            {#snippet meanLines()}
+                {@const is9amOnTop = mean3pmY !== null ? mean9amY < mean3pmY : true}
+
+                <!-- 9am monthly mean line -->
+                <line
+                    x1="0"
+                    y1={mean9amY}
+                    x2={innerWidth}
+                    y2={mean9amY}
+                    stroke="#000"
+                    stroke-width="1"
+                    stroke-dasharray="5,5"
+                />
+                <text
+                    x={innerWidth - 5}
+                    y={is9amOnTop ? mean9amY - 5 : mean9amY + 12}
+                    text-anchor="end"
+                    font-size="10"
+                    fill="#000"
+                >
+                    9am average
+                </text>
+
+                <!-- 3pm monthly mean line -->
+                {#if mean3pmY !== null}
+                    <line
+                        x1="0"
+                        y1={mean3pmY}
+                        x2={innerWidth}
+                        y2={mean3pmY}
+                        stroke="#000"
+                        stroke-width="1"
+                        stroke-dasharray="5,5"
+                    />
+                    <text
+                        x={innerWidth - 5}
+                        y={is9amOnTop ? mean3pmY + 12 : mean3pmY - 5}
+                        text-anchor="end"
+                        font-size="10"
+                        fill="#000"
+                    >
+                        3pm average
+                    </text>
+                {/if}
+            {/snippet}
+
+            {@render meanLines()}
 
             <!-- Data points -->
             {#each sevenDayData() as point}

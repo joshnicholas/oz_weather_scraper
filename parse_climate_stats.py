@@ -45,6 +45,7 @@ html_table = """
 <tr><td><a href="/climate/cdo/about/definitions9and3.shtml#mean9amrh">Mean 9am relative humidity (%) </a></td><td>63</td><td>66</td><td>68</td><td>71</td><td>77</td><td class="highest">80</td><td>79</td><td>73</td><td>67</td><td class="lowest">62</td><td>63</td><td class="lowest">62</td><td>69</td><td>56</td><td>1955<br>2010</td></tr>
 <tr><td><a href="/climate/cdo/about/definitions9and3.shtml#mean3pmrh">Mean 3pm relative humidity (%) </a></td><td class="lowest">47</td><td>48</td><td>49</td><td>52</td><td>59</td><td class="highest">63</td><td>61</td><td>56</td><td>53</td><td>50</td><td>49</td><td class="lowest">47</td><td>53</td><td>56</td><td>1955<br>2010</td></tr>
 <tr><td><a href="/climate/cdo/about/definitions9and3.shtml#mean9amwind">Mean 9am wind speed (km/h) </a></td><td>10.0</td><td>9.1</td><td>8.9</td><td class="lowest">8.7</td><td>9.1</td><td>9.4</td><td>10.4</td><td>11.3</td><td>12.4</td><td class="highest">12.6</td><td>11.5</td><td>10.8</td><td>10.4</td><td>54</td><td>1955<br>2009</td></tr>
+<tr><td><a href="/climate/cdo/about/definitions9and3.shtml#mean3pmwind">Mean 3pm wind speed (km/h) </a></td><td>13.7</td><td>13.5</td><td>12.4</td><td class="lowest">10.0</td><td>10.0</td><td>10.2</td><td>11.3</td><td>13.3</td><td>15.2</td><td class="highest">16.5</td><td>15.2</td><td>14.6</td><td>13.0</td><td>54</td><td>1955<br>2009</td></tr>
 </tbody>
 </table>
 """
@@ -76,6 +77,7 @@ stat_mappings = {
     'Mean 9am relative humidity (%)': ('Humidity', 'Mean_9am_RH'),
     'Mean 3pm relative humidity (%)': ('Humidity', 'Mean_3pm_RH'),
     'Mean 9am wind speed (km/h)': ('Wind', 'Mean_9am_Wind'),
+    'Mean 3pm wind speed (km/h)': ('Wind', 'Mean_3pm_Wind'),
 }
 
 for idx, row in df.iterrows():

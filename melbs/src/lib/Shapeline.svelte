@@ -106,14 +106,39 @@
 
     // Generate paths for each date
     let paths = $derived.by(() => {
-        return datesWithStatus.map(({ date, isToday }) => ({
-            date,
-            isToday,
-            path: lineGenerator(dataByDate[date]),
-            stroke: isToday ? '#000000' : '#7A9AFA',
-            opacity: isToday ? 1 : 0.3,
-            strokeWidth: 2
-        }));
+        // Calculate opacity based on date recency
+        const sortedDates = allDates.filter(d => d !== today).sort();
+        const oldestDate = sortedDates.length > 0 ? new Date(sortedDates[0]) : null;
+        const newestDate = sortedDates.length > 0 ? new Date(sortedDates[sortedDates.length - 1]) : null;
+
+        return datesWithStatus.map(({ date, isToday }) => {
+            let opacity = 0.3;
+
+            if (!isToday && oldestDate && newestDate) {
+                const currentDate = new Date(date);
+                const totalRange = newestDate - oldestDate;
+
+                if (totalRange > 0) {
+                    // Map from oldest (0.1) to newest (0.9)
+                    const position = (currentDate - oldestDate) / totalRange;
+                    opacity = 0.1 + (position * 0.7); // 0.1 to 0.9
+                } else {
+                    // Only one historic date, use high opacity
+                    opacity = 0.8;
+                }
+            } else if (isToday) {
+                opacity = 1;
+            }
+
+            return {
+                date,
+                isToday,
+                path: lineGenerator(dataByDate[date]),
+                stroke: isToday ? '#000000' : '#7A9AFA',
+                opacity,
+                strokeWidth: 2
+            };
+        });
     });
 
     // Y-axis ticks
@@ -167,6 +192,38 @@
             x: xScale(lastPoint.hour),
             y: yScale(lastPoint.temp)
         };
+    });
+
+    // Function to get ordinal suffix for day
+    function getOrdinalSuffix(day) {
+        if (day > 3 && day < 21) return 'th';
+        switch (day % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
+    }
+
+    // Get end point labels for historic lines
+    let historicLineLabels = $derived.by(() => {
+        return paths.filter(p => !p.isToday).map(p => {
+            const dayData = dataByDate[p.date];
+            if (!dayData || dayData.length === 0) return null;
+
+            // Get last point of the day
+            const lastPoint = dayData[dayData.length - 1];
+            const dateObj = new Date(p.date);
+            const day = dateObj.getDate();
+
+            return {
+                date: p.date,
+                x: xScale(lastPoint.hour),
+                y: yScale(lastPoint.temp),
+                label: `${day}${getOrdinalSuffix(day)}`,
+                opacity: p.opacity * 0.7 // Slightly more transparent than the line
+            };
+        }).filter(l => l !== null);
     });
 </script>
 
@@ -230,34 +287,35 @@
                 </g>
             {/each}
 
-            <!-- Previous days envelope (striped area) -->
-            {#if previousDaysEnvelope.length > 0}
-                {@const envelopePath = previousDaysEnvelope.map((point, i) =>
-                    `${i === 0 ? 'M' : 'L'} ${xScale(point.hour)},${yScale(point.temp)}`
-                ).join(' ') + ' Z'}
-                <path
-                    d={envelopePath}
-                    fill="url(#diagonalStripes)"
-                    opacity="0.8"
-                    stroke="none"
-                />
-            {/if}
-
-            <!-- Today's line -->
+            <!-- All daily lines (last 30 days) -->
             {#each paths as { date, path, stroke, opacity, strokeWidth, isToday }}
-                {#if isToday}
-                    <path
-                        d={path}
-                        fill="none"
-                        {stroke}
-                        stroke-width={strokeWidth}
-                        {opacity}
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <title>{date}</title>
-                    </path>
-                {/if}
+                <path
+                    d={path}
+                    fill="none"
+                    {stroke}
+                    stroke-width={strokeWidth}
+                    {opacity}
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-dasharray={isToday ? "none" : "4,4"}
+                >
+                    <title>{date}</title>
+                </path>
+            {/each}
+
+            <!-- Date labels at end of historic lines -->
+            {#each historicLineLabels as label}
+                <text
+                    x={label.x + 5}
+                    y={label.y}
+                    dy="0.32em"
+                    text-anchor="start"
+                    font-size="10"
+                    fill="#7A9AFA"
+                    opacity={label.opacity}
+                >
+                    {label.label}
+                </text>
             {/each}
 
             <!-- Latest value label for today -->
