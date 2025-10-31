@@ -173,21 +173,52 @@ def convert_observations_to_melbs_format(df):
     Returns:
         DataFrame ready for melbs/static/observations.json
     """
-    # Group by Date and aggregate
-    daily_summary = df.groupby('Date').agg({
-        'Temp (°C)': 'max',  # Max temp of the day
-        'Rainfall since 9 am (mm)': 'last',  # Latest rain observation
-        'Wind Speed (km/h) (knots)': lambda x: x.str.extract(r'(\d+)').astype(float).max() if x.notna().any() else None,  # Max wind speed
-        'Humidity(%)': 'mean'  # Average humidity
-    }).reset_index()
+    # Parse hour from Time column to calculate rainfall since midnight
+    df = df.copy()
+    df['Hour'] = df['Time (AEDT)'].str.extract(r'(\d+):\d+').astype(float)
+    df['is_pm'] = df['Time (AEDT)'].str.contains('pm')
+    # Convert to 24-hour format
+    df['Hour24'] = df.apply(lambda row: row['Hour'] if not row['is_pm'] or row['Hour'] == 12
+                            else row['Hour'] + 12 if row['Hour'] != 12
+                            else 12 if row['is_pm']
+                            else row['Hour'], axis=1)
 
-    # Rename columns to match expected format
-    daily_summary = daily_summary.rename(columns={
-        'Temp (°C)': 'Temp',
-        'Rainfall since 9 am (mm)': 'Rain',
-        'Wind Speed (km/h) (knots)': 'Wind',
-        'Humidity(%)': 'Humidity'
-    })
+    results = []
+
+    for date, group in df.groupby('Date'):
+        # Sort by hour to ensure chronological order
+        group = group.sort_values('Hour24')
+
+        # Max temp (unchanged)
+        max_temp = group['Temp (°C)'].max()
+
+        # Calculate rainfall since midnight
+        # BOM "Rainfall since 9am" resets at 9am daily
+        # Before 9am: shows rain from previous day's 9am (includes midnight to <9am)
+        # After 9am: shows rain from current day's 9am onwards
+        # Total rain for calendar day = rain_before_9am + rain_after_9am
+
+        before_9am = group[group['Hour24'] < 9]
+        after_9am = group[group['Hour24'] >= 9]
+
+        rain_midnight_to_9am = before_9am['Rainfall since 9 am (mm)'].iloc[-1] if len(before_9am) > 0 else 0
+        rain_9am_onwards = after_9am['Rainfall since 9 am (mm)'].iloc[-1] if len(after_9am) > 0 else 0
+
+        total_rain = rain_midnight_to_9am + rain_9am_onwards
+
+        # Wind and humidity (unchanged)
+        max_wind = group['Wind Speed (km/h) (knots)'].str.extract(r'(\d+)').astype(float).max()[0] if group['Wind Speed (km/h) (knots)'].notna().any() else None
+        avg_humidity = group['Humidity(%)'].mean()
+
+        results.append({
+            'Date': date,
+            'Temp': max_temp,
+            'Rain': total_rain,
+            'Wind': max_wind,
+            'Humidity': avg_humidity
+        })
+
+    daily_summary = pd.DataFrame(results)
 
     # Drop rows with all null values for the weather data
     daily_summary = daily_summary.dropna(subset=['Temp', 'Rain', 'Wind', 'Humidity'], how='all')
@@ -197,7 +228,7 @@ def convert_observations_to_melbs_format(df):
 def convert_forecast_to_melbs_format(df):
     """
     Convert forecast dataframe to Melbourne static format.
-    Expected format: {"Date": "YYYY-MM-DD", "Max_temp": int, "Rain": int}
+    Expected format: {"Date": "YYYY-MM-DD", "Max_temp": int, "Rain_low": int, "Rain_high": int}
 
     Args:
         df: DataFrame with XML forecast data (date, air_temperature_maximum, precipitation_range, etc.)
@@ -213,12 +244,14 @@ def convert_forecast_to_melbs_format(df):
     if 'air_temperature_maximum' in df.columns:
         melbs_forecast['Max_temp'] = pd.to_numeric(df['air_temperature_maximum'].str.replace(' Celsius', ''), errors='coerce')
 
-    # Extract rain amount from precipitation_range (e.g., "0 to 3 mm" -> 3)
+    # Extract rain amount from precipitation_range (e.g., "0 to 3 mm" -> low=0, high=3)
     if 'precipitation_range' in df.columns:
-        # Extract the upper bound of the range
-        melbs_forecast['Rain'] = pd.to_numeric(df['precipitation_range'].str.extract(r'to (\d+)')[0], errors='coerce')
+        # Extract both lower and upper bounds
+        melbs_forecast['Rain_low'] = pd.to_numeric(df['precipitation_range'].str.extract(r'(\d+)\s+to')[0], errors='coerce')
+        melbs_forecast['Rain_high'] = pd.to_numeric(df['precipitation_range'].str.extract(r'to\s+(\d+)')[0], errors='coerce')
     else:
-        melbs_forecast['Rain'] = None
+        melbs_forecast['Rain_low'] = None
+        melbs_forecast['Rain_high'] = None
 
     return melbs_forecast
 

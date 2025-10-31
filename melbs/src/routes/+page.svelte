@@ -43,7 +43,12 @@
                 </svg>
                 <span>Recent observations</span>
                 <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
-                    <circle cx="6" cy="6" r="5" fill="#FFFFFF" stroke="black" stroke-width="1" opacity="0.8" />
+                    <defs>
+                        <pattern id="legendForecastHash" patternUnits="userSpaceOnUse" width="3" height="3">
+                            <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="white" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <circle cx="6" cy="6" r="5" fill="url(#legendForecastHash)" stroke="black" stroke-width="1" opacity="0.8" />
                 </svg>
                 <span>Forecasts</span>
                 <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">

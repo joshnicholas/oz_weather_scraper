@@ -202,7 +202,13 @@
             .filter(d => targetDays.some(target => target.dateString === d.dateString))
             .map(d => parseFloat(d.Value));
 
-        return [...historicValues, ...recentValues, ...forecastValues]
+        // Include Rain_low and Rain_high for forecast ranges (for mm unit)
+        const forecastRangeValues = unit === 'mm' ? processedForecast
+            .filter(d => targetDays.some(target => target.dateString === d.dateString))
+            .flatMap(d => [parseFloat(d.Rain_low), parseFloat(d.Rain_high)])
+            : [];
+
+        return [...historicValues, ...recentValues, ...forecastValues, ...forecastRangeValues]
             .filter(v => !isNaN(v) && (logarithmic ? v > 0 : true));
     });
 
@@ -346,6 +352,12 @@
 
 <div class="chart-container" bind:this={chartContainer}>
     <svg width={chartWidth} height={totalHeight} style="background: transparent;">
+        <defs>
+            <!-- Diagonal hash pattern -->
+            <pattern id="diagonalHash" patternUnits="userSpaceOnUse" width="3" height="3">
+                <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="white" stroke-width="1"/>
+            </pattern>
+        </defs>
         <g transform="translate({margin.left}, {margin.top})">
             <!-- Y-axis ticks and labels -->
             {#each [yMin(), yMin() + (yMax-yMin())/4, yMin() + (yMax-yMin())/2, yMin() + (yMax-yMin())*3/4, yMax] as tick, i}
@@ -404,7 +416,29 @@
                 />
             {/each}
 
-            <!-- Forecast data points for 7-day range (white circles, drawn before observations) -->
+            <!-- Rain forecast range rectangles (shown behind forecast circles) -->
+            {#if unit === 'mm'}
+                {#each sevenDayRangeForecast as point}
+                    {#if point.Rain_low !== null && point.Rain_low !== undefined && point.Rain_high !== null && point.Rain_high !== undefined && !isNaN(point.Rain_low) && !isNaN(point.Rain_high)}
+                        {@const x = getXForDate(point.dateString)}
+                        {#if x !== null}
+                            {@const rectWidth = innerWidth / 14}
+                            {@const rectHeight = Math.abs(yScale(point.Rain_low) - yScale(point.Rain_high))}
+                            {@const rectY = Math.min(yScale(point.Rain_low), yScale(point.Rain_high))}
+                            <rect
+                                x={x - rectWidth/2}
+                                y={rectY}
+                                width={rectWidth}
+                                height={rectHeight}
+                                fill="url(#diagonalHash)"
+                                opacity="0.6"
+                            />
+                        {/if}
+                    {/if}
+                {/each}
+            {/if}
+
+            <!-- Forecast data points for 7-day range (circles with diagonal pattern, drawn before observations) -->
             {#each sevenDayRangeForecast as point}
                 {#if !isNaN(parseFloat(point.Value))}
                     {#if getXForDate(point.dateString) !== null}
@@ -413,7 +447,7 @@
                             cx={getXForDate(point.dateString)}
                             cy={yScale(point.Value)}
                             r={containerWidth < 500 ? "5" : "8"}
-                            fill={forecastColour}
+                            fill="url(#diagonalHash)"
                             stroke="black"
                             stroke-width="1"
                             opacity={dayInfo?.isToday ? "0.3" : "0.8"}
