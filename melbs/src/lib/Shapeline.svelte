@@ -134,9 +134,9 @@
                 date,
                 isToday,
                 path: lineGenerator(dataByDate[date]),
-                stroke: isToday ? '#000000' : '#7A9AFA',
+                stroke: isToday ? '#000' : '#7A9AFA',
                 opacity,
-                strokeWidth: 2
+                strokeWidth: isToday ? 2 : 1
             };
         });
     });
@@ -352,17 +352,17 @@
                 </path>
             {/each}
 
-            <!-- Forecast line for today (white) -->
+            <!-- Forecast line for today (black) -->
             {#if forecastPath}
                 <path
                     d={forecastPath}
                     fill="none"
-                    stroke="white"
-                    stroke-width={3}
+                    stroke="black"
+                    stroke-width={2}
                     opacity={0.9}
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-dasharray="4,4"
+                    stroke-dasharray="5,5"
                 >
                     <title>Forecast</title>
                 </path>
@@ -385,6 +385,12 @@
 
             <!-- Latest value label for today -->
             {#if todayLatestPoint}
+                <circle
+                    cx={todayLatestPoint.x}
+                    cy={todayLatestPoint.y}
+                    r="6"
+                    fill="#FA9A7A"
+                />
                 <text
                     x={todayLatestPoint.x}
                     y={todayLatestPoint.y - 15}
@@ -404,7 +410,8 @@
                     y={forecastMaxPoint.y - 15}
                     text-anchor="middle"
                     font-size="0.75em"
-                    fill="white"
+                    fill="#000"
+                    style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"
                 >
                     {forecastMaxPoint.temp.toFixed(1)}°C
                 </text>
