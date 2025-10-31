@@ -131,6 +131,10 @@ def save_data(df, folder_path, dropcol):
             required_cols = ['local_date_time_full[80]', 'air_temp', 'rain_trace[80]', 'wind_spd_kmh', 'rel_hum']
             if all(col in full_df.columns for col in required_cols):
                 # Convert timestamp to datetime and extract date/hour
+                # Convert to numeric, then int, then string to handle .0 suffix and NaN values
+                full_df['local_date_time_full[80]'] = pd.to_numeric(full_df['local_date_time_full[80]'], errors='coerce')
+                full_df = full_df.dropna(subset=['local_date_time_full[80]'])
+                full_df['local_date_time_full[80]'] = full_df['local_date_time_full[80]'].astype(int).astype(str)
                 full_df['datetime'] = pd.to_datetime(full_df['local_date_time_full[80]'], format='%Y%m%d%H%M%S')
                 full_df['Date'] = full_df['datetime'].dt.strftime('%Y-%m-%d')
                 full_df['Hour'] = full_df['datetime'].dt.hour
