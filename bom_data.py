@@ -432,7 +432,10 @@ def fetch_hourly_forecast_api():
             terr = period_data.get('terr', {}).get('surf_land', {})
 
             # Get weather description from icon code
-            icon_code = int(weather.get('icon_code', 0))
+            icon_code = weather.get('icon_code', 0)
+            if icon_code is None:
+                icon_code = 0
+            icon_code = int(icon_code)
             summary = icon_descriptions.get(icon_code, '')
 
             record = {

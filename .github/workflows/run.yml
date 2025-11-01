@@ -35,6 +35,7 @@ jobs:
           if ! git diff --staged --quiet; then
             timestamp=$(date -u)
             git commit -m "Latest data: ${timestamp}"
+            git pull --rebase origin main
             git push
             echo "changes_made=true" >> $GITHUB_OUTPUT
           else
