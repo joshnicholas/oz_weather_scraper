@@ -1946,9 +1946,17 @@
   {
     "Date":"2025-11-01",
     "Hour":15,
-    "Temp":18.6,
+    "Temp":18.4,
     "Rain":0.0,
     "Wind":13.0,
-    "Humidity":67.0
+    "Humidity":70.0
+  },
+  {
+    "Date":"2025-11-01",
+    "Hour":16,
+    "Temp":18.0,
+    "Rain":0.0,
+    "Wind":15.0,
+    "Humidity":70.0
   }
 ]
