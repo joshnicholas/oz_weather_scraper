@@ -170,11 +170,13 @@
 
         // Get the last point (highest hour)
         const lastPoint = todayData[todayData.length - 1];
+        // Use 0.1 for logarithmic scale if rain is 0
+        const rainValue = isLogarithmic && lastPoint.rain === 0 ? 0.1 : lastPoint.rain;
         return {
             hour: lastPoint.hour,
             rain: lastPoint.rain,
             x: xScale(lastPoint.hour),
-            y: yScale(lastPoint.rain)
+            y: yScale(rainValue)
         };
     });
 
@@ -199,11 +201,13 @@
             const lastPoint = dayData[dayData.length - 1];
             const dateObj = new Date(p.date);
             const day = dateObj.getDate();
+            // Use 0.1 for logarithmic scale if rain is 0
+            const rainValue = isLogarithmic && lastPoint.rain === 0 ? 0.1 : lastPoint.rain;
 
             return {
                 date: p.date,
                 x: xScale(lastPoint.hour),
-                y: yScale(lastPoint.rain),
+                y: yScale(rainValue),
                 label: `${day}${getOrdinalSuffix(day)}`,
                 opacity: p.opacity * 0.7 // Slightly more transparent than the line
             };
