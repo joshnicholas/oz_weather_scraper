@@ -1,9 +1,11 @@
 <script>
-    import { scaleLinear } from 'd3-scale';
+    import { scaleLinear, scaleLog } from 'd3-scale';
     import { line } from 'd3-shape';
     import { onMount } from 'svelte';
 
     let { data = [], forecastData = [], containerWidth, headline = '', subtitle = '', chartHeight = 300 } = $props();
+
+    let isLogarithmic = $state(true);
 
     let margin = $derived({
         top: 20,
@@ -33,7 +35,7 @@
         console.log('Today calculated as:', today);
     });
 
-    // Group data by date
+    // Group data by date and make cumulative from midnight
     let dataByDate = $derived.by(() => {
         const grouped = {};
         data.forEach(d => {
@@ -42,13 +44,23 @@
             }
             grouped[d.Date].push({
                 hour: parseInt(d.Hour),
-                temp: parseFloat(d.Temp)
+                rain: parseFloat(d.Rain) || 0
             });
         });
 
-        // Sort each day's data by hour
+        // Sort each day's data by hour and make cumulative
         Object.keys(grouped).forEach(date => {
             grouped[date].sort((a, b) => a.hour - b.hour);
+
+            // Make rain cumulative from midnight
+            let cumulative = 0;
+            grouped[date] = grouped[date].map(point => {
+                cumulative += point.rain;
+                return {
+                    hour: point.hour,
+                    rain: cumulative
+                };
+            });
         });
 
         return grouped;
@@ -63,25 +75,17 @@
         isToday: date === today
     })));
 
-    // Get min and max temperature across all data
-    let minTemp = $derived.by(() => {
-        let min = Infinity;
-        Object.values(dataByDate).forEach(dayData => {
-            dayData.forEach(point => {
-                if (point.temp < min) min = point.temp;
-            });
-        });
-        return min !== Infinity ? min : 0;
-    });
+    // Get min and max rain across all data
+    let minRain = $derived(isLogarithmic ? 0.1 : 0); // Logarithmic needs > 0
 
-    let maxTemp = $derived.by(() => {
+    let maxRain = $derived.by(() => {
         let max = 0;
         Object.values(dataByDate).forEach(dayData => {
             dayData.forEach(point => {
-                if (point.temp > max) max = point.temp;
+                if (point.rain > max) max = point.rain;
             });
         });
-        return max > 0 ? max : 30; // Default to 30 if no data
+        return max > 0 ? max : 10; // Default to 10 if no data
     });
 
     // Scales
@@ -92,16 +96,22 @@
     });
 
     let yScale = $derived.by(() => {
-        return scaleLinear()
-            .domain([minTemp, maxTemp])
-            .range([innerHeight, 0]); // Inverted for SVG coordinates
+        if (isLogarithmic) {
+            return scaleLog()
+                .domain([minRain, maxRain])
+                .range([innerHeight, 0]); // Inverted for SVG coordinates
+        } else {
+            return scaleLinear()
+                .domain([minRain, maxRain])
+                .range([innerHeight, 0]); // Inverted for SVG coordinates
+        }
     });
 
     // Line generator
     let lineGenerator = $derived.by(() => {
         return line()
             .x(d => xScale(d.hour))
-            .y(d => yScale(d.temp));
+            .y(d => yScale(isLogarithmic && d.rain === 0 ? 0.1 : d.rain));
     });
 
     // Generate paths for each date
@@ -143,8 +153,8 @@
 
     // Y-axis ticks
     let yTicks = $derived.by(() => {
-        const min = minTemp;
-        const max = maxTemp;
+        const min = minRain;
+        const max = maxRain;
         const tickCount = 5;
         const step = (max - min) / (tickCount - 1);
         return Array.from({ length: tickCount }, (_, i) => Math.round(min + (i * step)));
@@ -152,32 +162,6 @@
 
     // X-axis ticks (Midnight, 6am, Midday, 6pm, 11pm)
     let xTicks = $derived([0, 6, 12, 18, 23]);
-
-    // Calculate min/max envelope for previous days (not today)
-    let previousDaysEnvelope = $derived.by(() => {
-        const envelope = {};
-
-        // Get data for all days except today
-        Object.entries(dataByDate).forEach(([date, dayData]) => {
-            if (date === today) return; // Skip today
-
-            dayData.forEach(point => {
-                if (!envelope[point.hour]) {
-                    envelope[point.hour] = { min: point.temp, max: point.temp };
-                } else {
-                    if (point.temp < envelope[point.hour].min) envelope[point.hour].min = point.temp;
-                    if (point.temp > envelope[point.hour].max) envelope[point.hour].max = point.temp;
-                }
-            });
-        });
-
-        // Convert to array of points for area path
-        const hours = Object.keys(envelope).map(Number).sort((a, b) => a - b);
-        const topLine = hours.map(hour => ({ hour, temp: envelope[hour].max }));
-        const bottomLine = hours.map(hour => ({ hour, temp: envelope[hour].min })).reverse();
-
-        return [...topLine, ...bottomLine];
-    });
 
     // Get today's latest data point
     let todayLatestPoint = $derived.by(() => {
@@ -188,9 +172,9 @@
         const lastPoint = todayData[todayData.length - 1];
         return {
             hour: lastPoint.hour,
-            temp: lastPoint.temp,
+            rain: lastPoint.rain,
             x: xScale(lastPoint.hour),
-            y: yScale(lastPoint.temp)
+            y: yScale(lastPoint.rain)
         };
     });
 
@@ -219,25 +203,41 @@
             return {
                 date: p.date,
                 x: xScale(lastPoint.hour),
-                y: yScale(lastPoint.temp),
+                y: yScale(lastPoint.rain),
                 label: `${day}${getOrdinalSuffix(day)}`,
                 opacity: p.opacity * 0.7 // Slightly more transparent than the line
             };
         }).filter(l => l !== null);
     });
 
-    // Process forecast data for today
+    // Process forecast data for today - use Rain - 50% and make cumulative from observed
     let todayForecast = $derived.by(() => {
         if (!forecastData || forecastData.length === 0 || !today) return [];
 
+        // Get the latest observed cumulative rain for today
+        const todayData = dataByDate[today];
+        const startingRain = todayData && todayData.length > 0
+            ? todayData[todayData.length - 1].rain
+            : 0;
+
         // Filter forecast data for today only
-        return forecastData
+        const filtered = forecastData
             .filter(d => d.Date === today)
             .map(d => ({
                 hour: parseInt(d.Hour),
-                temp: parseFloat(d.Temperature)
+                rain: parseFloat(d['Rain - 50%']) || 0
             }))
             .sort((a, b) => a.hour - b.hour);
+
+        // Make rain cumulative starting from the last observed value
+        let cumulative = startingRain;
+        return filtered.map(point => {
+            cumulative += point.rain;
+            return {
+                hour: point.hour,
+                rain: cumulative
+            };
+        });
     });
 
     let forecastPath = $derived.by(() => {
@@ -245,35 +245,6 @@
         return lineGenerator(todayForecast);
     });
 
-    // Find max forecast temp and position
-    let forecastMaxPoint = $derived.by(() => {
-        if (todayForecast.length === 0) return null;
-
-        const maxPoint = todayForecast.reduce((max, point) =>
-            point.temp > max.temp ? point : max
-        , todayForecast[0]);
-
-        return {
-            temp: maxPoint.temp,
-            x: xScale(maxPoint.hour),
-            y: yScale(maxPoint.temp)
-        };
-    });
-
-    // Find max observed temp for today
-    let todayObservedMax = $derived.by(() => {
-        if (!today || !dataByDate[today]) return -Infinity;
-
-        const todayData = dataByDate[today];
-        if (todayData.length === 0) return -Infinity;
-
-        return Math.max(...todayData.map(d => d.temp));
-    });
-
-    // Show forecast max label only if it's higher than observed max
-    let showForecastMaxLabel = $derived(() => {
-        return forecastMaxPoint && forecastMaxPoint.temp > todayObservedMax;
-    });
 </script>
 
 <div class="chart-container">
@@ -281,13 +252,12 @@
     {#if subtitle}
         <p class="chart-subtitle">{subtitle}</p>
     {/if}
+    <div class="chart-header">
+        <button class="scale-toggle" onclick={() => isLogarithmic = !isLogarithmic}>
+            {isLogarithmic ? 'Logarithmic' : 'Linear'}
+        </button>
+    </div>
     <svg width={chartWidth} height={totalHeight}>
-        <defs>
-            <!-- Diagonal stripe pattern -->
-            <pattern id="diagonalStripes" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="4" stroke="#888888" stroke-width="2" />
-            </pattern>
-        </defs>
         <g transform="translate({margin.left}, {margin.top})">
             <!-- Y-axis ticks and labels -->
             {#each yTicks as tick}
@@ -401,21 +371,7 @@
                     fill="#000"
                     style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"
                 >
-                    {todayLatestPoint.temp.toFixed(1)}°C
-                </text>
-            {/if}
-
-            <!-- Forecast max label (only if higher than observed) -->
-            {#if showForecastMaxLabel && forecastMaxPoint}
-                <text
-                    x={forecastMaxPoint.x}
-                    y={forecastMaxPoint.y - 15}
-                    text-anchor="middle"
-                    font-size="0.75em"
-                    fill="#000"
-                    style="filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.8));"
-                >
-                    {forecastMaxPoint.temp.toFixed(1)}°C
+                    {todayLatestPoint.rain.toFixed(1)}mm
                 </text>
             {/if}
         </g>
@@ -453,5 +409,36 @@
 
     text {
         font-family: Arial, sans-serif;
+    }
+
+    .chart-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    .scale-toggle {
+        font-size: 0.5em;
+        color: #000;
+        background: transparent;
+        border: 1px solid #000;
+        border-radius: 4px;
+        padding: 3px 10px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .scale-toggle:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .scale-toggle:focus {
+        outline: none;
+    }
+
+    .scale-toggle:active {
+        outline: none;
     }
 </style>

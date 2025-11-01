@@ -2,6 +2,7 @@
     import Chart from '$lib/Chart.svelte';
     import ClimateChart from '$lib/ClimateChart.svelte';
     import Shapeline from '$lib/Shapeline.svelte';
+    import Rainline from '$lib/Rainline.svelte';
 
     let { data } = $props();
     let containerWidth = $state(0);
@@ -60,7 +61,7 @@
 
 
             <div class="chart-section">
-                <h2>Hourly temps</h2>
+                <h2>Temperature</h2>
                     <Shapeline
                         data={data.last30}
                         forecastData={data.hourlyForecasts}
@@ -70,6 +71,7 @@
                         chartHeight={150}
                     />
             </div>
+
 
             <hr class="chart-divider" />
 
@@ -87,7 +89,42 @@
                 />
             </div>
     
+            <hr class="chart-divider" />
 
+            <div class="chart-section">
+                <h2>Rain</h2>
+                    <Rainline
+                        data={data.last30}
+                        forecastData={data.hourlyForecasts}
+                        {containerWidth}
+                        headline=""
+                        subtitle=""
+                        chartHeight={150}
+                    />
+            </div>
+
+            <hr class="chart-divider" />
+
+            <div class="chart-section">
+                <h2>Total rainfall</h2>
+                <div class="chart-header">
+                    <button class="scale-toggle" onclick={() => isLogarithmic = !isLogarithmic}>
+                        {isLogarithmic ? 'Logarithmic' : 'Linear'}
+                    </button>
+                </div>
+                <Chart
+                    historicData={data.historicRain}
+                    recentData={data.observations.map(d => ({ ...d, Value: d.Rain }))}
+                    forecastData={data.forecasts.map(d => ({ ...d, Value: d.Rain }))}
+                    climateData={data.climate}
+                    unit="mm"
+                    {containerWidth}
+                    unitColour = {'#7A9AFA'}
+                    logarithmic={isLogarithmic}
+                    yMinDefault={isLogarithmic ? 0.1 : 0}
+                    chartHeight={175}
+                    leftMargin={30}
+                />
 
             <hr class="chart-divider" />
 
@@ -127,28 +164,7 @@
             </div>
 
 
-            <hr class="chart-divider" />
 
-            <div class="chart-section">
-                <h2>Rainfall</h2>
-                <div class="chart-header">
-                    <button class="scale-toggle" onclick={() => isLogarithmic = !isLogarithmic}>
-                        {isLogarithmic ? 'Logarithmic' : 'Linear'}
-                    </button>
-                </div>
-                <Chart
-                    historicData={data.historicRain}
-                    recentData={data.observations.map(d => ({ ...d, Value: d.Rain }))}
-                    forecastData={data.forecasts.map(d => ({ ...d, Value: d.Rain }))}
-                    climateData={data.climate}
-                    unit="mm"
-                    {containerWidth}
-                    unitColour = {'#7A9AFA'}
-                    logarithmic={isLogarithmic}
-                    yMinDefault={isLogarithmic ? 0.1 : 0}
-                    chartHeight={175}
-                    leftMargin={30}
-                />
             </div>
             {:else}
             <div class="chart-section">
