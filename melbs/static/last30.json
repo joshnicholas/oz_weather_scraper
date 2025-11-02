@@ -2178,9 +2178,17 @@
   {
     "Date":"2025-11-02",
     "Hour":20,
-    "Temp":27.0,
+    "Temp":26.3,
     "Rain":0.0,
     "Wind":0.0,
-    "Humidity":34.0
+    "Humidity":36.0
+  },
+  {
+    "Date":"2025-11-02",
+    "Hour":21,
+    "Temp":24.7,
+    "Rain":0.0,
+    "Wind":13.0,
+    "Humidity":45.0
   }
 ]
