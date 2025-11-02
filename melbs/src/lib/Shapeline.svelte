@@ -281,7 +281,7 @@
     let showForecastMaxLabel = $derived.by(() => {
         // First check: must have forecast max point and it must be higher than observed
         if (!forecastMaxPoint) return false;
-        if (!todayObservedMax || forecastMaxPoint.temp <= todayObservedMax) return false;
+        // if (!todayObservedMax || forecastMaxPoint.temp <= todayObservedMax) return false;
 
         // Must have hour data
         if (typeof forecastMaxPoint.hour !== 'number') return false;

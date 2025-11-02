@@ -3,6 +3,7 @@
     import ClimateChart from '$lib/ClimateChart.svelte';
     import Shapeline from '$lib/Shapeline.svelte';
     import Rainline from '$lib/Rainline.svelte';
+    import RainBars from '$lib/RainBars.svelte';
 
     let { data } = $props();
     let containerWidth = $state(0);
@@ -42,7 +43,7 @@
                 <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
                     <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" opacity="0.8" />
                 </svg>
-                <span>Recent observations</span>
+                <span>Observed</span>
                 <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
                     <defs>
                         <pattern id="legendForecastHash" patternUnits="userSpaceOnUse" width="3" height="3">
@@ -72,6 +73,19 @@
                     />
             </div>
 
+            <hr class="chart-divider" />
+
+            <div class="chart-section">
+                <h2>Hourly rainfall</h2>
+                    <RainBars
+                        data={data.last30}
+                        forecastData={data.hourlyForecasts}
+                        {containerWidth}
+                        headline=""
+                        subtitle=""
+                        chartHeight={150}
+                    />
+            </div>
 
             <hr class="chart-divider" />
 
@@ -89,7 +103,7 @@
                 />
             </div>
     
-            <hr class="chart-divider" />
+            <!-- <hr class="chart-divider" />
 
             <div class="chart-section">
                 <h2>Rain</h2>
@@ -101,7 +115,9 @@
                         subtitle=""
                         chartHeight={150}
                     />
-            </div>
+            </div> -->
+
+
 
             <hr class="chart-divider" />
 
