@@ -2,15 +2,15 @@
   {
     "Date": "2025-11-02",
     "Hour": 22,
-    "Summary": "Cloudy",
+    "Summary": "",
     "Temperature": 22,
     "Feels like": 19,
-    "Rain - 50%": 0,
-    "Rain - 25%": 0,
-    "Rain - 10%": 0,
+    "Rain - 50%": NaN,
+    "Rain - 25%": NaN,
+    "Rain - 10%": NaN,
     "Humidity": 61,
-    "UV Index": 0,
-    "Cloud cover": 76
+    "UV Index": NaN,
+    "Cloud cover": NaN
   },
   {
     "Date": "2025-11-02",
@@ -18,11 +18,11 @@
     "Summary": "Light shower",
     "Temperature": 20,
     "Feels like": 18,
-    "Rain - 50%": 0,
-    "Rain - 25%": 0,
-    "Rain - 10%": 0,
+    "Rain - 50%": 0.0,
+    "Rain - 25%": 0.0,
+    "Rain - 10%": 0.0,
     "Humidity": 68,
-    "UV Index": 0,
-    "Cloud cover": 82
+    "UV Index": 0.0,
+    "Cloud cover": 82.0
   }
 ]
