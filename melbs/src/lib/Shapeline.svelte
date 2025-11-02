@@ -230,9 +230,15 @@
     let todayForecast = $derived.by(() => {
         if (!forecastData || forecastData.length === 0 || !today) return [];
 
-        // Filter forecast data for today only
+        // Get the last observed hour for today
+        const todayData = dataByDate[today];
+        const lastObservedHour = todayData && todayData.length > 0
+            ? todayData[todayData.length - 1].hour
+            : -1;
+
+        // Filter forecast data for today only, starting at last observed hour
         return forecastData
-            .filter(d => d.Date === today)
+            .filter(d => d.Date === today && parseInt(d.Hour) >= lastObservedHour)
             .map(d => ({
                 hour: parseInt(d.Hour),
                 temp: parseFloat(d.Temperature)
@@ -255,6 +261,7 @@
 
         return {
             temp: maxPoint.temp,
+            hour: maxPoint.hour,
             x: xScale(maxPoint.hour),
             y: yScale(maxPoint.temp)
         };
@@ -270,9 +277,31 @@
         return Math.max(...todayData.map(d => d.temp));
     });
 
-    // Show forecast max label only if it's higher than observed max
-    let showForecastMaxLabel = $derived(() => {
-        return forecastMaxPoint && forecastMaxPoint.temp > todayObservedMax;
+    // Show forecast max label only if it's higher than observed max and before 3-hour window
+    let showForecastMaxLabel = $derived.by(() => {
+        // First check: must have forecast max point and it must be higher than observed
+        if (!forecastMaxPoint) return false;
+        if (!todayObservedMax || forecastMaxPoint.temp <= todayObservedMax) return false;
+
+        // Must have hour data
+        if (typeof forecastMaxPoint.hour !== 'number') return false;
+
+        // Get current hour in Melbourne time
+        const now = new Date();
+        const formatter = new Intl.DateTimeFormat('en-AU', {
+            timeZone: 'Australia/Melbourne',
+            hour: 'numeric',
+            hour12: false
+        });
+        const currentHour = parseInt(formatter.format(now));
+
+        // Calculate cutoff: 3 hours before the forecast max hour
+        const cutoffHour = forecastMaxPoint.hour - 3;
+
+        // Show label only if current hour is before the cutoff
+        // Example: if max is at 14:00 (2pm), cutoff is 11:00 (11am)
+        // Show from midnight (0) to 10:59 (hour 10), hide from 11:00 onwards
+        return currentHour < cutoffHour;
     });
 </script>
 
@@ -405,7 +434,7 @@
                 </text>
             {/if}
 
-            <!-- Forecast max label (only if higher than observed) -->
+            <!-- Forecast max label (only if higher than observed and before cutoff) -->
             {#if showForecastMaxLabel && forecastMaxPoint}
                 <text
                     x={forecastMaxPoint.x}
