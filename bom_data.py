@@ -160,6 +160,34 @@ def save_data(df, folder_path, dropcol):
                 # Sort by Date and Hour
                 last30 = last30.sort_values(['Date', 'Hour'])
 
+                # Calculate hourly rain difference (rain_trace[80] is cumulative, resets at 9am)
+                last30['Rain_diff'] = 0.0
+                for date in last30['Date'].unique():
+                    date_mask = last30['Date'] == date
+                    date_data = last30[date_mask].copy()
+
+                    # Calculate differences
+                    rain_values = date_data['Rain'].values
+                    hourly_rain = []
+
+                    for i in range(len(rain_values)):
+                        if i == 0:
+                            # First hour of the day - use value as-is
+                            hourly_rain.append(rain_values[i])
+                        else:
+                            diff = rain_values[i] - rain_values[i-1]
+                            # If diff is negative, we hit the 9am reset, so use current value
+                            if diff < 0:
+                                hourly_rain.append(rain_values[i])
+                            else:
+                                hourly_rain.append(diff)
+
+                    last30.loc[date_mask, 'Rain_diff'] = hourly_rain
+
+                # Replace Rain column with the hourly differences
+                last30['Rain'] = last30['Rain_diff']
+                last30 = last30.drop(columns=['Rain_diff'])
+
                 # Save to melbs/static/last30.json
                 os.makedirs('melbs/static', exist_ok=True)
                 last30.to_json('melbs/static/last30.json', orient='records', indent=2)
