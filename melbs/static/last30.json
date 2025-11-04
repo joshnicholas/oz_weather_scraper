@@ -2554,9 +2554,17 @@
   {
     "Date":"2025-11-04",
     "Hour":19,
-    "Temp":14.7,
+    "Temp":14.5,
     "Rain":0.0,
-    "Wind":13.0,
-    "Humidity":50.0
+    "Wind":11.0,
+    "Humidity":51.0
+  },
+  {
+    "Date":"2025-11-04",
+    "Hour":20,
+    "Temp":14.1,
+    "Rain":0.0,
+    "Wind":15.0,
+    "Humidity":54.0
   }
 ]
