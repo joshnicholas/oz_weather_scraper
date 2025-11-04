@@ -2586,9 +2586,49 @@
   {
     "Date":"2025-11-04",
     "Hour":23,
-    "Temp":11.2,
-    "Rain":0.2,
+    "Temp":11.1,
+    "Rain":0.4,
     "Wind":11.0,
-    "Humidity":80.0
+    "Humidity":83.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":0,
+    "Temp":11.6,
+    "Rain":0.6,
+    "Wind":13.0,
+    "Humidity":72.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":1,
+    "Temp":11.3,
+    "Rain":0.0,
+    "Wind":11.0,
+    "Humidity":70.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":2,
+    "Temp":10.7,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":75.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":3,
+    "Temp":10.6,
+    "Rain":0.2,
+    "Wind":2.0,
+    "Humidity":79.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":4,
+    "Temp":11.3,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":73.0
   }
 ]
