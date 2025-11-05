@@ -2826,9 +2826,17 @@
   {
     "Date":"2025-11-06",
     "Hour":5,
-    "Temp":10.0,
+    "Temp":10.5,
     "Rain":0.0,
-    "Wind":0.0,
-    "Humidity":97.0
+    "Wind":4.0,
+    "Humidity":91.0
+  },
+  {
+    "Date":"2025-11-06",
+    "Hour":6,
+    "Temp":10.6,
+    "Rain":0.0,
+    "Wind":6.0,
+    "Humidity":84.0
   }
 ]
