@@ -2714,9 +2714,65 @@
   {
     "Date":"2025-11-05",
     "Hour":15,
-    "Temp":19.5,
+    "Temp":19.2,
     "Rain":0.0,
-    "Wind":19.0,
+    "Wind":17.0,
     "Humidity":41.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":16,
+    "Temp":19.0,
+    "Rain":0.0,
+    "Wind":17.0,
+    "Humidity":39.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":17,
+    "Temp":19.2,
+    "Rain":0.0,
+    "Wind":13.0,
+    "Humidity":39.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":18,
+    "Temp":17.0,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":63.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":19,
+    "Temp":16.3,
+    "Rain":0.0,
+    "Wind":7.0,
+    "Humidity":66.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":20,
+    "Temp":15.4,
+    "Rain":0.0,
+    "Wind":7.0,
+    "Humidity":69.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":21,
+    "Temp":14.7,
+    "Rain":0.0,
+    "Wind":7.0,
+    "Humidity":67.0
+  },
+  {
+    "Date":"2025-11-05",
+    "Hour":22,
+    "Temp":14.3,
+    "Rain":0.0,
+    "Wind":2.0,
+    "Humidity":67.0
   }
 ]
