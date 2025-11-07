@@ -3242,9 +3242,17 @@
   {
     "Date":"2025-11-08",
     "Hour":9,
-    "Temp":11.8,
-    "Rain":0.4,
-    "Wind":13.0,
-    "Humidity":93.0
+    "Temp":11.5,
+    "Rain":0.8,
+    "Wind":15.0,
+    "Humidity":98.0
+  },
+  {
+    "Date":"2025-11-08",
+    "Hour":10,
+    "Temp":11.6,
+    "Rain":1.0,
+    "Wind":15.0,
+    "Humidity":100.0
   }
 ]
