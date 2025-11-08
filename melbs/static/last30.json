@@ -3330,9 +3330,17 @@
   {
     "Date":"2025-11-08",
     "Hour":20,
-    "Temp":10.7,
-    "Rain":0.2,
+    "Temp":11.3,
+    "Rain":0.4,
+    "Wind":17.0,
+    "Humidity":57.0
+  },
+  {
+    "Date":"2025-11-08",
+    "Hour":21,
+    "Temp":11.2,
+    "Rain":0.0,
     "Wind":11.0,
-    "Humidity":80.0
+    "Humidity":70.0
   }
 ]
