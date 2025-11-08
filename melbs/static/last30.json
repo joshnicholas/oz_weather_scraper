@@ -3347,8 +3347,16 @@
     "Date":"2025-11-08",
     "Hour":22,
     "Temp":10.3,
-    "Rain":0.2,
-    "Wind":7.0,
-    "Humidity":79.0
+    "Rain":0.4,
+    "Wind":6.0,
+    "Humidity":83.0
+  },
+  {
+    "Date":"2025-11-08",
+    "Hour":23,
+    "Temp":10.2,
+    "Rain":0.0,
+    "Wind":4.0,
+    "Humidity":89.0
   }
 ]
