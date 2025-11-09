@@ -3594,9 +3594,17 @@
   {
     "Date":"2025-11-10",
     "Hour":5,
-    "Temp":11.2,
+    "Temp":11.3,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":74.0
+  },
+  {
+    "Date":"2025-11-10",
+    "Hour":6,
+    "Temp":11.5,
     "Rain":0.0,
     "Wind":6.0,
-    "Humidity":76.0
+    "Humidity":72.0
   }
 ]
