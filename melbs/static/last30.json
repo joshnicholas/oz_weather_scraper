@@ -3810,9 +3810,17 @@
   {
     "Date":"2025-11-11",
     "Hour":8,
-    "Temp":8.4,
+    "Temp":8.7,
     "Rain":0.6,
-    "Wind":7.0,
-    "Humidity":91.0
+    "Wind":9.0,
+    "Humidity":88.0
+  },
+  {
+    "Date":"2025-11-11",
+    "Hour":9,
+    "Temp":9.2,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":85.0
   }
 ]
