@@ -3802,8 +3802,16 @@
   {
     "Date":"2025-11-11",
     "Hour":7,
-    "Temp":8.2,
-    "Rain":1.2,
+    "Temp":8.3,
+    "Rain":2.4,
+    "Wind":7.0,
+    "Humidity":91.0
+  },
+  {
+    "Date":"2025-11-11",
+    "Hour":8,
+    "Temp":8.4,
+    "Rain":0.6,
     "Wind":7.0,
     "Humidity":91.0
   }
