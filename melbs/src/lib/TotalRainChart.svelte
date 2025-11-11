@@ -1,22 +1,19 @@
 <script>
-    import { scaleTime, scaleLinear } from 'd3-scale';
-    import { interpolateRgb } from 'd3-interpolate';
-    import { forceSimulation, forceX, forceY, forceCollide } from 'd3-force';
 
-    let { historicData = [], recentData = [], forecastData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', forecastColour = '#FFFFFF', logarithmic = false, yMinDefault = null, subtitle = '', chartHeight = 200, leftMargin = 25 } = $props();
+    let { recentData = [], forecastData = [], climateData = [], unit = '', containerWidth, unitColour = '#7A9AFA', recentColour = '#FA9A7A', forecastColour = '#FFFFFF', yMinDefault = null, subtitle = '', chartHeight = 200, leftMargin = 25 } = $props();
 
     let chartContainer;
 
     let margin = $derived({
         top: 20,
-        right: containerWidth < 500 ? 0 : 10,
+        right: containerWidth < 500 ? 0 : 5,
         bottom: containerWidth < 500 ? 35 : 50,
         left: containerWidth < 500 ? leftMargin : leftMargin
     });
 
     let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
 
-    let chartWidth = $derived(containerWidth - margin.right)
+    let chartWidth = $derived(containerWidth - margin.right - margin.left)
 
     // Get current month name
     let currentMonthName = $derived(() => {
@@ -96,18 +93,6 @@
     });
 
     // Process data to add date information
-    let processedHistoric = $derived(historicData.map(d => {
-        const date = new Date(d.Date);
-        return {
-            ...d,
-            date: date,
-            dayNumber: date.getDate(),
-            month: date.getMonth(),
-            year: date.getFullYear(),
-            dateString: d.Date
-        };
-    }));
-
     let processedRecent = $derived(recentData.map(d => {
         const date = new Date(d.Date);
         return {
@@ -132,47 +117,12 @@
         };
     }));
 
-    // Filter historic data for the same day-of-month AND month values as the 7-day range
-    let matchingDaysHistoric = $derived(() => {
-        const targetDays = sevenDayRange().map(day => ({
-            dayNumber: day.dayNumber,
-            month: day.date.getMonth()
-        }));
-        return processedHistoric.filter(d =>
-            targetDays.some(target =>
-                target.dayNumber === d.dayNumber && target.month === d.month
-            )
-        );
-    });
-
-    // Color scale based on date
-    let allDates = $derived(matchingDaysHistoric().map(d => d.date));
-
-    let timeScale = $derived(() => {
-        if (allDates.length === 0) return () => 100;
-        const extent = [Math.min(...allDates.map(d => d.getTime())), Math.max(...allDates.map(d => d.getTime()))];
-        return scaleTime().domain(extent).range([0, 100]);
-    });
-
-    let colourScale = $derived(() => {
-        return scaleLinear()
-            .domain([0, 100])
-            .range(['#FADA7A', unitColour])
-            .interpolate(interpolateRgb);
-    });
 
     // Scales and positioning functions
     let innerWidth = $derived(chartWidth - margin.left - margin.right);
     let innerHeight = $derived(chartHeight);
 
     const xScale = (dayIndex) => (dayIndex * innerWidth) / 7 + innerWidth / 14;
-
-    // Function to get x position for historic data (based on matching day numbers)
-    const getXForHistoricDay = (dayNumber) => {
-        const targetDayNumbers = sevenDayRange().map(day => day.dayNumber);
-        const dayIndex = targetDayNumbers.indexOf(dayNumber);
-        return dayIndex >= 0 ? xScale(dayIndex) : null;
-    };
 
     // Function to get x position for a specific date
     const getXForDate = (dateString) => {
@@ -188,12 +138,6 @@
             dateString: day.dateString
         }));
 
-        const historicValues = processedHistoric
-            .filter(d => targetDays.some(target =>
-                target.dayNumber === d.dayNumber && target.month === d.month
-            ))
-            .map(d => parseFloat(d.Value));
-
         const recentValues = processedRecent
             .filter(d => targetDays.some(target => target.dateString === d.dateString))
             .map(d => parseFloat(d.Value));
@@ -208,22 +152,18 @@
             .flatMap(d => [parseFloat(d.Rain_low), parseFloat(d.Rain_high)])
             : [];
 
-        return [...historicValues, ...recentValues, ...forecastValues, ...forecastRangeValues]
-            .filter(v => !isNaN(v) && (logarithmic ? v > 0 : true));
+        return [...recentValues, ...forecastValues, ...forecastRangeValues]
+            .filter(v => !isNaN(v));
     });
 
     let yMin = $derived(() => {
         if (yMinDefault !== null) return yMinDefault;
 
-        if (displayedValues().length === 0) return logarithmic ? 0.1 : 0;
+        if (displayedValues().length === 0) return 0;
         const minValue = Math.min(...displayedValues());
 
-        if (logarithmic) {
-            return Math.max(0.1, minValue * 0.5);
-        }
-
         if (unit === 'mm') {
-            // For rainfall, ensure minimum is at least a bit below the lowest value to accommodate beeswarm
+            // For rainfall, ensure minimum is at least a bit below the lowest value
             return Math.max(0, minValue - (Math.max(...displayedValues()) * 0.05));
         }
         return minValue;
@@ -232,51 +172,8 @@
 
     const yScale = (value) => {
         const v = parseFloat(value);
-        if (logarithmic) {
-            const logMin = Math.log10(yMin());
-            const logMax = Math.log10(yMax);
-            const logValue = Math.log10(Math.max(0.1, v));
-            return innerHeight - ((logValue - logMin) / (logMax - logMin) * innerHeight);
-        }
         return innerHeight - ((v - yMin()) / (yMax - yMin()) * innerHeight);
     };
-
-    // Beeswarm simulation
-    let beeswarmNodes = $derived.by(() => {
-        const nodes = matchingDaysHistoric()
-            .filter(point => !isNaN(parseFloat(point.Value)))
-            .map(point => ({
-                ...point,
-                targetX: getXForHistoricDay(point.dayNumber),
-                targetY: yScale(point.Value),
-                x: getXForHistoricDay(point.dayNumber),
-                y: yScale(point.Value)
-            }))
-            .filter(node => node.targetX !== null);
-
-        if (nodes.length === 0) {
-            return [];
-        }
-
-        const collisionRadius = containerWidth < 500 ? 1.8 : 3.5;
-        const simulation = forceSimulation(nodes)
-            .force('x', forceX(d => d.targetX).strength(1))
-            .force('y', forceY(d => d.targetY).strength(1))
-            .force('collide', forceCollide(collisionRadius))
-            .stop();
-
-        // Reduce iterations for faster rendering (60 is usually sufficient)
-        for (let i = 0; i < 60; i++) {
-            simulation.tick();
-        }
-
-        // Constrain nodes to not go below the x-axis
-        nodes.forEach(node => {
-            node.y = Math.min(node.y, innerHeight - 2);
-        });
-
-        return nodes;
-    });
 
     // Extract monthly average from climate data
     let monthlyAverage = $derived(() => {
@@ -354,22 +251,18 @@
     <div style="text-align: center;">
         <div class="legend">
             <svg width="12" height="12" style="vertical-align: middle;">
-                <circle cx="6" cy="6" r="4" fill="#7A9AFA" opacity="0.8" />
-            </svg>
-            <span>Historic</span>
-            <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
-                <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" opacity="0.8" />
+                <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" />
             </svg>
             <span>Observed</span>
             <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
                 <defs>
-                    <pattern id="legendForecastHashChart" patternUnits="userSpaceOnUse" width="3" height="3">
+                    <pattern id="legendSquareHash" patternUnits="userSpaceOnUse" width="3" height="3">
                         <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="white" stroke-width="1"/>
                     </pattern>
                 </defs>
-                <circle cx="6" cy="6" r="5" fill="url(#legendForecastHashChart)" stroke="black" stroke-width="1" opacity="0.8" />
+                <rect width="12" height="12" fill="url(#legendSquareHash)" stroke="black" stroke-width="1" />
             </svg>
-            <span>Forecasts</span>
+            <span>Forecast</span>
         </div>
     </div>
     <svg width={chartWidth} height={totalHeight} style="background: transparent;">
@@ -426,17 +319,6 @@
                 </text>
             {/if}
 
-            <!-- Historic data points (beeswarm) -->
-            {#each beeswarmNodes as node}
-                <circle
-                    cx={node.x}
-                    cy={node.y}
-                    r={containerWidth < 500 ? "2" : "4"}
-                    fill={colourScale()(timeScale()(node.date))}
-                    opacity={0.8}
-                />
-            {/each}
-
             <!-- Rain forecast range rectangles (shown behind forecast circles) -->
             {#if unit === 'mm'}
                 {#each sevenDayRangeForecast as point}
@@ -461,11 +343,13 @@
 
             <!-- Forecast data points for 7-day range (circles with diagonal pattern, drawn before observations) -->
             {#each sevenDayRangeForecast as point}
-                {#if !isNaN(parseFloat(point.Value))}
-                    {#if getXForDate(point.dateString) !== null}
+                {#if getXForDate(point.dateString) !== null}
+                    {@const x = getXForDate(point.dateString)}
+                    {@const lineWidth = innerWidth / 14}
+                    {#if !isNaN(parseFloat(point.Value)) && parseFloat(point.Value) > 0}
                         {@const dayInfo = sevenDayRange().find(d => d.dateString === point.dateString)}
                         <circle
-                            cx={getXForDate(point.dateString)}
+                            cx={x}
                             cy={yScale(point.Value)}
                             r={containerWidth < 500 ? "5" : "8"}
                             fill="url(#diagonalHash)"
@@ -478,6 +362,17 @@
                             ontouchstart={(e) => showTooltip(e.touches[0], point)}
                             ontouchend={hideTooltip}
                         />
+                    {:else}
+                        <line
+                            x1={x - lineWidth}
+                            y1={innerHeight}
+                            x2={x + lineWidth}
+                            y2={innerHeight}
+                            stroke="#000"
+                            stroke-width="1"
+                        >
+                            <title>Forecast: 0mm on {point.Date}</title>
+                        </line>
                     {/if}
                 {/if}
             {/each}

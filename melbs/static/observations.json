@@ -4,27 +4,31 @@
     "Temp":11.3,
     "Rain":13.0,
     "Wind":17.0,
-    "Humidity":76.3636363636
+    "Humidity":76.6666666667,
+    "Cloud":-9999.0
   },
   {
     "Date":"2025-11-09",
     "Temp":15.5,
     "Rain":16.2,
     "Wind":19.0,
-    "Humidity":78.0
+    "Humidity":78.0,
+    "Cloud":-9999.0
   },
   {
     "Date":"2025-11-10",
     "Temp":18.1,
     "Rain":3.2,
     "Wind":13.0,
-    "Humidity":72.86
+    "Humidity":72.86,
+    "Cloud":-9999.0
   },
   {
     "Date":"2025-11-11",
     "Temp":13.3,
     "Rain":16.2,
     "Wind":19.0,
-    "Humidity":79.8604651163
+    "Humidity":78.7111111111,
+    "Cloud":-9999.0
   }
 ]

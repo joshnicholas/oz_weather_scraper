@@ -5,7 +5,7 @@
 
     let margin = $derived({
         top: 20,
-        right: containerWidth < 500 ? 25 : 10,
+        right: containerWidth < 500 ? 5 : 5,
         bottom: containerWidth < 500 ? 35 : 50,
         left: containerWidth < 500 ? leftMargin : leftMargin
     });
@@ -18,7 +18,7 @@
     let tooltipY = $state(0);
     let tooltipContent = $state('');
 
-    let chartWidth = $derived(containerWidth - margin.right - margin.left);
+    let chartWidth = $derived(containerWidth - margin.right );
     let innerWidth = $derived(chartWidth - margin.left - margin.right);
     let innerHeight = $derived(chartHeight);
 

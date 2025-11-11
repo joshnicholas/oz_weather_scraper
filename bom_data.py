@@ -65,6 +65,10 @@ def convert_to_legacy_format(df):
     # Rainfall
     converted['Rainfall since 9 am (mm)'] = df['rain_trace[80]']
 
+    # Cloud data
+    converted['Cloud'] = df['cloud[80]']
+    converted['Cloud Oktas'] = df['cloud_oktas']
+
     # Date formatting: convert from "20251025093000" to "2025-10-25"
     converted['Date'] = pd.to_datetime(df['local_date_time_full[80]'], format='%Y%m%d%H%M%S').dt.strftime('%Y-%m-%d')
 
@@ -199,7 +203,7 @@ def dumper(path, name, frame):
 def convert_observations_to_melbs_format(df):
     """
     Convert observations dataframe to Melbourne static format.
-    Expected format: {"Date": "YYYY-MM-DD", "Temp": float, "Rain": float, "Wind": float, "Humidity": float}
+    Expected format: {"Date": "YYYY-MM-DD", "Temp": float, "Rain": float, "Wind": float, "Humidity": float, "Cloud": float}
 
     Args:
         df: DataFrame with legacy format columns (Time (AEDT), Temp (°C), etc.)
@@ -244,18 +248,22 @@ def convert_observations_to_melbs_format(df):
         max_wind = group['Wind Speed (km/h) (knots)'].str.extract(r'(\d+)').astype(float).max()[0] if group['Wind Speed (km/h) (knots)'].notna().any() else None
         avg_humidity = group['Humidity(%)'].mean()
 
+        # Cloud coverage (average oktas for the day)
+        avg_cloud = group['Cloud Oktas'].mean() if 'Cloud Oktas' in group.columns and group['Cloud Oktas'].notna().any() else None
+
         results.append({
             'Date': date,
             'Temp': max_temp,
             'Rain': total_rain,
             'Wind': max_wind,
-            'Humidity': avg_humidity
+            'Humidity': avg_humidity,
+            'Cloud': avg_cloud
         })
 
     daily_summary = pd.DataFrame(results)
 
     # Drop rows with all null values for the weather data
-    daily_summary = daily_summary.dropna(subset=['Temp', 'Rain', 'Wind', 'Humidity'], how='all')
+    daily_summary = daily_summary.dropna(subset=['Temp', 'Rain', 'Wind', 'Humidity', 'Cloud'], how='all')
 
     return daily_summary
 

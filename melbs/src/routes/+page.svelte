@@ -1,5 +1,6 @@
 <script>
     import Chart from '$lib/Chart.svelte';
+    import TotalRainChart from '$lib/TotalRainChart.svelte';
     import ClimateChart from '$lib/ClimateChart.svelte';
     import Shapeline from '$lib/Shapeline.svelte';
     import Rainline from '$lib/Rainline.svelte';
@@ -7,7 +8,12 @@
 
     let { data } = $props();
     let containerWidth = $state(0);
-    let isLogarithmic = $state(true);
+    let tempWidth = $state(0);
+    let hourlyRainWidth = $state(0);
+    let maxTempWidth = $state(0);
+    let totalRainWidth = $state(0);
+    let humidityWidth = $state(0);
+    let windWidth = $state(0);
 
     // Get latest observation date and format it
     let latestUpdate = $derived(() => {
@@ -35,153 +41,114 @@
                     &nbsp;
                 {/if}
             </p>
-            <div class="legend">
-                <svg width="12" height="12" style="vertical-align: middle;">
-                    <circle cx="6" cy="6" r="4" fill="#7A9AFA" opacity="0.8" />
-                </svg>
-                <span>Historic data</span>
-                <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
-                    <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" opacity="0.8" />
-                </svg>
-                <span>Observed</span>
-                <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
-                    <defs>
-                        <pattern id="legendForecastHash" patternUnits="userSpaceOnUse" width="3" height="3">
-                            <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="white" stroke-width="1"/>
-                        </pattern>
-                    </defs>
-                    <circle cx="6" cy="6" r="5" fill="url(#legendForecastHash)" stroke="black" stroke-width="1" opacity="0.8" />
-                </svg>
-                <span>Forecasts</span>
-            </div>
         </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#hourly">Hourly</a></li>
+                <li><a href="#weekly">Weekly</a></li>
+            </ul>
+        </nav>
 
         <div class="charts">
             {#if containerWidth > 0}
-            <div class="chart-section">
 
-
-            <div class="chart-section">
-                <h2>Temperature</h2>
+            <section id="hourly" class="chart-group">
+                <h2 class="section-header">Hourly</h2>
+                <div class="chart-section" bind:clientWidth={tempWidth}>
+                    <h2>Temperature</h2>
                     <Shapeline
                         data={data.last30}
                         forecastData={data.hourlyForecasts}
-                        {containerWidth}
+                        containerWidth={tempWidth}
                         headline=""
                         subtitle=""
                         chartHeight={150}
                     />
-            </div>
+                </div>
 
-            <hr class="chart-divider" />
-
-            <div class="chart-section">
-                <h2>Hourly rainfall</h2>
+                <div class="chart-section" bind:clientWidth={hourlyRainWidth}>
+                    <h2>Hourly rainfall</h2>
                     <RainBars
                         data={data.last30}
                         forecastData={data.hourlyForecasts}
-                        {containerWidth}
+                        containerWidth={hourlyRainWidth}
                         headline=""
                         subtitle=""
                         chartHeight={150}
                     />
-            </div>
-
-            <hr class="chart-divider" />
-
-                <h2>Max temp</h2>
-                <Chart
-                    historicData={data.historicTemp}
-                    recentData={data.observations.map(d => ({ ...d, Value: d.Temp }))}
-                    forecastData={data.forecasts.map(d => ({ ...d, Value: d.Max_temp }))}
-                    climateData={data.climate}
-                    unit="°C"
-                    {containerWidth}
-                    unitColour = {'#7A9AFA'}
-                    yMinDefault={0}
-                    chartHeight={150}
-                />
-            </div>
-    
-            <!-- <hr class="chart-divider" />
-
-            <div class="chart-section">
-                <h2>Rain</h2>
-                    <Rainline
-                        data={data.last30}
-                        forecastData={data.hourlyForecasts}
-                        {containerWidth}
-                        headline=""
-                        subtitle=""
-                        chartHeight={150}
-                    />
-            </div> -->
-
-
-
-            <hr class="chart-divider" />
-
-            <div class="chart-section">
-                <h2>Total rainfall</h2>
-                <div class="chart-header">
-                    <button class="scale-toggle" onclick={() => isLogarithmic = !isLogarithmic}>
-                        {isLogarithmic ? 'Logarithmic' : 'Linear'}
-                    </button>
                 </div>
-                <Chart
-                    historicData={data.historicRain}
-                    recentData={data.observations.map(d => ({ ...d, Value: d.Rain }))}
-                    forecastData={data.forecasts.map(d => ({ ...d, Value: d.Rain }))}
-                    climateData={data.climate}
-                    unit="mm"
-                    {containerWidth}
-                    unitColour = {'#7A9AFA'}
-                    logarithmic={isLogarithmic}
-                    yMinDefault={isLogarithmic ? 0.1 : 0}
-                    chartHeight={175}
-                    leftMargin={30}
-                />
+            </section>
 
-            <hr class="chart-divider" />
+            <hr class="section-divider" />
 
-            <div class="chart-section">
-                <h2>Humidity</h2>
-                <ClimateChart
-                    observationData={data.observations}
-                    subtitle = {""}
-                    climateStats={data.climateStats}
-                    {containerWidth}
-                    unitColour={'#7A9AFA'}
-                    unit="%"
-                    chartHeight={110}
-                    metric9am="Mean_9am_RH"
-                    metric3pm="Mean_3pm_RH"
-                    dataKey="Humidity"
-                />
-            </div>
+            <section id="weekly" class="chart-group">
+                <h2 class="section-header">Weekly</h2>
+                <div class="chart-section" bind:clientWidth={maxTempWidth}>
+                    <h2>Max temp</h2>
+                    <Chart
+                        historicData={data.historicTemp}
+                        recentData={data.observations.map(d => ({ ...d, Value: d.Temp }))}
+                        forecastData={data.forecasts.map(d => ({ ...d, Value: d.Max_temp }))}
+                        climateData={data.climate}
+                        unit="°C"
+                        containerWidth={maxTempWidth}
+                        unitColour = {'#7A9AFA'}
+                        yMinDefault={0}
+                        chartHeight={150}
+                    />
+                </div>
 
-            <hr class="chart-divider" />
+                <div class="chart-section" bind:clientWidth={totalRainWidth}>
+                    <h2>Rain</h2>
+                    <TotalRainChart
+                        recentData={data.observations.map(d => ({ ...d, Value: d.Rain }))}
+                        forecastData={data.forecasts.map(d => ({ ...d, Value: d.Rain }))}
+                        climateData={data.climate}
+                        unit="mm"
+                        containerWidth={totalRainWidth}
+                        unitColour = {'#7A9AFA'}
+                        yMinDefault={0}
+                        chartHeight={150}
+                        leftMargin={30}
+                    />
+                </div>
 
-            <div class="chart-section">
-                <h2>Wind speed</h2>
-                <ClimateChart
-                    observationData={data.observations}
-                    subtitle = {""}
-                    climateStats={data.climateStats}
-                    {containerWidth}
-                    unitColour={'#7A9AFA'}
-                    unit="km/h"
-                    chartHeight={110}
-                    metric9am="Mean_9am_Wind"
-                    metric3pm="Mean_3pm_Wind"
-                    dataKey="Wind"
-                    leftMargin={50}
-                />
-            </div>
+                <div class="chart-section" bind:clientWidth={humidityWidth}>
+                    <h2>Humidity</h2>
+                    <ClimateChart
+                        observationData={data.observations}
+                        subtitle = {""}
+                        climateStats={data.climateStats}
+                        containerWidth={humidityWidth}
+                        unitColour={'#7A9AFA'}
+                        unit="%"
+                        chartHeight={150}
+                        metric9am="Mean_9am_RH"
+                        metric3pm="Mean_3pm_RH"
+                        dataKey="Humidity"
+                    />
+                </div>
+
+                <div class="chart-section" bind:clientWidth={windWidth}>
+                    <h2>Wind speed</h2>
+                    <ClimateChart
+                        observationData={data.observations}
+                        subtitle = {""}
+                        climateStats={data.climateStats}
+                        containerWidth={windWidth}
+                        unitColour={'#7A9AFA'}
+                        unit="km/h"
+                        chartHeight={150}
+                        metric9am="Mean_9am_Wind"
+                        metric3pm="Mean_3pm_Wind"
+                        dataKey="Wind"
+                        leftMargin={50}
+                    />
+                </div>
+            </section>
 
 
-
-            </div>
             {:else}
             <div class="chart-section">
                 <p class="loading-text">Loading...</p>
@@ -204,7 +171,13 @@
     .dashboard {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 20px 2px;
+    }
+
+    @media (min-width: 768px) {
+        .dashboard {
+            padding: 20px 10px;
+        }
     }
 
     .header {
@@ -225,19 +198,80 @@
         margin: 0;
     }
 
+    .nav {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav li {
+        display: inline;
+    }
+
+    .nav a {
+        color: #000;
+        text-decoration: underline;
+        font-size: 1.5em;
+    }
+
     .charts {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 40px;
         width: 100%;
+    }
+
+    .chart-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .chart-group {
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
     }
 
     .chart-section {
         background: transparent;
         border-radius: 8px;
-        padding: 10px;
+        padding: 0 2px;
         width: 100%;
         box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+        .chart-section {
+            padding: 5px;
+        }
+    }
+
+    .section-header {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .section-divider {
+        width: 25%;
+        margin: 20px auto;
+        border: none;
+        border-top: 1px solid #000;
     }
 
     h2 {
@@ -248,34 +282,18 @@
         font-weight: bold;
     }
 
-    .chart-header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 10px;
-    }
-
-    .scale-toggle {
-        font-size: 0.5em;
-        color: #000;
-        background: transparent;
-        border: 1px solid #000;
-        border-radius: 4px;
-        padding: 3px 10px;
-        cursor: pointer;
-    }
-
-    .scale-toggle:hover {
-        background: rgba(0, 0, 0, 0.05);
-    }
-
     .footer {
         text-align: center;
         font-size: 0.75em;
         color: #000;
         margin-top: 40px;
-        padding-bottom: 20px;
+        padding: 0 2px 20px 2px;
+    }
+
+    @media (min-width: 768px) {
+        .footer {
+            padding: 0 10px 20px 10px;
+        }
     }
 
     .footer p {
@@ -289,23 +307,6 @@
 
     .footer a:hover {
         opacity: 0.7;
-    }
-
-    .chart-divider {
-        width: 25%;
-        margin: 20px auto;
-        border: none;
-        border-top: 1px solid #000;
-    }
-
-    .legend {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        margin-top: 5px;
-        font-size: 0.5em;
-        color: #000;
     }
 
     .loading-text {

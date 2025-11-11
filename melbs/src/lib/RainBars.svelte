@@ -6,9 +6,9 @@
 
     let margin = $derived({
         top: 20,
-        right: containerWidth < 500 ? 80 : 100,
+        right: containerWidth < 500 ? 10 : 100,
         bottom: containerWidth < 500 ? 35 : 50,
-        left: containerWidth < 500 ? 10 : 10
+        left: containerWidth < 500 ? 15 : 10
     });
 
     let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
@@ -121,49 +121,25 @@
     {/if}
     <div style="text-align: center;">
         <div class="legend">
-            <span>Likelihood: </span>
             <svg width="12" height="12" style="vertical-align: middle;">
-                <defs>
-                    <pattern id="legend50" patternUnits="userSpaceOnUse" width="3" height="3">
-                        <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="#f0f0f0" stroke-width="1"/>
-                    </pattern>
-                </defs>
-                <rect width="12" height="12" fill="url(#legend50)" stroke="#000" stroke-width="1"/>
+                <rect width="12" height="12" fill="#FA9A7A" stroke="#000" stroke-width="1"/>
+            </svg>
+            <span>Observed</span>
+            <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
+                <rect width="12" height="12" fill="#f0f0f0" stroke="#000" stroke-width="1"/>
             </svg>
             <span>50%</span>
             <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
-                <defs>
-                    <pattern id="legend25" patternUnits="userSpaceOnUse" width="3" height="3">
-                        <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="#bdbdbd" stroke-width="1"/>
-                    </pattern>
-                </defs>
-                <rect width="12" height="12" fill="url(#legend25)" stroke="#000" stroke-width="1"/>
+                <rect width="12" height="12" fill="#bdbdbd" stroke="#000" stroke-width="1"/>
             </svg>
             <span>25%</span>
             <svg width="12" height="12" style="vertical-align: middle; margin-left: 10px;">
-                <defs>
-                    <pattern id="legend10" patternUnits="userSpaceOnUse" width="3" height="3">
-                        <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="#636363" stroke-width="1"/>
-                    </pattern>
-                </defs>
-                <rect width="12" height="12" fill="url(#legend10)" stroke="#000" stroke-width="1"/>
+                <rect width="12" height="12" fill="#636363" stroke="#000" stroke-width="1"/>
             </svg>
             <span>10%</span>
         </div>
     </div>
     <svg width={chartWidth} height={totalHeight}>
-        <defs>
-            <!-- Diagonal hash patterns -->
-            <pattern id="diagonalHash50" patternUnits="userSpaceOnUse" width="3" height="3">
-                <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="#f0f0f0" stroke-width="1"/>
-            </pattern>
-            <pattern id="diagonalHash25" patternUnits="userSpaceOnUse" width="3" height="3">
-                <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="#bdbdbd" stroke-width="1"/>
-            </pattern>
-            <pattern id="diagonalHash10" patternUnits="userSpaceOnUse" width="3" height="3">
-                <path d="M-0.5,0.5 l1,-1 M0,3 l3,-3 M2.5,3.5 l1,-1" stroke="#636363" stroke-width="1"/>
-            </pattern>
-        </defs>
         <g transform="translate({margin.left}, {margin.top})">
             <!-- Y-axis ticks and labels -->
             {#each yTicks as tick}
@@ -227,19 +203,30 @@
                     >
                         <title>Observed: {obs.rain}mm at {obs.hour}:00</title>
                     </rect>
+                {:else}
+                    <line
+                        x1={xScale(obs.hour)}
+                        y1={innerHeight}
+                        x2={xScale(obs.hour) + barWidth}
+                        y2={innerHeight}
+                        stroke="#000"
+                        stroke-width="1"
+                    >
+                        <title>Observed: 0mm at {obs.hour}:00</title>
+                    </line>
                 {/if}
             {/each}
 
-            <!-- Forecast bars (patterned fill, grouped) -->
+            <!-- Forecast bars (solid fill, grouped) -->
             {#each todayForecasts as forecast}
-                <!-- Rain 50% (lightest pattern) -->
+                <!-- Rain 50% (lightest) -->
                 {#if forecast.rain50 > 0}
                     <rect
                         x={xScale(forecast.hour) + groupOffsets.rain50}
                         y={yScale(forecast.rain50)}
                         width={groupBarWidth}
                         height={innerHeight - yScale(forecast.rain50)}
-                        fill="url(#diagonalHash50)"
+                        fill="#f0f0f0"
                         stroke="#000"
                         stroke-width="1"
                         opacity="0.8"
@@ -248,14 +235,14 @@
                     </rect>
                 {/if}
 
-                <!-- Rain 25% (medium pattern) -->
+                <!-- Rain 25% (medium) -->
                 {#if forecast.rain25 > 0}
                     <rect
                         x={xScale(forecast.hour) + groupOffsets.rain25}
                         y={yScale(forecast.rain25)}
                         width={groupBarWidth}
                         height={innerHeight - yScale(forecast.rain25)}
-                        fill="url(#diagonalHash25)"
+                        fill="#bdbdbd"
                         stroke="#000"
                         stroke-width="1"
                         opacity="0.8"
@@ -264,14 +251,14 @@
                     </rect>
                 {/if}
 
-                <!-- Rain 10% (darkest pattern) -->
+                <!-- Rain 10% (darkest) -->
                 {#if forecast.rain10 > 0}
                     <rect
                         x={xScale(forecast.hour) + groupOffsets.rain10}
                         y={yScale(forecast.rain10)}
                         width={groupBarWidth}
                         height={innerHeight - yScale(forecast.rain10)}
-                        fill="url(#diagonalHash10)"
+                        fill="#636363"
                         stroke="#000"
                         stroke-width="1"
                         opacity="0.8"

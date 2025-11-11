@@ -7,9 +7,9 @@
 
     let margin = $derived({
         top: 20,
-        right: containerWidth < 500 ? 100 : 100,
+        right: containerWidth < 500 ? 30 : 100,
         bottom: containerWidth < 500 ? 35 : 50,
-        left: containerWidth < 500 ? 10 : 10
+        left: containerWidth < 500 ? 30 : 10
     });
 
     let totalHeight = $derived(chartHeight + margin.top + margin.bottom);
@@ -310,6 +310,18 @@
     {#if subtitle}
         <p class="chart-subtitle">{subtitle}</p>
     {/if}
+    <div style="text-align: center;">
+        <div class="legend">
+            <svg width="12" height="12" style="vertical-align: middle;">
+                <circle cx="6" cy="6" r="5" fill="#FA9A7A" stroke="black" stroke-width="1" opacity="0.8" />
+            </svg>
+            <span>Observed</span>
+            <svg width="24" height="12" style="vertical-align: middle; margin-left: 10px;">
+                <line x1="0" y1="6" x2="24" y2="6" stroke="#888888" stroke-width="2" stroke-dasharray="4,2" />
+            </svg>
+            <span>Forecast</span>
+        </div>
+    </div>
     <svg width={chartWidth} height={totalHeight}>
         <defs>
             <!-- Diagonal stripe pattern -->
@@ -482,5 +494,15 @@
 
     text {
         font-family: Arial, sans-serif;
+    }
+
+    .legend {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+        font-size: 0.5em;
+        color: #000;
     }
 </style>
