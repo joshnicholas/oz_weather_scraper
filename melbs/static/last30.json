@@ -4002,9 +4002,17 @@
   {
     "Date":"2025-11-12",
     "Hour":8,
-    "Temp":10.4,
+    "Temp":11.4,
     "Rain":0.0,
     "Wind":15.0,
-    "Humidity":60.0
+    "Humidity":56.0
+  },
+  {
+    "Date":"2025-11-12",
+    "Hour":9,
+    "Temp":12.5,
+    "Rain":0.0,
+    "Wind":17.0,
+    "Humidity":56.0
   }
 ]
