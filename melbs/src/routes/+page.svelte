@@ -43,16 +43,15 @@
             </p>
         </div>
 
-        <nav class="nav">
+        {#if containerWidth > 0}
+        <!-- <nav class="nav">
             <ul>
                 <li><a href="#hourly">Hourly</a></li>
                 <li><a href="#weekly">Weekly</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
         <div class="charts">
-            {#if containerWidth > 0}
-
             <section id="hourly" class="chart-group">
                 <h2 class="section-header">Hourly</h2>
                 <div class="chart-section" bind:clientWidth={tempWidth}>
@@ -148,14 +147,12 @@
                 </div>
             </section>
 
-
-            {:else}
-            <div class="chart-section">
-                <p class="loading-text">Loading...</p>
-            </div>
-            {/if}
-
         </div>
+        {:else}
+        <div class="loading-container">
+            <p class="loading-text">Loading...</p>
+        </div>
+        {/if}
 </div>
 
 
@@ -314,5 +311,10 @@
         font-size: 0.85em;
         color: #000;
         margin: 20px 0;
+    }
+
+    .loading-container {
+        text-align: center;
+        padding: 40px 20px;
     }
 </style>
