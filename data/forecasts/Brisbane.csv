@@ -1,8 +1,9 @@
-index,date,forecast_icon_code,air_temperature_maximum,precis,probability_of_precipitation,air_temperature_minimum,precipitation_range
-0,2025-11-11,3,28 Celsius,Mostly sunny.,10%,,
-1,2025-11-12,3,27 Celsius,Mostly sunny.,10%,16 Celsius,
-2,2025-11-13,3,27 Celsius,Mostly sunny.,10%,17 Celsius,
-3,2025-11-14,11,27 Celsius,Showers increasing.,80%,19 Celsius,1 to 20 mm
-4,2025-11-15,16,32 Celsius,Showers. Storm developing.,80%,19 Celsius,0 to 20 mm
-5,2025-11-16,11,29 Celsius,Showers.,80%,21 Celsius,1 to 30 mm
-6,2025-11-17,11,31 Celsius,Shower or two.,50%,21 Celsius,0 to 5 mm
+index,date,forecast_icon_code,precis,probability_of_precipitation,air_temperature_minimum,air_temperature_maximum,precipitation_range
+0,2025-11-11,2,Clear.,5%,,,
+1,2025-11-12,3,Mostly sunny.,10%,16 Celsius,27 Celsius,
+2,2025-11-13,3,Mostly sunny.,10%,17 Celsius,27 Celsius,
+3,2025-11-14,16,Showers. Possible storm.,80%,19 Celsius,27 Celsius,1 to 20 mm
+4,2025-11-15,16,Showers. Storm developing.,80%,19 Celsius,32 Celsius,0 to 20 mm
+5,2025-11-16,11,Showers.,80%,21 Celsius,29 Celsius,1 to 30 mm
+6,2025-11-17,11,Shower or two.,50%,21 Celsius,31 Celsius,0 to 5 mm
+7,2025-11-18,3,Mostly sunny.,30%,19 Celsius,29 Celsius,0 to 1 mm
