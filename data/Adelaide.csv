@@ -1,4 +1,6 @@
 Time (AEDT),Temp (°C),Feels Like (°C),Humidity(%),Wind Direction,Wind Speed (km/h) (knots),Wind Gust (km/h) (knots),Pressure (hPa),Rainfall since 9 am (mm),Cloud,Cloud Oktas,Date
+04:30 am,14.1,14.8,88.0,CALM,0.0 0.0,0.0 0.0,1006.1,1.2,Cloudy,8.0,2025-11-14
+04:00 am,14.6,15.4,88.0,CALM,0.0 0.0,0.0 0.0,1006.1,1.2,Cloudy,8.0,2025-11-14
 03:30 am,15.0,15.8,85.0,CALM,0.0 0.0,0.0 0.0,1006.1,1.2,Cloudy,8.0,2025-11-14
 03:00 am,15.3,16.0,82.0,CALM,0.0 0.0,0.0 0.0,1006.1,1.2,Cloudy,8.0,2025-11-14
 02:30 am,15.7,15.9,78.0,N,2.0 1.0,7.0 4.0,1006.2,1.2,Partly cloudy,3.0,2025-11-14
@@ -141,5 +143,3 @@ Time (AEDT),Temp (°C),Feels Like (°C),Humidity(%),Wind Direction,Wind Speed (k
 06:00 am,9.6,7.4,80.0,SSE,7.0 4.0,13.0 7.0,1020.2,2.2,Partly cloudy,3.0,2025-11-11
 05:30 am,10.1,7.9,78.0,S,7.0 4.0,13.0 7.0,1019.8,2.2,Mostly clear,1.0,2025-11-11
 05:00 am,10.5,7.6,75.0,S,11.0 6.0,19.0 10.0,1019.3,2.2,Mostly clear,1.0,2025-11-11
-04:30 am,11.4,8.4,77.0,S,13.0 7.0,26.0 14.0,1019.0,2.2,Partly cloudy,5.0,2025-11-11
-04:00 am,11.2,9.3,86.0,S,9.0 5.0,13.0 7.0,1018.6,2.0,Partly cloudy,5.0,2025-11-11
