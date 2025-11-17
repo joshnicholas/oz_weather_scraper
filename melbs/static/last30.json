@@ -5010,9 +5010,17 @@
   {
     "Date":"2025-11-17",
     "Hour":14,
-    "Temp":15.2,
+    "Temp":16.3,
     "Rain":0.0,
-    "Wind":13.0,
-    "Humidity":60.0
+    "Wind":11.0,
+    "Humidity":57.0
+  },
+  {
+    "Date":"2025-11-17",
+    "Hour":15,
+    "Temp":15.5,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":66.0
   }
 ]
