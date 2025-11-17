@@ -1,44 +1,50 @@
 [
   {
     "Date":"2025-11-17",
-    "Max_temp":17,
+    "Max_temp":null,
     "Rain_low":null,
     "Rain_high":null
   },
   {
     "Date":"2025-11-18",
-    "Max_temp":23,
+    "Max_temp":23.0,
     "Rain_low":0.0,
     "Rain_high":1.0
   },
   {
     "Date":"2025-11-19",
-    "Max_temp":22,
+    "Max_temp":22.0,
     "Rain_low":null,
     "Rain_high":null
   },
   {
     "Date":"2025-11-20",
-    "Max_temp":17,
-    "Rain_low":0.0,
-    "Rain_high":1.0
+    "Max_temp":16.0,
+    "Rain_low":null,
+    "Rain_high":null
   },
   {
     "Date":"2025-11-21",
-    "Max_temp":18,
+    "Max_temp":18.0,
     "Rain_low":null,
     "Rain_high":null
   },
   {
     "Date":"2025-11-22",
-    "Max_temp":21,
-    "Rain_low":null,
-    "Rain_high":null
+    "Max_temp":22.0,
+    "Rain_low":0.0,
+    "Rain_high":1.0
   },
   {
     "Date":"2025-11-23",
-    "Max_temp":26,
+    "Max_temp":27.0,
     "Rain_low":0.0,
-    "Rain_high":5.0
+    "Rain_high":4.0
+  },
+  {
+    "Date":"2025-11-24",
+    "Max_temp":26.0,
+    "Rain_low":0.0,
+    "Rain_high":1.0
   }
 ]
