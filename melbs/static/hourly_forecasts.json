@@ -1,26 +1,13 @@
 [
   {
     "Date": "2025-11-17",
-    "Hour": 10,
-    "Summary": "Shower",
-    "Temperature": 13,
-    "Feels like": 7,
-    "Rain - 50%": 0,
-    "Rain - 25%": 0,
-    "Rain - 10%": 0,
-    "Humidity": 61,
-    "UV Index": 1,
-    "Cloud cover": 67
-  },
-  {
-    "Date": "2025-11-17",
     "Hour": 11,
     "Summary": "Shower",
     "Temperature": 14,
     "Feels like": 8,
     "Rain - 50%": 0,
     "Rain - 25%": 0,
-    "Rain - 10%": 1,
+    "Rain - 10%": 0,
     "Humidity": 60,
     "UV Index": 7,
     "Cloud cover": 90
@@ -33,7 +20,7 @@
     "Feels like": 8,
     "Rain - 50%": 0,
     "Rain - 25%": 0,
-    "Rain - 10%": 1,
+    "Rain - 10%": 0,
     "Humidity": 59,
     "UV Index": 7,
     "Cloud cover": 90
@@ -46,7 +33,7 @@
     "Feels like": 9,
     "Rain - 50%": 0,
     "Rain - 25%": 0,
-    "Rain - 10%": 1,
+    "Rain - 10%": 0,
     "Humidity": 56,
     "UV Index": 7,
     "Cloud cover": 90
@@ -62,7 +49,7 @@
     "Rain - 10%": 0,
     "Humidity": 56,
     "UV Index": 9,
-    "Cloud cover": 92
+    "Cloud cover": 93
   },
   {
     "Date": "2025-11-17",
@@ -75,7 +62,7 @@
     "Rain - 10%": 0,
     "Humidity": 53,
     "UV Index": 9,
-    "Cloud cover": 92
+    "Cloud cover": 93
   },
   {
     "Date": "2025-11-17",
@@ -88,7 +75,7 @@
     "Rain - 10%": 0,
     "Humidity": 50,
     "UV Index": 9,
-    "Cloud cover": 92
+    "Cloud cover": 93
   },
   {
     "Date": "2025-11-17",
@@ -98,7 +85,7 @@
     "Feels like": 12,
     "Rain - 50%": 0,
     "Rain - 25%": 0,
-    "Rain - 10%": 0,
+    "Rain - 10%": 1,
     "Humidity": 50,
     "UV Index": 2,
     "Cloud cover": 95
@@ -111,7 +98,7 @@
     "Feels like": 13,
     "Rain - 50%": 0,
     "Rain - 25%": 0,
-    "Rain - 10%": 0,
+    "Rain - 10%": 1,
     "Humidity": 54,
     "UV Index": 2,
     "Cloud cover": 95
@@ -124,7 +111,7 @@
     "Feels like": 13,
     "Rain - 50%": 0,
     "Rain - 25%": 0,
-    "Rain - 10%": 0,
+    "Rain - 10%": 1,
     "Humidity": 56,
     "UV Index": 2,
     "Cloud cover": 95
