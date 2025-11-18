@@ -5210,9 +5210,25 @@
   {
     "Date":"2025-11-18",
     "Hour":15,
-    "Temp":21.6,
+    "Temp":22.0,
+    "Rain":0.0,
+    "Wind":9.0,
+    "Humidity":47.0
+  },
+  {
+    "Date":"2025-11-18",
+    "Hour":16,
+    "Temp":22.6,
     "Rain":0.0,
     "Wind":13.0,
-    "Humidity":47.0
+    "Humidity":48.0
+  },
+  {
+    "Date":"2025-11-18",
+    "Hour":17,
+    "Temp":22.7,
+    "Rain":0.0,
+    "Wind":11.0,
+    "Humidity":46.0
   }
 ]
