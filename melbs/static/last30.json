@@ -5618,9 +5618,17 @@
   {
     "Date":"2025-11-20",
     "Hour":18,
-    "Temp":15.1,
+    "Temp":14.5,
+    "Rain":0.0,
+    "Wind":15.0,
+    "Humidity":51.0
+  },
+  {
+    "Date":"2025-11-20",
+    "Hour":19,
+    "Temp":14.2,
     "Rain":0.0,
     "Wind":13.0,
-    "Humidity":44.0
+    "Humidity":51.0
   }
 ]
