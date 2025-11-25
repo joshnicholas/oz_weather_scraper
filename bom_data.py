@@ -102,7 +102,9 @@ def save_data(df, folder_path, dropcol):
         # Ensure numeric columns are properly typed
         numeric_cols = ['sort_order', 'wmo', 'lat', 'lon', 'air_temp', 'apparent_t',
                         'rel_hum', 'wind_spd_kmh', 'wind_spd_kt', 'gust_kmh',
-                        'gust_kt', 'press_qnh', 'rain_trace[80]']
+                        'gust_kt', 'press_qnh', 'rain_trace[80]', 'cloud_base_m',
+                        'cloud_oktas', 'delta_t', 'dewpt', 'press', 'press_msl',
+                        'swell_height', 'swell_period', 'vis_km[80]']
         for col in numeric_cols:
             if col in combined_df.columns:
                 combined_df[col] = pd.to_numeric(combined_df[col], errors='coerce')
@@ -114,6 +116,15 @@ def save_data(df, folder_path, dropcol):
         combined_df.to_parquet(filepath, index=False)
 
     else:
+        # Ensure numeric columns are properly typed
+        numeric_cols = ['sort_order', 'wmo', 'lat', 'lon', 'air_temp', 'apparent_t',
+                        'rel_hum', 'wind_spd_kmh', 'wind_spd_kt', 'gust_kmh',
+                        'gust_kt', 'press_qnh', 'rain_trace[80]', 'cloud_base_m',
+                        'cloud_oktas', 'delta_t', 'dewpt', 'press', 'press_msl',
+                        'swell_height', 'swell_period', 'vis_km[80]']
+        for col in numeric_cols:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
         # Sort before creating new file
         df = df.sort_values(by=dropcol)
         # Create new file

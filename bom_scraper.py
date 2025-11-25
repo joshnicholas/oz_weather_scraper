@@ -50,6 +50,9 @@ def if_no_fold_create(pathos, to_check):
     if pathos[-1] != '/':
         pathos += '/'
 
+    # Create parent directory if it doesn't exist
+    os.makedirs(pathos, exist_ok=True)
+
     folds = os.listdir(pathos)
 
     if to_check not in folds:
@@ -165,21 +168,25 @@ def scraper(stem, out_path, combo_path, urlo):
 
 
 
-scraper("Sydney", 'data/raw','data',  'http://www.bom.gov.au/places/nsw/turramurra/observations/sydney---observatory-hill/')
 
-scraper("Melbourne", 'data/raw','data',  'http://www.bom.gov.au/places/vic/melbourne/observations/melbourne-(olympic-park)/')
+# scraper("Sydney", 'data/raw','data',  'http://www.bom.gov.au/places/nsw/turramurra/observations/sydney---observatory-hill/')
+scraper("Sydney", 'data/raw','data',  'https://www.bom.gov.au/weatherstation/australia/new-south-wales/66214/accessible-observations')
 
-scraper("Brisbane", 'data/raw','data',  'http://www.bom.gov.au/places/qld/brisbane/observations/brisbane/')
+# https://www.bom.gov.au/location/australia/victoria/central/bvic_pt042-melbourne/accessible-forecast
+# scraper("Melbourne", 'data/raw','data',  'http://www.bom.gov.au/places/vic/melbourne/observations/melbourne-(olympic-park)/')
+# # scraper("Melbourne", 'data/raw','data',  'http://www.bom.gov.au/places/vic/melbourne/observations/melbourne-(olympic-park)/')
 
-scraper("Perth", 'data/raw','data',  'http://www.bom.gov.au/places/wa/perth/observations/perth/')
+# scraper("Brisbane", 'data/raw','data',  'http://www.bom.gov.au/places/qld/brisbane/observations/brisbane/')
 
-scraper("Adelaide", 'data/raw','data',  'http://www.bom.gov.au/places/sa/adelaide/observations/adelaide-(west-terrace----ngayirdapira)/')
+# scraper("Perth", 'data/raw','data',  'http://www.bom.gov.au/places/wa/perth/observations/perth/')
 
-scraper("Hobart", 'data/raw','data',  'http://www.bom.gov.au/places/tas/hobart/observations/hobart/')
+# scraper("Adelaide", 'data/raw','data',  'http://www.bom.gov.au/places/sa/adelaide/observations/adelaide-(west-terrace----ngayirdapira)/')
 
-scraper("Canberra", 'data/raw','data',  'http://www.bom.gov.au/places/act/canberra/observations/canberra/')
+# scraper("Hobart", 'data/raw','data',  'http://www.bom.gov.au/places/tas/hobart/observations/hobart/')
 
-scraper("Darwin", 'data/raw','data',  'http://www.bom.gov.au/places/nt/darwin/')
+# scraper("Canberra", 'data/raw','data',  'http://www.bom.gov.au/places/act/canberra/observations/canberra/')
+
+# scraper("Darwin", 'data/raw','data',  'http://www.bom.gov.au/places/nt/darwin/')
 
 # driver.quit()
 
