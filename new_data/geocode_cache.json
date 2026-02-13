@@ -1,0 +1,58 @@
+{
+  "Melbourne": {
+    "latitude": -37.814,
+    "longitude": 144.96332,
+    "name": "Melbourne",
+    "country": "Australia",
+    "timezone": "Australia/Melbourne"
+  },
+  "Sydney": {
+    "latitude": -33.86785,
+    "longitude": 151.20732,
+    "name": "Sydney",
+    "country": "Australia",
+    "timezone": "Australia/Sydney"
+  },
+  "Brisbane": {
+    "latitude": -27.46794,
+    "longitude": 153.02809,
+    "name": "Brisbane",
+    "country": "Australia",
+    "timezone": "Australia/Brisbane"
+  },
+  "Adelaide": {
+    "latitude": -34.92866,
+    "longitude": 138.59863,
+    "name": "Adelaide",
+    "country": "Australia",
+    "timezone": "Australia/Adelaide"
+  },
+  "Perth": {
+    "latitude": -31.95224,
+    "longitude": 115.8614,
+    "name": "Perth",
+    "country": "Australia",
+    "timezone": "Australia/Perth"
+  },
+  "Hobart": {
+    "latitude": -42.87936,
+    "longitude": 147.3294,
+    "name": "Hobart",
+    "country": "Australia",
+    "timezone": "Australia/Hobart"
+  },
+  "Darwin": {
+    "latitude": -12.46113,
+    "longitude": 130.84184,
+    "name": "Darwin",
+    "country": "Australia",
+    "timezone": "Australia/Darwin"
+  },
+  "Canberra": {
+    "latitude": -35.28346,
+    "longitude": 149.12807,
+    "name": "Canberra",
+    "country": "Australia",
+    "timezone": "Australia/Sydney"
+  }
+}

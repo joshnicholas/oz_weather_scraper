@@ -1,8 +1,5 @@
-requests
-pytz
+openmeteo-requests
+requests-cache
+retry-requests
 pandas
-lxml
-beautifulsoup4
-html5lib
 pyarrow
-fastparquet

@@ -1,0 +1,42 @@
+name: Open Meteo Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 * * * *"  # Every hour at 5 past
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Run Open Meteo scraper
+        run: python open_meteo_scraper.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add -A
+          if ! git diff --staged --quiet; then
+            timestamp=$(date -u)
+            git commit -m "Hourly weather update: ${timestamp}"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes to commit"
+          fi
