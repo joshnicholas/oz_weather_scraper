@@ -1,45 +1,16 @@
 <script>
-    import { Plot, Line, Dot, AxisX, AxisY } from 'svelteplot';
+    import { Plot, Line, Dot, AreaY, AxisX, AxisY } from 'svelteplot';
 
-    let { days = [], averages = [], currentHour = -1 } = $props();
+    let { days = [], averages = [], bands = [], currentHour = -1 } = $props();
 
-    let avgByHour = $derived.by(() => {
-        const map = {};
-        for (const a of averages) map[a.hour] = a.value;
-        return map;
-    });
-
-    let historicDays = $derived(days.filter(d => d.isHistoric));
     let todayObserved = $derived(days.find(d => d.isToday && d.portion === 'observed'));
     let todayForecast = $derived(days.find(d => d.isToday && d.portion === 'forecast'));
-    let futureDays = $derived(days.filter(d => d.isForecast));
 
-    // Compute the average of all daily maxes to use as reference
-    let avgDailyMax = $derived.by(() => {
-        if (averages.length === 0) return 50;
-        return Math.max(...averages.map(a => a.value));
-    });
+    const BAND_COLORS = ['#c51b7d', '#e9a3c9', '#fde0ef', '#e6f5d0', '#a1d76a', '#4d9221'];
 
-    // Historic lines: all #ccc, opacity based on distance from average daily max
-    // Closer to average = more opaque, further = less opaque
-    let historicLines = $derived.by(() => {
-        if (historicDays.length === 0) return [];
-
-        // Collect all daily max values to find the range of distances
-        const distances = historicDays.map(day => Math.abs(day.maxTemp - avgDailyMax));
-        const maxDistance = Math.max(...distances, 1);
-
-        return historicDays.map(day => {
-            const distance = Math.abs(day.maxTemp - avgDailyMax);
-            // Close to average → high opacity (0.5), far from average → low opacity (0.05)
-            const opacity = 0.5 - (distance / maxDistance) * 0.45;
-            return {
-                date: day.date,
-                data: day.points.map(p => ({ hour: p.hour, value: p.value })),
-                opacity
-            };
-        });
-    });
+    let streamBands = $derived(
+        bands.map((data, i) => ({ data, color: BAND_COLORS[i] }))
+    );
 
     let todayObservedData = $derived(
         todayObserved ? todayObserved.points.map(p => ({ hour: p.hour, value: p.value })) : []
@@ -48,13 +19,6 @@
     let todayForecastData = $derived(
         todayForecast ? todayForecast.points.map(p => ({ hour: p.hour, value: p.value })) : []
     );
-
-    let futureDayLines = $derived.by(() => {
-        return futureDays.map(day => ({
-            date: day.date,
-            data: day.points.map(p => ({ hour: p.hour, value: p.value }))
-        }));
-    });
 
     let avgLineData = $derived(
         averages.map(a => ({ hour: a.hour, value: a.value }))
@@ -87,6 +51,13 @@
             <line x1="0" y1="5" x2="20" y2="5" stroke="#000" stroke-width="2" stroke-dasharray="4,3" opacity="0.6" />
         </svg>
         <span>Forecast</span>
+        <span class="band-legend">
+            <span>Lowest</span>
+            {#each BAND_COLORS as color}
+                <span class="band-swatch" style="background:{color}"></span>
+            {/each}
+            <span>Max</span>
+        </span>
     </div>
 
     <Plot
@@ -96,6 +67,18 @@
     >
         <AxisX ticks={[0, 6, 12, 18, 23]} tickFormat={xTickFormat} textAnchor={(d) => d === 0 ? 'start' : d === 23 ? 'end' : 'middle'} title={false} />
         <AxisY title={false} />
+
+        {#each streamBands as band}
+            <AreaY
+                data={band.data}
+                x="hour"
+                y1="lower"
+                y2="upper"
+                fill={band.color}
+                opacity={0.5}
+                curve="monotone-x"
+            />
+        {/each}
 
         {#if avgLineData.length > 0}
             <Line
@@ -109,30 +92,6 @@
             />
         {/if}
 
-        {#each historicLines as line}
-            <Line
-                data={line.data}
-                x="hour"
-                y="value"
-                stroke="#F8843F"
-                strokeDasharray="4,3"
-                opacity={line.opacity}
-                strokeWidth={1}
-            />
-        {/each}
-
-        {#each futureDayLines as line}
-            <Line
-                data={line.data}
-                x="hour"
-                y="value"
-                stroke="#ccc"
-                strokeDasharray="4,3"
-                opacity={0.3}
-                strokeWidth={1}
-            />
-        {/each}
-
         {#if todayForecastData.length > 0}
             <Line
                 data={todayForecastData}
@@ -142,6 +101,7 @@
                 strokeDasharray="5,4"
                 opacity={0.6}
                 strokeWidth={2}
+                class="white-glow"
             />
         {/if}
 
@@ -152,6 +112,7 @@
                 y="value"
                 stroke="#000"
                 strokeWidth={2}
+                class="white-glow"
             />
         {/if}
 
@@ -162,6 +123,7 @@
                 y="value"
                 fill="#000"
                 r={3}
+                class="white-glow"
             />
         {/if}
     </Plot>
@@ -187,5 +149,23 @@
         margin-bottom: 5px;
         font-size: 0.5em;
         color: #000;
+    }
+
+    .band-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0;
+        margin-left: 8px;
+    }
+
+    .band-swatch {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        opacity: 0.5;
+    }
+
+    .humidity-chart :global(.white-glow) {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
     }
 </style>

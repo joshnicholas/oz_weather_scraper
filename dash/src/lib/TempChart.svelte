@@ -1,32 +1,16 @@
 <script>
-    import { Plot, Line, Dot, Text, AxisX, AxisY } from 'svelteplot';
+    import { Plot, Line, Dot, Text, AreaY, AxisX, AxisY } from 'svelteplot';
 
-    let { days = [], averages = [], currentHour = -1 } = $props();
+    let { days = [], averages = [], bands = [], currentHour = -1 } = $props();
 
-    // Build a lookup: hour → average temp
-    let avgByHour = $derived.by(() => {
-        const map = {};
-        for (const a of averages) {
-            map[a.hour] = a.value;
-        }
-        return map;
-    });
-
-    // Separate day categories
-    let historicDays = $derived(days.filter(d => d.isHistoric));
     let todayObserved = $derived(days.find(d => d.isToday && d.portion === 'observed'));
     let todayForecast = $derived(days.find(d => d.isToday && d.portion === 'forecast'));
-    let futureDays = $derived(days.filter(d => d.isForecast));
 
-    // Historic lines: color based on max temp vs midday average
-    let historicLines = $derived.by(() => {
-        return historicDays.map(day => ({
-            date: day.date,
-            data: day.points.map(p => ({ hour: p.hour, value: p.value })),
-            stroke: day.maxTemp >= (avgByHour[12] ?? 22) ? '#F8843F' : '#3D45AA',
-            opacity: day.opacity
-        }));
-    });
+    const BAND_COLORS = ['#542788', '#998ec3', '#d8daeb', '#fee0b6', '#f1a340', '#b35806'];
+
+    let streamBands = $derived(
+        bands.map((data, i) => ({ data, color: BAND_COLORS[i] }))
+    );
 
     let todayObservedData = $derived(
         todayObserved ? todayObserved.points.map(p => ({ hour: p.hour, value: p.value })) : []
@@ -36,14 +20,6 @@
         todayForecast ? todayForecast.points.map(p => ({ hour: p.hour, value: p.value })) : []
     );
 
-    let futureDayLines = $derived.by(() => {
-        return futureDays.map(day => ({
-            date: day.date,
-            data: day.points.map(p => ({ hour: p.hour, value: p.value }))
-        }));
-    });
-
-    // Average line data
     let avgLineData = $derived(
         averages.map(a => ({ hour: a.hour, value: a.value }))
     );
@@ -95,6 +71,13 @@
             <line x1="0" y1="5" x2="20" y2="5" stroke="#000" stroke-width="2" stroke-dasharray="4,3" opacity="0.6" />
         </svg>
         <span>Forecast</span>
+        <span class="band-legend">
+            <span>Lowest</span>
+            {#each BAND_COLORS as color}
+                <span class="band-swatch" style="background:{color}"></span>
+            {/each}
+            <span>Max</span>
+        </span>
     </div>
 
     <Plot
@@ -104,6 +87,18 @@
     >
         <AxisX ticks={[0, 6, 12, 18, 23]} tickFormat={xTickFormat} textAnchor={(d) => d === 0 ? 'start' : d === 23 ? 'end' : 'middle'} title={false} />
         <AxisY title={false} />
+
+        {#each streamBands as band}
+            <AreaY
+                data={band.data}
+                x="hour"
+                y1="lower"
+                y2="upper"
+                fill={band.color}
+                opacity={0.5}
+                curve="monotone-x"
+            />
+        {/each}
 
         {#if avgLineData.length > 0}
             <Line
@@ -117,30 +112,6 @@
             />
         {/if}
 
-        {#each historicLines as line}
-            <Line
-                data={line.data}
-                x="hour"
-                y="value"
-                stroke={line.stroke}
-                strokeDasharray="4,3"
-                opacity={line.opacity}
-                strokeWidth={1}
-            />
-        {/each}
-
-        {#each futureDayLines as line}
-            <Line
-                data={line.data}
-                x="hour"
-                y="value"
-                stroke="#ccc"
-                strokeDasharray="4,3"
-                opacity={0.5}
-                strokeWidth={1}
-            />
-        {/each}
-
         {#if todayForecastData.length > 0}
             <Line
                 data={todayForecastData}
@@ -150,6 +121,7 @@
                 strokeDasharray="5,4"
                 opacity={0.6}
                 strokeWidth={2}
+                class="white-glow"
             />
         {/if}
 
@@ -160,6 +132,7 @@
                 y="value"
                 stroke="#000"
                 strokeWidth={2}
+                class="white-glow"
             />
         {/if}
 
@@ -170,6 +143,7 @@
                 y="value"
                 fill="#000"
                 r={3}
+                class="white-glow"
             />
         {/if}
 
@@ -180,6 +154,7 @@
                 y="value"
                 fill="#000"
                 r={2}
+                class="white-glow"
             />
             <Text
                 data={todayMaxPoint}
@@ -189,6 +164,7 @@
                 dy={-8}
                 fill="#000"
                 textAnchor="middle"
+                class="white-glow"
             />
         {/if}
     </Plot>
@@ -214,5 +190,23 @@
         margin-bottom: 5px;
         font-size: 0.5em;
         color: #000;
+    }
+
+    .band-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0;
+        margin-left: 8px;
+    }
+
+    .band-swatch {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        opacity: 0.5;
+    }
+
+    .temp-chart :global(.white-glow) {
+        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
     }
 </style>

@@ -145,7 +145,7 @@
         {#if mounted}
             <div class="chart-grid">
                 <div class="chart-section">
-                    <TempChart days={tempDays} averages={cityData.temperature_2m_avg ?? []} {currentHour} />
+                    <TempChart days={tempDays} averages={cityData.temperature_2m_avg ?? []} bands={cityData.temperature_2m_bands ?? []} {currentHour} />
                 </div>
                 <div class="mobile-divider"><hr /></div>
                 <div class="chart-section">
@@ -159,7 +159,7 @@
                 </div>
                 <div class="mobile-divider"><hr /></div>
                 <div class="chart-section">
-                    <HumidityChart days={humidityDays} averages={cityData.relative_humidity_2m_avg ?? []} {currentHour} />
+                    <HumidityChart days={humidityDays} averages={cityData.relative_humidity_2m_avg ?? []} bands={cityData.relative_humidity_2m_bands ?? []} {currentHour} />
                 </div>
             </div>
         {/if}
