@@ -36,7 +36,7 @@
       "wind_direction_10m": 132.6140289307,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 1.5,
+      "uv_index": 1.7999999523,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -56,7 +56,7 @@
       "wind_direction_10m": 143.7460784912,
       "wind_gusts_10m": 32.0399971008,
       "visibility": 24140.0,
-      "uv_index": 2.4500000477,
+      "uv_index": 2.25,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -76,7 +76,7 @@
       "wind_direction_10m": 140.8263549805,
       "wind_gusts_10m": 32.0399971008,
       "visibility": 24140.0,
-      "uv_index": 3.0,
+      "uv_index": 2.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -96,7 +96,7 @@
       "wind_direction_10m": 135.0001068115,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 1.7000000477,
+      "uv_index": 1.2999999523,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -115,8 +115,8 @@
       "wind_speed_10m": 12.9799842834,
       "wind_direction_10m": 146.3099060059,
       "wind_gusts_10m": 33.1199989319,
-      "visibility": 19060.0,
-      "uv_index": 0.5500000119,
+      "visibility": 24140.0,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -136,7 +136,7 @@
       "wind_direction_10m": 163.7397155762,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 24140.0,
-      "uv_index": 0.400000006,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -156,7 +156,7 @@
       "wind_direction_10m": 142.5945739746,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 24140.0,
-      "uv_index": 0.400000006,
+      "uv_index": 0.3000000119,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -395,7 +395,7 @@
       "wind_speed_10m": 7.1729488373,
       "wind_direction_10m": 197.5256652832,
       "wind_gusts_10m": 19.0799999237,
-      "visibility": 18620.0,
+      "visibility": 24140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -415,7 +415,7 @@
       "wind_speed_10m": 6.3792161942,
       "wind_direction_10m": 196.3896179199,
       "wind_gusts_10m": 17.2800006866,
-      "visibility": 4760.0,
+      "visibility": 22180.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -435,8 +435,8 @@
       "wind_speed_10m": 8.0498447418,
       "wind_direction_10m": 206.5649871826,
       "wind_gusts_10m": 19.0799999237,
-      "visibility": 4000.0,
-      "uv_index": 0.0500000007,
+      "visibility": 14400.0,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -455,8 +455,8 @@
       "wind_speed_10m": 8.8255081177,
       "wind_direction_10m": 191.7682647705,
       "wind_gusts_10m": 21.2399997711,
-      "visibility": 5820.0,
-      "uv_index": 0.200000003,
+      "visibility": 6540.0,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -475,8 +475,8 @@
       "wind_speed_10m": 9.531504631,
       "wind_direction_10m": 190.8854827881,
       "wind_gusts_10m": 23.3999996185,
-      "visibility": 4020.0,
-      "uv_index": 0.5,
+      "visibility": 7940.0,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -495,8 +495,8 @@
       "wind_speed_10m": 10.4400005341,
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 25.1999988556,
-      "visibility": 17940.0,
-      "uv_index": 0.349999994,
+      "visibility": 6500.0,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -515,8 +515,8 @@
       "wind_speed_10m": 11.8854532242,
       "wind_direction_10m": 178.2643280029,
       "wind_gusts_10m": 28.4400005341,
-      "visibility": 8280.0,
-      "uv_index": 0.8000000119,
+      "visibility": 10000.0,
+      "uv_index": 1.1499999762,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -535,8 +535,8 @@
       "wind_speed_10m": 11.5424776077,
       "wind_direction_10m": 176.4237365723,
       "wind_gusts_10m": 28.7999992371,
-      "visibility": 5400.0,
-      "uv_index": 0.9499999881,
+      "visibility": 9820.0,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -555,8 +555,8 @@
       "wind_speed_10m": 11.2121353149,
       "wind_direction_10m": 174.4725494385,
       "wind_gusts_10m": 29.1599998474,
-      "visibility": 13380.0,
-      "uv_index": 0.400000006,
+      "visibility": 11020.0,
+      "uv_index": 0.6499999762,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -575,7 +575,7 @@
       "wind_speed_10m": 11.165804863,
       "wind_direction_10m": 181.8475646973,
       "wind_gusts_10m": 28.7999992371,
-      "visibility": 9760.0,
+      "visibility": 19160.0,
       "uv_index": 0.5,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -595,8 +595,8 @@
       "wind_speed_10m": 11.165804863,
       "wind_direction_10m": 178.1524353027,
       "wind_gusts_10m": 26.6399993896,
-      "visibility": 13160.0,
-      "uv_index": 0.5500000119,
+      "visibility": 12180.0,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -615,7 +615,7 @@
       "wind_speed_10m": 10.4833574295,
       "wind_direction_10m": 164.0545349121,
       "wind_gusts_10m": 27.359998703,
-      "visibility": 6060.0,
+      "visibility": 9840.0,
       "uv_index": 0.25,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -635,8 +635,8 @@
       "wind_speed_10m": 10.8059988022,
       "wind_direction_10m": 178.0908966064,
       "wind_gusts_10m": 25.9199981689,
-      "visibility": 7040.0,
-      "uv_index": 0.200000003,
+      "visibility": 8560.0,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -655,7 +655,7 @@
       "wind_speed_10m": 9.6932954788,
       "wind_direction_10m": 195.0685424805,
       "wind_gusts_10m": 25.5599994659,
-      "visibility": 8720.0,
+      "visibility": 7100.0,
       "uv_index": 0.0500000007,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -675,7 +675,7 @@
       "wind_speed_10m": 8.2250347137,
       "wind_direction_10m": 203.1986083984,
       "wind_gusts_10m": 22.6800003052,
-      "visibility": 8760.0,
+      "visibility": 6580.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -695,7 +695,7 @@
       "wind_speed_10m": 7.8954162598,
       "wind_direction_10m": 204.2277374268,
       "wind_gusts_10m": 21.5999984741,
-      "visibility": 13980.0,
+      "visibility": 10120.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -715,7 +715,7 @@
       "wind_speed_10m": 5.4833564758,
       "wind_direction_10m": 203.1986236572,
       "wind_gusts_10m": 18.7199993134,
-      "visibility": 24140.0,
+      "visibility": 23280.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -916,7 +916,7 @@
       "wind_direction_10m": 194.0362701416,
       "wind_gusts_10m": 15.1199989319,
       "visibility": 24140.0,
-      "uv_index": 0.349999994,
+      "uv_index": 0.25,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -936,7 +936,7 @@
       "wind_direction_10m": 187.4313201904,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 24140.0,
-      "uv_index": 2.4000000954,
+      "uv_index": 1.3500000238,
       "sunshine_duration": 2527.1948242188,
       "city": "Brisbane"
     },
@@ -956,7 +956,7 @@
       "wind_direction_10m": 170.8377227783,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 24140.0,
-      "uv_index": 4.6999998093,
+      "uv_index": 2.6500000954,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -976,7 +976,7 @@
       "wind_direction_10m": 143.1300201416,
       "wind_gusts_10m": 43.5600013733,
       "visibility": 24140.0,
-      "uv_index": 6.4499998093,
+      "uv_index": 4.8000001907,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -996,7 +996,7 @@
       "wind_direction_10m": 142.6505737305,
       "wind_gusts_10m": 43.9199981689,
       "visibility": 24140.0,
-      "uv_index": 5.9499998093,
+      "uv_index": 7.4000000954,
       "sunshine_duration": 1621.6968994141,
       "city": "Brisbane"
     },
@@ -1016,7 +1016,7 @@
       "wind_direction_10m": 142.3523101807,
       "wind_gusts_10m": 41.7600021362,
       "visibility": 24140.0,
-      "uv_index": 9.1499996185,
+      "uv_index": 7.0999999046,
       "sunshine_duration": 808.6111450195,
       "city": "Brisbane"
     },
@@ -1036,7 +1036,7 @@
       "wind_direction_10m": 137.6426086426,
       "wind_gusts_10m": 40.3199996948,
       "visibility": 24140.0,
-      "uv_index": 8.8500003815,
+      "uv_index": 8.6499996185,
       "sunshine_duration": 1430.6323242188,
       "city": "Brisbane"
     },
@@ -1055,8 +1055,8 @@
       "wind_speed_10m": 16.3235282898,
       "wind_direction_10m": 131.4235687256,
       "wind_gusts_10m": 40.6800003052,
-      "visibility": 24140.0,
-      "uv_index": 8.3500003815,
+      "visibility": 18420.0,
+      "uv_index": 5.5999999046,
       "sunshine_duration": 2500.1821289062,
       "city": "Brisbane"
     },
@@ -1075,8 +1075,8 @@
       "wind_speed_10m": 15.8154354095,
       "wind_direction_10m": 131.3085174561,
       "wind_gusts_10m": 41.0399971008,
-      "visibility": 24140.0,
-      "uv_index": 6.8499999046,
+      "visibility": 19220.0,
+      "uv_index": 4.25,
       "sunshine_duration": 1014.2376708984,
       "city": "Brisbane"
     },
@@ -1095,8 +1095,8 @@
       "wind_speed_10m": 14.5655479431,
       "wind_direction_10m": 129.986831665,
       "wind_gusts_10m": 38.1599998474,
-      "visibility": 24140.0,
-      "uv_index": 4.8499999046,
+      "visibility": 18200.0,
+      "uv_index": 3.9000000954,
       "sunshine_duration": 2956.7592773438,
       "city": "Brisbane"
     },
@@ -1115,8 +1115,8 @@
       "wind_speed_10m": 13.7838172913,
       "wind_direction_10m": 130.7635192871,
       "wind_gusts_10m": 35.6399993896,
-      "visibility": 23800.0,
-      "uv_index": 2.7000000477,
+      "visibility": 24140.0,
+      "uv_index": 2.1500000954,
       "sunshine_duration": 1363.4328613281,
       "city": "Brisbane"
     },
@@ -1136,7 +1136,7 @@
       "wind_direction_10m": 136.169052124,
       "wind_gusts_10m": 32.7600021362,
       "visibility": 24140.0,
-      "uv_index": 0.9499999881,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 1217.1704101562,
       "city": "Brisbane"
     },
@@ -1215,7 +1215,7 @@
       "wind_speed_10m": 7.6282629967,
       "wind_direction_10m": 160.709854126,
       "wind_gusts_10m": 21.2399997711,
-      "visibility": 24140.0,
+      "visibility": 24040.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -1235,7 +1235,7 @@
       "wind_speed_10m": 6.8777899742,
       "wind_direction_10m": 173.9910888672,
       "wind_gusts_10m": 17.6399993896,
-      "visibility": 24140.0,
+      "visibility": 23700.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -1255,7 +1255,7 @@
       "wind_speed_10m": 6.8494668007,
       "wind_direction_10m": 183.0127258301,
       "wind_gusts_10m": 16.5599994659,
-      "visibility": 24140.0,
+      "visibility": 21260.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -1275,7 +1275,7 @@
       "wind_speed_10m": 6.8777899742,
       "wind_direction_10m": 186.0089111328,
       "wind_gusts_10m": 16.1999988556,
-      "visibility": 24140.0,
+      "visibility": 22340.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
@@ -1436,7 +1436,7 @@
       "wind_direction_10m": 135.0001068115,
       "wind_gusts_10m": 33.8399963379,
       "visibility": 24140.0,
-      "uv_index": 2.25,
+      "uv_index": 3.4500000477,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -1456,7 +1456,7 @@
       "wind_direction_10m": 126.2539291382,
       "wind_gusts_10m": 33.8399963379,
       "visibility": 24140.0,
-      "uv_index": 4.4499998093,
+      "uv_index": 6.5999999046,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -1476,7 +1476,7 @@
       "wind_direction_10m": 118.6103668213,
       "wind_gusts_10m": 34.2000007629,
       "visibility": 24140.0,
-      "uv_index": 7.8499999046,
+      "uv_index": 8.25,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -1496,7 +1496,7 @@
       "wind_direction_10m": 110.3765182495,
       "wind_gusts_10m": 33.8399963379,
       "visibility": 24140.0,
-      "uv_index": 5.3499999046,
+      "uv_index": 9.1000003815,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -1516,7 +1516,7 @@
       "wind_direction_10m": 108.9247436523,
       "wind_gusts_10m": 34.5600013733,
       "visibility": 24140.0,
-      "uv_index": 7.5999999046,
+      "uv_index": 9.1499996185,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -1956,7 +1956,7 @@
       "wind_direction_10m": 108.435043335,
       "wind_gusts_10m": 16.5599994659,
       "visibility": 24140.0,
-      "uv_index": 8.25,
+      "uv_index": 8.3000001907,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -1976,7 +1976,7 @@
       "wind_direction_10m": 94.3986206055,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 9.1000003815,
+      "uv_index": 9.1499996185,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2036,7 +2036,7 @@
       "wind_direction_10m": 44.9998970032,
       "wind_gusts_10m": 30.2399978638,
       "visibility": 24140.0,
-      "uv_index": 6.75,
+      "uv_index": 6.8499999046,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2096,7 +2096,7 @@
       "wind_direction_10m": 24.7751216888,
       "wind_gusts_10m": 31.3199977875,
       "visibility": 24140.0,
-      "uv_index": 0.8500000238,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2336,7 +2336,7 @@
       "wind_direction_10m": 258.6900939941,
       "wind_gusts_10m": 6.1199998856,
       "visibility": 24140.0,
-      "uv_index": 0.0,
+      "uv_index": 0.0500000007,
       "sunshine_duration": 164.9915618896,
       "city": "Brisbane"
     },
@@ -2356,7 +2356,7 @@
       "wind_direction_10m": 270.0,
       "wind_gusts_10m": 6.4799995422,
       "visibility": 24140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2376,7 +2376,7 @@
       "wind_direction_10m": 315.0000915527,
       "wind_gusts_10m": 7.1999998093,
       "visibility": 24140.0,
-      "uv_index": 1.2999999523,
+      "uv_index": 2.5499999523,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2396,7 +2396,7 @@
       "wind_direction_10m": 360.0,
       "wind_gusts_10m": 8.6400003433,
       "visibility": 24140.0,
-      "uv_index": 2.75,
+      "uv_index": 4.6500000954,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2416,7 +2416,7 @@
       "wind_direction_10m": 20.5561275482,
       "wind_gusts_10m": 10.7999992371,
       "visibility": 24140.0,
-      "uv_index": 4.1500000954,
+      "uv_index": 6.4499998093,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2436,7 +2436,7 @@
       "wind_direction_10m": 38.659828186,
       "wind_gusts_10m": 14.3999996185,
       "visibility": 24140.0,
-      "uv_index": 5.4499998093,
+      "uv_index": 7.5500001907,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2456,7 +2456,7 @@
       "wind_direction_10m": 47.2906341553,
       "wind_gusts_10m": 18.7199993134,
       "visibility": 24140.0,
-      "uv_index": 6.6999998093,
+      "uv_index": 8.25,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2476,7 +2476,7 @@
       "wind_direction_10m": 50.1944732666,
       "wind_gusts_10m": 23.0399990082,
       "visibility": 24140.0,
-      "uv_index": 7.3000001907,
+      "uv_index": 8.5,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2496,7 +2496,7 @@
       "wind_direction_10m": 46.3321533203,
       "wind_gusts_10m": 28.4400005341,
       "visibility": 24140.0,
-      "uv_index": 7.0,
+      "uv_index": 8.1499996185,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2516,7 +2516,7 @@
       "wind_direction_10m": 41.7602157593,
       "wind_gusts_10m": 33.8399963379,
       "visibility": 24140.0,
-      "uv_index": 6.0999999046,
+      "uv_index": 7.3499999046,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 37.998790741,
       "wind_gusts_10m": 36.719997406,
       "visibility": 24140.0,
-      "uv_index": 5.0,
+      "uv_index": 6.1999998093,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2556,7 +2556,7 @@
       "wind_direction_10m": 36.2539367676,
       "wind_gusts_10m": 35.2799987793,
       "visibility": 24140.0,
-      "uv_index": 3.6500000954,
+      "uv_index": 4.4499998093,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2576,7 +2576,7 @@
       "wind_direction_10m": 33.6901016235,
       "wind_gusts_10m": 31.3199977875,
       "visibility": 24140.0,
-      "uv_index": 2.0999999046,
+      "uv_index": 2.2999999523,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2596,7 +2596,7 @@
       "wind_direction_10m": 30.0685043335,
       "wind_gusts_10m": 26.6399993896,
       "visibility": 24140.0,
-      "uv_index": 0.8999999762,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 369.4621582031,
       "city": "Brisbane"
     },
@@ -2616,7 +2616,7 @@
       "wind_direction_10m": 25.0168685913,
       "wind_gusts_10m": 21.2399997711,
       "visibility": 24140.0,
-      "uv_index": 0.349999994,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -2636,7 +2636,7 @@
       "wind_direction_10m": 19.9831981659,
       "wind_gusts_10m": 14.7599992752,
       "visibility": 24140.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "city": "Brisbane"
     },
@@ -2836,7 +2836,7 @@
       "wind_direction_10m": 239.0363006592,
       "wind_gusts_10m": 6.1199998856,
       "visibility": 24140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.200000003,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2856,7 +2856,7 @@
       "wind_direction_10m": 108.435043335,
       "wind_gusts_10m": 11.1599988937,
       "visibility": 24140.0,
-      "uv_index": 1.2999999523,
+      "uv_index": 1.25,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2876,7 +2876,7 @@
       "wind_direction_10m": 85.9144668579,
       "wind_gusts_10m": 17.6399993896,
       "visibility": 24140.0,
-      "uv_index": 2.75,
+      "uv_index": 2.7999999523,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2896,7 +2896,7 @@
       "wind_direction_10m": 82.568687439,
       "wind_gusts_10m": 23.0399990082,
       "visibility": 24140.0,
-      "uv_index": 4.1500000954,
+      "uv_index": 4.3000001907,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2916,7 +2916,7 @@
       "wind_direction_10m": 83.8845901489,
       "wind_gusts_10m": 26.2800006866,
       "visibility": 24140.0,
-      "uv_index": 5.5,
+      "uv_index": 5.9000000954,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2936,7 +2936,7 @@
       "wind_direction_10m": 86.1860046387,
       "wind_gusts_10m": 28.4400005341,
       "visibility": 24140.0,
-      "uv_index": 6.8499999046,
+      "uv_index": 7.5500001907,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2956,7 +2956,7 @@
       "wind_direction_10m": 84.6442642212,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 7.5999999046,
+      "uv_index": 8.5,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2976,7 +2976,7 @@
       "wind_direction_10m": 80.2724990845,
       "wind_gusts_10m": 33.1199989319,
       "visibility": 24140.0,
-      "uv_index": 7.5500001907,
+      "uv_index": 8.3999996185,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -2996,7 +2996,7 @@
       "wind_direction_10m": 74.4758300781,
       "wind_gusts_10m": 35.6399993896,
       "visibility": 24140.0,
-      "uv_index": 6.9499998093,
+      "uv_index": 7.6500000954,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -3016,7 +3016,7 @@
       "wind_direction_10m": 70.1446990967,
       "wind_gusts_10m": 36.3600006104,
       "visibility": 24140.0,
-      "uv_index": 5.9499998093,
+      "uv_index": 6.5,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -3036,7 +3036,7 @@
       "wind_direction_10m": 69.4438705444,
       "wind_gusts_10m": 34.5600013733,
       "visibility": 24140.0,
-      "uv_index": 4.4000000954,
+      "uv_index": 4.8000001907,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -3056,7 +3056,7 @@
       "wind_direction_10m": 68.1985321045,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 24140.0,
-      "uv_index": 2.5,
+      "uv_index": 2.6500000954,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -3076,7 +3076,7 @@
       "wind_direction_10m": 68.7494277954,
       "wind_gusts_10m": 26.2800006866,
       "visibility": 24140.0,
-      "uv_index": 1.0,
+      "uv_index": 1.0499999523,
       "sunshine_duration": 326.0246887207,
       "city": "Brisbane"
     },
@@ -3336,7 +3336,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 8.279999733,
       "visibility": 24140.0,
-      "uv_index": 1.3999999762,
+      "uv_index": 1.3500000238,
       "sunshine_duration": 3600.0,
       "city": "Brisbane"
     },
@@ -3370,7 +3370,7 @@
       "rain_sum": 22.7000007629,
       "wind_speed_10m_max": 13.3927736282,
       "wind_gusts_10m_max": 33.1199989319,
-      "uv_index_max": 3.0,
+      "uv_index_max": 2.25,
       "sunrise": 0,
       "sunset": 0,
       "city": "Brisbane"
@@ -3383,7 +3383,7 @@
       "rain_sum": 15.9000005722,
       "wind_speed_10m_max": 11.8854532242,
       "wind_gusts_10m_max": 29.1599998474,
-      "uv_index_max": 4.6999998093,
+      "uv_index_max": 2.6500000954,
       "sunrise": 0,
       "sunset": 0,
       "city": "Brisbane"
@@ -3396,7 +3396,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 18.0,
       "wind_gusts_10m_max": 43.9199981689,
-      "uv_index_max": 9.1499996185,
+      "uv_index_max": 8.6499996185,
       "sunrise": 0,
       "sunset": 0,
       "city": "Brisbane"
@@ -3409,7 +3409,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 13.5323600769,
       "wind_gusts_10m_max": 34.5600013733,
-      "uv_index_max": 8.3500003815,
+      "uv_index_max": 9.1499996185,
       "sunrise": 0,
       "sunset": 0,
       "city": "Brisbane"
@@ -3435,7 +3435,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 14.6188373566,
       "wind_gusts_10m_max": 36.719997406,
-      "uv_index_max": 7.3000001907,
+      "uv_index_max": 8.5,
       "sunrise": 0,
       "sunset": 0,
       "city": "Brisbane"
@@ -3448,7 +3448,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 13.7791137695,
       "wind_gusts_10m_max": 36.3600006104,
-      "uv_index_max": 7.5999999046,
+      "uv_index_max": 8.5,
       "sunrise": 0,
       "sunset": 0,
       "city": "Brisbane"
