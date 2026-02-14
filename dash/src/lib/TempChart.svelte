@@ -72,11 +72,11 @@
         </svg>
         <span>Forecast</span>
         <span class="band-legend">
-            <span>Lowest</span>
+            <span>Low</span>
             {#each BAND_COLORS as color}
                 <span class="band-swatch" style="background:{color}"></span>
             {/each}
-            <span>Max</span>
+            <span>High</span>
         </span>
     </div>
 
@@ -95,12 +95,12 @@
                 y1="lower"
                 y2="upper"
                 fill={band.color}
-                opacity={0.5}
+                opacity={0.4}
                 curve="monotone-x"
             />
         {/each}
 
-        {#if avgLineData.length > 0}
+        <!-- {#if avgLineData.length > 0}
             <Line
                 data={avgLineData}
                 x="hour"
@@ -110,7 +110,7 @@
                 opacity={0.6}
                 strokeWidth={1}
             />
-        {/if}
+        {/if} -->
 
         {#if todayForecastData.length > 0}
             <Line
