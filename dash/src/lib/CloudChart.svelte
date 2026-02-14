@@ -1,5 +1,6 @@
 <script>
     import { Plot, AreaY, AxisX, AxisY } from 'svelteplot';
+    import './chart.css';
 
     let { days = [], currentHour = -1 } = $props();
 
@@ -59,7 +60,7 @@
     </defs>
 </svg>
 
-<div class="cloud-chart">
+<div class="chart cloud-chart">
     <h2>Cloud cover</h2>
     <div class="legend">
         <svg width="20" height="10" style="vertical-align: middle;">
@@ -120,27 +121,6 @@
 </div>
 
 <style>
-    .cloud-chart {
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-        font-weight: bold;
-        margin: 0 0 2px 0;
-        color: #000;
-    }
-
-    .legend {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        margin-bottom: 5px;
-        font-size: 0.5em;
-        color: #000;
-    }
-
     :global(.cloud-forecast-hash path) {
         fill: url(#cloud-hash) !important;
         stroke: none !important;

@@ -1,0 +1,40 @@
+.chart {
+    width: 100%;
+}
+
+.chart h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 2px 0;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom:5px;
+}
+
+.chart .legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 20px;
+    font-size: 0.5em;
+    color: #000;
+}
+
+.chart .band-legend {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    margin-left: 8px;
+}
+
+.chart .band-swatch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    opacity: 0.5;
+}
+
+.chart .white-glow {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+}

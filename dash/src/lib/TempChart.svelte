@@ -1,5 +1,6 @@
 <script>
     import { Plot, Line, Dot, Text, AreaY, AxisX, AxisY } from 'svelteplot';
+    import './chart.css';
 
     let { days = [], averages = [], bands = [], currentHour = -1 } = $props();
 
@@ -60,7 +61,7 @@
     };
 </script>
 
-<div class="temp-chart">
+<div class="chart">
     <h2>Temperature</h2>
     <div class="legend">
         <svg width="20" height="10" style="vertical-align: middle;">
@@ -171,42 +172,4 @@
 </div>
 
 <style>
-    .temp-chart {
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-        font-weight: bold;
-        margin: 0 0 2px 0;
-        color: #000;
-    }
-
-    .legend {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        margin-bottom: 5px;
-        font-size: 0.5em;
-        color: #000;
-    }
-
-    .band-legend {
-        display: inline-flex;
-        align-items: center;
-        gap: 0;
-        margin-left: 8px;
-    }
-
-    .band-swatch {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        opacity: 0.5;
-    }
-
-    .temp-chart :global(.white-glow) {
-        filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
-    }
 </style>

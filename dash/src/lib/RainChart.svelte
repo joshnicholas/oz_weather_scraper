@@ -1,5 +1,6 @@
 <script>
     import { Plot, BarY, AxisX, AxisY } from 'svelteplot';
+    import './chart.css';
 
     let { days = [], averages = [], probability = [], currentHour = -1, today = '' } = $props();
 
@@ -62,7 +63,7 @@
     };
 </script>
 
-<div class="rain-chart">
+<div class="chart rain-chart">
     <h2>Precipitation</h2>
     <div class="legend">
         <svg width="12" height="10" style="vertical-align: middle;">
@@ -113,27 +114,6 @@
 </div>
 
 <style>
-    .rain-chart {
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-        font-weight: bold;
-        margin: 0 0 2px 0;
-        color: #000;
-    }
-
-    .legend {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        margin-bottom: 5px;
-        font-size: 0.5em;
-        color: #000;
-    }
-
     .no-rain {
         display: flex;
         align-items: center;
