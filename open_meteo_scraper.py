@@ -37,6 +37,11 @@ HOURLY_VARS = [
     "sunshine_duration",
 ]
 
+# Additional vars only available in the forecast API (not archive)
+FORECAST_EXTRA_HOURLY_VARS = [
+    "precipitation_probability",
+]
+
 DAILY_VARS = [
     "temperature_2m_max", "temperature_2m_min",
     "precipitation_sum", "rain_sum",
@@ -202,13 +207,14 @@ def fetch_observations(client, lat: float, lon: float,
 
 def fetch_forecast(client, lat: float, lon: float) -> tuple:
     """Fetch forecast data. Returns (hourly_df, daily_df)."""
+    forecast_hourly_vars = HOURLY_VARS + FORECAST_EXTRA_HOURLY_VARS
     responses = api_call_with_rate_limit(
         client,
         "https://api.open-meteo.com/v1/forecast",
         params={
             "latitude": lat,
             "longitude": lon,
-            "hourly": HOURLY_VARS,
+            "hourly": forecast_hourly_vars,
             "daily": DAILY_VARS,
             "timezone": "UTC",
         },
@@ -225,7 +231,7 @@ def fetch_forecast(client, lat: float, lon: float) -> tuple:
             inclusive="left",
         )
     }
-    for i, var in enumerate(HOURLY_VARS):
+    for i, var in enumerate(forecast_hourly_vars):
         hourly_data[var] = hourly.Variables(i).ValuesAsNumpy()
 
     hourly_df = pd.DataFrame(hourly_data)
