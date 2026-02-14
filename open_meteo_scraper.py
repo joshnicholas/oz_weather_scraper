@@ -352,8 +352,9 @@ def main():
 
         obs_df["city"] = city
 
-        # Save latest JSON (last 3 hours only)
-        cutoff = pd.Timestamp.now(tz="UTC") - timedelta(hours=3)
+        # Save latest JSON (last 7 days of available data)
+        latest_time = obs_df["time"].max()
+        cutoff = latest_time - timedelta(days=7)
         recent_df = obs_df[obs_df["time"] >= cutoff]
         save_json(recent_df, OBS_DIR / f"{city}.json")
 
