@@ -2,11 +2,19 @@ name: Open Meteo Scraper
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
   schedule:
     - cron: "5 * * * *"  # Every hour at 5 past
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -40,3 +48,36 @@ jobs:
           else
             echo "No changes to commit"
           fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: dash/package-lock.json
+
+      - name: Install dashboard dependencies
+        run: npm ci
+        working-directory: dash
+
+      - name: Build dashboard
+        run: npm run build
+        working-directory: dash
+        env:
+          NODE_ENV: production
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dash/build
+
+  deploy:
+    needs: scrape
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
