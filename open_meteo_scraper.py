@@ -399,6 +399,11 @@ def main():
 
         time.sleep(REQUEST_DELAY)
 
+    # Combine observations + forecasts into per-city JSON for the dashboard
+    print("\n[4/4] Combining data for dashboard...")
+    from combine import main as combine_main
+    combine_main()
+
     print("\n" + "=" * 60)
     print("Done!")
     print("=" * 60)
