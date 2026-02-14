@@ -6,28 +6,17 @@
     import { onMount } from 'svelte';
 
     let { data } = $props();
-    let containerWidth = $state(0);
-
-    let today = $state('');
-    let currentHour = $state(-1);
     let selectedCity = $state('Melbourne');
 
-    onMount(() => {
-        const formatter = new Intl.DateTimeFormat('en-CA', {
-            timeZone: 'Australia/Melbourne',
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit'
-        });
-        today = formatter.format(new Date());
+    // Pre-computed at build time in +page.js
+    let today = $derived(data.today);
+    let currentHour = $derived(data.currentHour);
 
-        const hourFormatter = new Intl.DateTimeFormat('en-AU', {
-            timeZone: 'Australia/Melbourne',
-            hour: 'numeric',
-            hour12: false
-        });
-        currentHour = parseInt(hourFormatter.format(new Date()));
-    });
+    // Gate chart rendering on mount — svelteplot needs the DOM for width measurement.
+    // This still works for prerendering (onMount fires during prerender) but avoids
+    // broken SSR in dev mode where there's no DOM.
+    let mounted = $state(false);
+    onMount(() => { mounted = true; });
 
     let cityData = $derived(data.cityData[selectedCity] ?? {});
 
@@ -141,7 +130,7 @@
 </script>
 
 <div class="mx-auto max-w-[800px] min-h-[700px]">
-    <div class="dashboard" bind:clientWidth={containerWidth}>
+    <div class="dashboard">
         <div class="header">
             <select class="city-select" bind:value={selectedCity}>
                 {#each data.cities as city}
@@ -153,7 +142,7 @@
             {/if}
         </div>
 
-        {#if containerWidth > 0 && today}
+        {#if mounted}
             <div class="chart-grid">
                 <div class="chart-section">
                     <TempChart days={tempDays} averages={cityData.temperature_2m_avg ?? []} {currentHour} />
@@ -172,10 +161,6 @@
                 <div class="chart-section">
                     <HumidityChart days={humidityDays} averages={cityData.relative_humidity_2m_avg ?? []} {currentHour} />
                 </div>
-            </div>
-        {:else}
-            <div class="loading-container">
-                <p class="loading-text">Loading...</p>
             </div>
         {/if}
     </div>
@@ -330,15 +315,4 @@
         opacity: 0.7;
     }
 
-    .loading-text {
-        text-align: center;
-        font-size: 0.85em;
-        color: #000;
-        margin: 20px 0;
-    }
-
-    .loading-container {
-        text-align: center;
-        padding: 40px 20px;
-    }
 </style>
