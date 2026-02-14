@@ -1,3 +1,42 @@
 [
-
+  {
+    "time":"2026-02-13 22:00:00+00:00",
+    "temperature_2m":17.7374992371,
+    "apparent_temperature":17.3926696777,
+    "dew_point_2m":9.9375,
+    "relative_humidity_2m":60.2622070312,
+    "precipitation":0.0,
+    "rain":0.0,
+    "snowfall":0.0,
+    "cloud_cover":100.0,
+    "pressure_msl":1017.0999755859,
+    "surface_pressure":1011.3853759766,
+    "wind_speed_10m":2.3469126225,
+    "wind_direction_10m":265.6013793945,
+    "wind_gusts_10m":10.4400005341,
+    "visibility":null,
+    "uv_index":null,
+    "sunshine_duration":3600.0,
+    "city":"Adelaide"
+  },
+  {
+    "time":"2026-02-13 23:00:00+00:00",
+    "temperature_2m":19.0874996185,
+    "apparent_temperature":18.4250297546,
+    "dew_point_2m":9.8374996185,
+    "relative_humidity_2m":55.0043144226,
+    "precipitation":0.0,
+    "rain":0.0,
+    "snowfall":0.0,
+    "cloud_cover":100.0,
+    "pressure_msl":1017.0999755859,
+    "surface_pressure":1011.4117431641,
+    "wind_speed_10m":4.3274931908,
+    "wind_direction_10m":253.0724029541,
+    "wind_gusts_10m":14.0399999619,
+    "visibility":null,
+    "uv_index":null,
+    "sunshine_duration":615.3595581055,
+    "city":"Adelaide"
+  }
 ]

@@ -1,3 +1,42 @@
 [
-
+  {
+    "time":"2026-02-13 22:00:00+00:00",
+    "temperature_2m":19.75,
+    "apparent_temperature":21.3560905457,
+    "dew_point_2m":16.75,
+    "relative_humidity_2m":82.842124939,
+    "precipitation":0.200000003,
+    "rain":0.200000003,
+    "snowfall":0.0,
+    "cloud_cover":100.0,
+    "pressure_msl":1021.200012207,
+    "surface_pressure":1015.1468505859,
+    "wind_speed_10m":5.2416787148,
+    "wind_direction_10m":105.9454650879,
+    "wind_gusts_10m":15.4800004959,
+    "visibility":null,
+    "uv_index":null,
+    "sunshine_duration":0.0,
+    "city":"Sydney"
+  },
+  {
+    "time":"2026-02-13 23:00:00+00:00",
+    "temperature_2m":20.3999996185,
+    "apparent_temperature":21.2148342133,
+    "dew_point_2m":15.75,
+    "relative_humidity_2m":74.6644287109,
+    "precipitation":0.200000003,
+    "rain":0.200000003,
+    "snowfall":0.0,
+    "cloud_cover":100.0,
+    "pressure_msl":1021.4000244141,
+    "surface_pressure":1015.3590087891,
+    "wind_speed_10m":7.8625183105,
+    "wind_direction_10m":105.9454650879,
+    "wind_gusts_10m":18.7199993134,
+    "visibility":null,
+    "uv_index":null,
+    "sunshine_duration":0.0,
+    "city":"Sydney"
+  }
 ]

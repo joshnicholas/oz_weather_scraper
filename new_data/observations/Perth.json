@@ -1,3 +1,42 @@
 [
-
+  {
+    "time":"2026-02-13 22:00:00+00:00",
+    "temperature_2m":20.8500003815,
+    "apparent_temperature":19.1420555115,
+    "dew_point_2m":10.8999996185,
+    "relative_humidity_2m":52.9391174316,
+    "precipitation":0.0,
+    "rain":0.0,
+    "snowfall":0.0,
+    "cloud_cover":0.0,
+    "pressure_msl":1008.299987793,
+    "surface_pressure":1005.6094360352,
+    "wind_speed_10m":13.615901947,
+    "wind_direction_10m":65.8068008423,
+    "wind_gusts_10m":28.4400005341,
+    "visibility":null,
+    "uv_index":null,
+    "sunshine_duration":0.0,
+    "city":"Perth"
+  },
+  {
+    "time":"2026-02-13 23:00:00+00:00",
+    "temperature_2m":21.8999996185,
+    "apparent_temperature":20.2463207245,
+    "dew_point_2m":11.0,
+    "relative_humidity_2m":49.971408844,
+    "precipitation":0.0,
+    "rain":0.0,
+    "snowfall":0.0,
+    "cloud_cover":0.0,
+    "pressure_msl":1008.5,
+    "surface_pressure":1005.818359375,
+    "wind_speed_10m":13.4470949173,
+    "wind_direction_10m":62.062953949,
+    "wind_gusts_10m":29.1599998474,
+    "visibility":null,
+    "uv_index":null,
+    "sunshine_duration":2535.2585449219,
+    "city":"Perth"
+  }
 ]
