@@ -1,25 +1,5 @@
 [
   {
-    "time":"2026-02-13 22:00:00+00:00",
-    "temperature_2m":14.75,
-    "apparent_temperature":14.5984764099,
-    "dew_point_2m":11.75,
-    "relative_humidity_2m":82.2299957275,
-    "precipitation":0.0,
-    "rain":0.0,
-    "snowfall":0.0,
-    "cloud_cover":100.0,
-    "pressure_msl":1021.700012207,
-    "surface_pressure":1019.399597168,
-    "wind_speed_10m":4.7555441856,
-    "wind_direction_10m":150.5242004395,
-    "wind_gusts_10m":14.3999996185,
-    "visibility":null,
-    "uv_index":null,
-    "sunshine_duration":3600.0,
-    "city":"Melbourne"
-  },
-  {
     "time":"2026-02-13 23:00:00+00:00",
     "temperature_2m":16.0499992371,
     "apparent_temperature":15.677740097,
