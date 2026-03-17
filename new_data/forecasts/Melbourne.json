@@ -499,7 +499,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 6.1199998856,
       "visibility": 24140.0,
-      "uv_index": 2.0,
+      "uv_index": 2.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -520,7 +520,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 7.5599994659,
       "visibility": 24140.0,
-      "uv_index": 2.7000000477,
+      "uv_index": 3.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -541,7 +541,7 @@
       "wind_direction_10m": 185.7104949951,
       "wind_gusts_10m": 10.7999992371,
       "visibility": 24140.0,
-      "uv_index": 4.0500001907,
+      "uv_index": 5.3000001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -562,7 +562,7 @@
       "wind_direction_10m": 172.4054412842,
       "wind_gusts_10m": 15.1199989319,
       "visibility": 24140.0,
-      "uv_index": 5.9000000954,
+      "uv_index": 5.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -583,7 +583,7 @@
       "wind_direction_10m": 169.2157440186,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 24140.0,
-      "uv_index": 5.75,
+      "uv_index": 6.6999998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -604,7 +604,7 @@
       "wind_direction_10m": 171.5731201172,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 24140.0,
-      "uv_index": 5.8499999046,
+      "uv_index": 5.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Melbourne"
@@ -625,7 +625,7 @@
       "wind_direction_10m": 175.6013793945,
       "wind_gusts_10m": 25.1999988556,
       "visibility": 24140.0,
-      "uv_index": 4.6999998093,
+      "uv_index": 4.3499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Melbourne"
@@ -646,7 +646,7 @@
       "wind_direction_10m": 182.1210479736,
       "wind_gusts_10m": 24.4799995422,
       "visibility": 24140.0,
-      "uv_index": 3.5999999046,
+      "uv_index": 3.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 8.0,
       "city": "Melbourne"
@@ -667,7 +667,7 @@
       "wind_direction_10m": 192.9946136475,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 24140.0,
-      "uv_index": 1.1499999762,
+      "uv_index": 2.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 13.0,
       "city": "Melbourne"
@@ -688,7 +688,7 @@
       "wind_direction_10m": 195.9454650879,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 24140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 664.0028686523,
       "precipitation_probability": 15.0,
       "city": "Melbourne"
@@ -982,7 +982,7 @@
       "wind_direction_10m": 177.797454834,
       "wind_gusts_10m": 21.2399997711,
       "visibility": 24140.0,
-      "uv_index": 0.75,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1003,7 +1003,7 @@
       "wind_direction_10m": 178.2101287842,
       "wind_gusts_10m": 27.0,
       "visibility": 24140.0,
-      "uv_index": 2.0,
+      "uv_index": 2.2999999523,
       "sunshine_duration": 0.0,
       "precipitation_probability": 3.0,
       "city": "Melbourne"
@@ -1024,7 +1024,7 @@
       "wind_direction_10m": 171.1194152832,
       "wind_gusts_10m": 28.0799999237,
       "visibility": 24140.0,
-      "uv_index": 2.9000000954,
+      "uv_index": 3.4500000477,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1045,7 +1045,7 @@
       "wind_direction_10m": 174.8056640625,
       "wind_gusts_10m": 28.0799999237,
       "visibility": 24140.0,
-      "uv_index": 4.9499998093,
+      "uv_index": 4.75,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1066,7 +1066,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 29.5199985504,
       "visibility": 24140.0,
-      "uv_index": 5.8499999046,
+      "uv_index": 6.3499999046,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1087,7 +1087,7 @@
       "wind_direction_10m": 178.2101287842,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 24140.0,
-      "uv_index": 5.9000000954,
+      "uv_index": 6.75,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1129,7 +1129,7 @@
       "wind_direction_10m": 178.3634643555,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 24140.0,
-      "uv_index": 4.6500000954,
+      "uv_index": 4.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1150,7 +1150,7 @@
       "wind_direction_10m": 178.3153533936,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 3.4000000954,
+      "uv_index": 3.6500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1171,7 +1171,7 @@
       "wind_direction_10m": 175.1009979248,
       "wind_gusts_10m": 29.8799991608,
       "visibility": 24140.0,
-      "uv_index": 1.9500000477,
+      "uv_index": 2.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1192,7 +1192,7 @@
       "wind_direction_10m": 169.6952056885,
       "wind_gusts_10m": 29.8799991608,
       "visibility": 24140.0,
-      "uv_index": 0.75,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1486,7 +1486,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 4.6799998283,
       "visibility": 24140.0,
-      "uv_index": 0.8000000119,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 1689.1507568359,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1528,7 +1528,7 @@
       "wind_direction_10m": 172.8750762939,
       "wind_gusts_10m": 15.4800004959,
       "visibility": 24140.0,
-      "uv_index": 3.7000000477,
+      "uv_index": 3.8499999046,
       "sunshine_duration": 1910.7993164062,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1549,7 +1549,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 17.6399993896,
       "visibility": 24140.0,
-      "uv_index": 5.25,
+      "uv_index": 5.4499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1570,7 +1570,7 @@
       "wind_direction_10m": 193.3925170898,
       "wind_gusts_10m": 20.1599998474,
       "visibility": 24140.0,
-      "uv_index": 6.0,
+      "uv_index": 6.4499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1591,7 +1591,7 @@
       "wind_direction_10m": 191.3098907471,
       "wind_gusts_10m": 24.1199989319,
       "visibility": 24140.0,
-      "uv_index": 6.3000001907,
+      "uv_index": 6.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1612,7 +1612,7 @@
       "wind_direction_10m": 189.4622497559,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 24140.0,
-      "uv_index": 5.9499998093,
+      "uv_index": 6.3499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1633,7 +1633,7 @@
       "wind_direction_10m": 190.3047943115,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 24140.0,
-      "uv_index": 4.9499998093,
+      "uv_index": 5.3499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -1654,7 +1654,7 @@
       "wind_direction_10m": 189.4622497559,
       "wind_gusts_10m": 32.0399971008,
       "visibility": 24140.0,
-      "uv_index": 3.7000000477,
+      "uv_index": 3.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2032,7 +2032,7 @@
       "wind_direction_10m": 155.0952606201,
       "wind_gusts_10m": 27.359998703,
       "visibility": 24140.0,
-      "uv_index": 3.8499999046,
+      "uv_index": 3.9500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2053,7 +2053,7 @@
       "wind_direction_10m": 162.0719909668,
       "wind_gusts_10m": 31.6800003052,
       "visibility": 24140.0,
-      "uv_index": 5.3499999046,
+      "uv_index": 5.4000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2074,7 +2074,7 @@
       "wind_direction_10m": 169.5625762939,
       "wind_gusts_10m": 34.2000007629,
       "visibility": 24140.0,
-      "uv_index": 6.3000001907,
+      "uv_index": 6.3499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2095,7 +2095,7 @@
       "wind_direction_10m": 175.8151702881,
       "wind_gusts_10m": 36.0,
       "visibility": 24140.0,
-      "uv_index": 6.6500000954,
+      "uv_index": 6.6999998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2116,7 +2116,7 @@
       "wind_direction_10m": 178.6980743408,
       "wind_gusts_10m": 37.7999992371,
       "visibility": 24140.0,
-      "uv_index": 6.25,
+      "uv_index": 6.3000001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2137,7 +2137,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 38.8800010681,
       "visibility": 24140.0,
-      "uv_index": 5.25,
+      "uv_index": 5.3000001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2494,7 +2494,7 @@
       "wind_direction_10m": 26.5649852753,
       "wind_gusts_10m": 2.879999876,
       "visibility": 24140.0,
-      "uv_index": 0.75,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 934.367980957,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 63.4350128174,
       "wind_gusts_10m": 5.3999996185,
       "visibility": 24140.0,
-      "uv_index": 3.7000000477,
+      "uv_index": 3.5499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2557,7 +2557,7 @@
       "wind_direction_10m": 143.1300201416,
       "wind_gusts_10m": 8.6400003433,
       "visibility": 24140.0,
-      "uv_index": 5.0999999046,
+      "uv_index": 4.0500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2578,7 +2578,7 @@
       "wind_direction_10m": 158.1985321045,
       "wind_gusts_10m": 12.5999994278,
       "visibility": 24140.0,
-      "uv_index": 6.0500001907,
+      "uv_index": 5.9499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2599,7 +2599,7 @@
       "wind_direction_10m": 165.0685272217,
       "wind_gusts_10m": 16.5599994659,
       "visibility": 24140.0,
-      "uv_index": 6.6500000954,
+      "uv_index": 5.9499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2620,7 +2620,7 @@
       "wind_direction_10m": 168.6901092529,
       "wind_gusts_10m": 20.1599998474,
       "visibility": 24140.0,
-      "uv_index": 5.9499998093,
+      "uv_index": 5.1500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2641,7 +2641,7 @@
       "wind_direction_10m": 172.8750762939,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 24140.0,
-      "uv_index": 5.3000001907,
+      "uv_index": 4.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2662,7 +2662,7 @@
       "wind_direction_10m": 175.6013793945,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 24140.0,
-      "uv_index": 3.6500000954,
+      "uv_index": 3.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2683,7 +2683,7 @@
       "wind_direction_10m": 182.3858947754,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 24140.0,
-      "uv_index": 2.6500000954,
+      "uv_index": 2.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2704,7 +2704,7 @@
       "wind_direction_10m": 194.7436065674,
       "wind_gusts_10m": 20.5199985504,
       "visibility": 24140.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 0.6499999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2725,7 +2725,7 @@
       "wind_direction_10m": 209.7447967529,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 0.8999999762,
+      "uv_index": 0.0500000007,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2746,7 +2746,7 @@
       "wind_direction_10m": 228.0128631592,
       "wind_gusts_10m": 14.7599992752,
       "visibility": 24140.0,
-      "uv_index": 0.4499999881,
+      "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2767,7 +2767,7 @@
       "wind_direction_10m": 251.564956665,
       "wind_gusts_10m": 12.2399997711,
       "visibility": 24140.0,
-      "uv_index": 0.150000006,
+      "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -2998,7 +2998,7 @@
       "wind_direction_10m": 33.6901016235,
       "wind_gusts_10m": 7.5599994659,
       "visibility": 24140.0,
-      "uv_index": 0.5500000119,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -3019,7 +3019,7 @@
       "wind_direction_10m": 44.9998970032,
       "wind_gusts_10m": 10.0799999237,
       "visibility": 24140.0,
-      "uv_index": 1.3500000238,
+      "uv_index": 1.1499999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -3040,7 +3040,7 @@
       "wind_direction_10m": 41.6334495544,
       "wind_gusts_10m": 12.2399997711,
       "visibility": 24140.0,
-      "uv_index": 2.2999999523,
+      "uv_index": 2.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -3061,7 +3061,7 @@
       "wind_direction_10m": 24.7751216888,
       "wind_gusts_10m": 14.0399999619,
       "visibility": 24140.0,
-      "uv_index": 3.6500000954,
+      "uv_index": 3.4000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -3082,7 +3082,7 @@
       "wind_direction_10m": 6.3401002884,
       "wind_gusts_10m": 15.8400001526,
       "visibility": 24140.0,
-      "uv_index": 5.1500000954,
+      "uv_index": 4.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -3103,7 +3103,7 @@
       "wind_direction_10m": 356.8202209473,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 6.0999999046,
+      "uv_index": 5.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Melbourne"
@@ -3124,7 +3124,7 @@
       "wind_direction_10m": 352.8750610352,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 6.25,
+      "uv_index": 6.0500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Melbourne"
@@ -3145,7 +3145,7 @@
       "wind_direction_10m": 188.1300201416,
       "wind_gusts_10m": 16.5599994659,
       "visibility": 24140.0,
-      "uv_index": 5.9000000954,
+      "uv_index": 5.6500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Melbourne"
@@ -3166,7 +3166,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 5.0999999046,
+      "uv_index": 4.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Melbourne"
@@ -3187,7 +3187,7 @@
       "wind_direction_10m": 177.797454834,
       "wind_gusts_10m": 21.5999984741,
       "visibility": 24140.0,
-      "uv_index": 3.5499999523,
+      "uv_index": 3.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Melbourne"
@@ -3208,7 +3208,7 @@
       "wind_direction_10m": 178.0908966064,
       "wind_gusts_10m": 27.0,
       "visibility": 24140.0,
-      "uv_index": 1.6000000238,
+      "uv_index": 2.1500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Melbourne"
@@ -3229,7 +3229,7 @@
       "wind_direction_10m": 180.0,
       "wind_gusts_10m": 29.5199985504,
       "visibility": 24140.0,
-      "uv_index": 0.150000006,
+      "uv_index": 0.9499999881,
       "sunshine_duration": 102.5683135986,
       "precipitation_probability": 2.0,
       "city": "Melbourne"
@@ -3250,7 +3250,7 @@
       "wind_direction_10m": 188.7460784912,
       "wind_gusts_10m": 26.2800006866,
       "visibility": 24140.0,
-      "uv_index": 0.0,
+      "uv_index": 0.400000006,
       "sunshine_duration": 0.0,
       "precipitation_probability": 2.0,
       "city": "Melbourne"
@@ -3271,7 +3271,7 @@
       "wind_direction_10m": 207.8971710205,
       "wind_gusts_10m": 20.5199985504,
       "visibility": 24140.0,
-      "uv_index": 0.0,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "precipitation_probability": 3.0,
       "city": "Melbourne"
@@ -3502,7 +3502,7 @@
       "wind_direction_10m": 277.1249084473,
       "wind_gusts_10m": 9.0,
       "visibility": 24140.0,
-      "uv_index": 0.5500000119,
+      "uv_index": 0.5,
       "sunshine_duration": 0.0,
       "precipitation_probability": 9.0,
       "city": "Melbourne"
@@ -3523,7 +3523,7 @@
       "wind_direction_10m": 234.4622344971,
       "wind_gusts_10m": 9.3599996567,
       "visibility": 24140.0,
-      "uv_index": 1.3500000238,
+      "uv_index": 1.2000000477,
       "sunshine_duration": 0.0,
       "precipitation_probability": 10.0,
       "city": "Melbourne"
@@ -3538,7 +3538,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 12.4967193604,
       "wind_gusts_10m_max": 29.5199985504,
-      "uv_index_max": 2.0,
+      "uv_index_max": 2.25,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
@@ -3551,7 +3551,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 11.5256233215,
       "wind_gusts_10m_max": 27.0,
-      "uv_index_max": 5.9000000954,
+      "uv_index_max": 6.6999998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
@@ -3564,7 +3564,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 12.6462001801,
       "wind_gusts_10m_max": 30.9600009918,
-      "uv_index_max": 5.9000000954,
+      "uv_index_max": 6.75,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
@@ -3577,7 +3577,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 13.1387653351,
       "wind_gusts_10m_max": 32.3999977112,
-      "uv_index_max": 6.3000001907,
+      "uv_index_max": 6.75,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
@@ -3590,7 +3590,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 16.1999988556,
       "wind_gusts_10m_max": 38.8800010681,
-      "uv_index_max": 6.6500000954,
+      "uv_index_max": 6.6999998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
@@ -3603,7 +3603,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 9.3876504898,
       "wind_gusts_10m_max": 24.8400001526,
-      "uv_index_max": 6.6500000954,
+      "uv_index_max": 5.9499998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
@@ -3616,7 +3616,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 11.1599988937,
       "wind_gusts_10m_max": 29.5199985504,
-      "uv_index_max": 6.25,
+      "uv_index_max": 6.0500001907,
       "sunrise": 0,
       "sunset": 0,
       "city": "Melbourne"
