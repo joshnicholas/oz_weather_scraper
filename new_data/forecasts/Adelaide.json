@@ -163,7 +163,7 @@
       "wind_direction_10m": 78.6901016235,
       "wind_gusts_10m": 11.5199995041,
       "visibility": 24140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.3000000119,
       "sunshine_duration": 0.0,
       "precipitation_probability": 53.0,
       "city": "Adelaide"
@@ -541,7 +541,7 @@
       "wind_direction_10m": 349.5625915527,
       "wind_gusts_10m": 28.7999992371,
       "visibility": 13580.0,
-      "uv_index": 3.6500000954,
+      "uv_index": 4.4000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Adelaide"
@@ -562,7 +562,7 @@
       "wind_direction_10m": 340.5598754883,
       "wind_gusts_10m": 28.7999992371,
       "visibility": 24140.0,
-      "uv_index": 1.5,
+      "uv_index": 5.5500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Adelaide"
@@ -583,7 +583,7 @@
       "wind_direction_10m": 305.9097900391,
       "wind_gusts_10m": 29.1599998474,
       "visibility": 24140.0,
-      "uv_index": 5.6999998093,
+      "uv_index": 6.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Adelaide"
@@ -604,7 +604,7 @@
       "wind_direction_10m": 277.8532104492,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 24140.0,
-      "uv_index": 5.0999999046,
+      "uv_index": 5.9499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 5.0,
       "city": "Adelaide"
@@ -625,7 +625,7 @@
       "wind_direction_10m": 254.0545349121,
       "wind_gusts_10m": 23.7599983215,
       "visibility": 24140.0,
-      "uv_index": 4.9000000954,
+      "uv_index": 5.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Adelaide"
@@ -646,7 +646,7 @@
       "wind_direction_10m": 236.3099060059,
       "wind_gusts_10m": 22.6800003052,
       "visibility": 24140.0,
-      "uv_index": 2.0999999046,
+      "uv_index": 3.4500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 5.0,
       "city": "Adelaide"
@@ -667,7 +667,7 @@
       "wind_direction_10m": 215.7539825439,
       "wind_gusts_10m": 23.7599983215,
       "visibility": 24140.0,
-      "uv_index": 2.2000000477,
+      "uv_index": 0.6000000238,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Adelaide"
@@ -688,7 +688,7 @@
       "wind_direction_10m": 207.2994842529,
       "wind_gusts_10m": 25.9199981689,
       "visibility": 24140.0,
-      "uv_index": 0.6000000238,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 3293.4924316406,
       "precipitation_probability": 3.0,
       "city": "Adelaide"
@@ -1003,7 +1003,7 @@
       "wind_direction_10m": 182.8623504639,
       "wind_gusts_10m": 16.1999988556,
       "visibility": 24140.0,
-      "uv_index": 1.1000000238,
+      "uv_index": 1.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Adelaide"
@@ -1024,7 +1024,7 @@
       "wind_direction_10m": 189.0901947021,
       "wind_gusts_10m": 20.1599998474,
       "visibility": 24140.0,
-      "uv_index": 2.3499999046,
+      "uv_index": 2.4000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Adelaide"
@@ -1045,7 +1045,7 @@
       "wind_direction_10m": 201.4477996826,
       "wind_gusts_10m": 24.1199989319,
       "visibility": 24140.0,
-      "uv_index": 3.4000000954,
+      "uv_index": 4.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Adelaide"
@@ -1066,7 +1066,7 @@
       "wind_direction_10m": 208.1784973145,
       "wind_gusts_10m": 25.1999988556,
       "visibility": 24140.0,
-      "uv_index": 4.8499999046,
+      "uv_index": 4.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Adelaide"
@@ -1108,7 +1108,7 @@
       "wind_direction_10m": 218.8845062256,
       "wind_gusts_10m": 30.2399978638,
       "visibility": 24140.0,
-      "uv_index": 5.9000000954,
+      "uv_index": 5.8499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Adelaide"
@@ -1129,7 +1129,7 @@
       "wind_direction_10m": 212.4711761475,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 4.9000000954,
+      "uv_index": 4.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Adelaide"
@@ -1150,7 +1150,7 @@
       "wind_direction_10m": 212.0053405762,
       "wind_gusts_10m": 29.8799991608,
       "visibility": 24140.0,
-      "uv_index": 3.0499999523,
+      "uv_index": 3.5499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Adelaide"
@@ -1486,7 +1486,7 @@
       "wind_direction_10m": 53.1300201416,
       "wind_gusts_10m": 14.7599992752,
       "visibility": 24140.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.200000003,
       "sunshine_duration": 0.0,
       "precipitation_probability": 42.0,
       "city": "Adelaide"
@@ -1507,7 +1507,7 @@
       "wind_direction_10m": 40.3644676208,
       "wind_gusts_10m": 19.0799999237,
       "visibility": 13420.0,
-      "uv_index": 0.349999994,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 0.0,
       "precipitation_probability": 52.0,
       "city": "Adelaide"
@@ -1528,7 +1528,7 @@
       "wind_direction_10m": 19.6539134979,
       "wind_gusts_10m": 26.2800006866,
       "visibility": 23980.0,
-      "uv_index": 1.8500000238,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 60.0,
       "city": "Adelaide"
@@ -1549,7 +1549,7 @@
       "wind_direction_10m": 13.6270236969,
       "wind_gusts_10m": 28.0799999237,
       "visibility": 24140.0,
-      "uv_index": 2.5499999523,
+      "uv_index": 3.2000000477,
       "sunshine_duration": 0.0,
       "precipitation_probability": 65.0,
       "city": "Adelaide"
@@ -1570,7 +1570,7 @@
       "wind_direction_10m": 11.5921468735,
       "wind_gusts_10m": 28.7999992371,
       "visibility": 24140.0,
-      "uv_index": 2.3499999046,
+      "uv_index": 3.0999999046,
       "sunshine_duration": 0.0,
       "precipitation_probability": 69.0,
       "city": "Adelaide"
@@ -1591,7 +1591,7 @@
       "wind_direction_10m": 7.9433913231,
       "wind_gusts_10m": 35.2799987793,
       "visibility": 24140.0,
-      "uv_index": 1.1499999762,
+      "uv_index": 3.25,
       "sunshine_duration": 0.0,
       "precipitation_probability": 71.0,
       "city": "Adelaide"
@@ -1612,7 +1612,7 @@
       "wind_direction_10m": 6.0089182854,
       "wind_gusts_10m": 45.3600006104,
       "visibility": 24140.0,
-      "uv_index": 1.9500000477,
+      "uv_index": 2.5,
       "sunshine_duration": 0.0,
       "precipitation_probability": 72.0,
       "city": "Adelaide"
@@ -1633,7 +1633,7 @@
       "wind_direction_10m": 12.3390827179,
       "wind_gusts_10m": 50.0399971008,
       "visibility": 24140.0,
-      "uv_index": 2.2999999523,
+      "uv_index": 0.9499999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 71.0,
       "city": "Adelaide"
@@ -1654,7 +1654,7 @@
       "wind_direction_10m": 358.1524353027,
       "wind_gusts_10m": 51.1199989319,
       "visibility": 24140.0,
-      "uv_index": 2.5499999523,
+      "uv_index": 1.5499999523,
       "sunshine_duration": 517.6671142578,
       "precipitation_probability": 68.0,
       "city": "Adelaide"
@@ -1675,7 +1675,7 @@
       "wind_direction_10m": 353.4802856445,
       "wind_gusts_10m": 51.1199989319,
       "visibility": 24140.0,
-      "uv_index": 1.8999999762,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 0.0,
       "precipitation_probability": 62.0,
       "city": "Adelaide"
@@ -1696,7 +1696,7 @@
       "wind_direction_10m": 21.8014755249,
       "wind_gusts_10m": 53.639995575,
       "visibility": 24140.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.6499999762,
       "sunshine_duration": 0.0,
       "precipitation_probability": 53.0,
       "city": "Adelaide"
@@ -2011,7 +2011,7 @@
       "wind_direction_10m": 27.6458911896,
       "wind_gusts_10m": 43.9199981689,
       "visibility": 24140.0,
-      "uv_index": 1.25,
+      "uv_index": 1.0499999523,
       "sunshine_duration": 904.8135986328,
       "precipitation_probability": 19.0,
       "city": "Adelaide"
@@ -2032,7 +2032,7 @@
       "wind_direction_10m": 16.9276027679,
       "wind_gusts_10m": 54.0,
       "visibility": 24140.0,
-      "uv_index": 2.75,
+      "uv_index": 2.5,
       "sunshine_duration": 841.4799194336,
       "precipitation_probability": 20.0,
       "city": "Adelaide"
@@ -2053,7 +2053,7 @@
       "wind_direction_10m": 357.6141052246,
       "wind_gusts_10m": 46.7999992371,
       "visibility": 24140.0,
-      "uv_index": 4.1999998093,
+      "uv_index": 4.0500001907,
       "sunshine_duration": 820.8743896484,
       "precipitation_probability": 21.0,
       "city": "Adelaide"
@@ -2074,7 +2074,7 @@
       "wind_direction_10m": 335.3764648438,
       "wind_gusts_10m": 31.6800003052,
       "visibility": 24140.0,
-      "uv_index": 5.3000001907,
+      "uv_index": 4.9499998093,
       "sunshine_duration": 763.5095214844,
       "precipitation_probability": 22.0,
       "city": "Adelaide"
@@ -2095,7 +2095,7 @@
       "wind_direction_10m": 328.3925476074,
       "wind_gusts_10m": 23.7599983215,
       "visibility": 24140.0,
-      "uv_index": 5.6500000954,
+      "uv_index": 3.0999999046,
       "sunshine_duration": 531.2684326172,
       "precipitation_probability": 24.0,
       "city": "Adelaide"
@@ -2116,7 +2116,7 @@
       "wind_direction_10m": 337.2489929199,
       "wind_gusts_10m": 32.7600021362,
       "visibility": 23000.0,
-      "uv_index": 5.0999999046,
+      "uv_index": 2.2999999523,
       "sunshine_duration": 0.0,
       "precipitation_probability": 25.0,
       "city": "Adelaide"
@@ -2137,7 +2137,7 @@
       "wind_direction_10m": 350.5377502441,
       "wind_gusts_10m": 48.5999984741,
       "visibility": 23280.0,
-      "uv_index": 4.3000001907,
+      "uv_index": 2.25,
       "sunshine_duration": 0.0,
       "precipitation_probability": 27.0,
       "city": "Adelaide"
@@ -2158,7 +2158,7 @@
       "wind_direction_10m": 360.0,
       "wind_gusts_10m": 59.0399971008,
       "visibility": 24140.0,
-      "uv_index": 3.2999999523,
+      "uv_index": 1.7000000477,
       "sunshine_duration": 0.0,
       "precipitation_probability": 28.0,
       "city": "Adelaide"
@@ -2179,7 +2179,7 @@
       "wind_direction_10m": 2.6629452705,
       "wind_gusts_10m": 56.1599998474,
       "visibility": 24140.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.1499999762,
       "sunshine_duration": 0.0,
       "precipitation_probability": 29.0,
       "city": "Adelaide"
@@ -2200,7 +2200,7 @@
       "wind_direction_10m": 2.6025116444,
       "wind_gusts_10m": 47.5199966431,
       "visibility": 24140.0,
-      "uv_index": 0.400000006,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 31.0,
       "city": "Adelaide"
@@ -2515,7 +2515,7 @@
       "wind_direction_10m": 265.100982666,
       "wind_gusts_10m": 51.8399963379,
       "visibility": 24140.0,
-      "uv_index": 0.75,
+      "uv_index": 1.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 24.0,
       "city": "Adelaide"
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 266.8202209473,
       "wind_gusts_10m": 53.639995575,
       "visibility": 24140.0,
-      "uv_index": 2.0,
+      "uv_index": 2.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 23.0,
       "city": "Adelaide"
@@ -2557,7 +2557,7 @@
       "wind_direction_10m": 267.6467590332,
       "wind_gusts_10m": 53.639995575,
       "visibility": 24140.0,
-      "uv_index": 2.0999999046,
+      "uv_index": 1.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 22.0,
       "city": "Adelaide"
@@ -2578,7 +2578,7 @@
       "wind_direction_10m": 268.4306945801,
       "wind_gusts_10m": 52.9199981689,
       "visibility": 24140.0,
-      "uv_index": 2.0,
+      "uv_index": 3.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 21.0,
       "city": "Adelaide"
@@ -2599,7 +2599,7 @@
       "wind_direction_10m": 266.0275878906,
       "wind_gusts_10m": 53.2799987793,
       "visibility": 24140.0,
-      "uv_index": 1.8999999762,
+      "uv_index": 2.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 20.0,
       "city": "Adelaide"
@@ -2620,7 +2620,7 @@
       "wind_direction_10m": 258.6900939941,
       "wind_gusts_10m": 55.7999992371,
       "visibility": 24140.0,
-      "uv_index": 2.0499999523,
+      "uv_index": 2.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 19.0,
       "city": "Adelaide"
@@ -2641,7 +2641,7 @@
       "wind_direction_10m": 249.5376434326,
       "wind_gusts_10m": 59.0399971008,
       "visibility": 24140.0,
-      "uv_index": 2.25,
+      "uv_index": 2.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 18.0,
       "city": "Adelaide"
@@ -2662,7 +2662,7 @@
       "wind_direction_10m": 242.3870544434,
       "wind_gusts_10m": 61.5600013733,
       "visibility": 24140.0,
-      "uv_index": 2.2000000477,
+      "uv_index": 2.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 17.0,
       "city": "Adelaide"
@@ -2683,7 +2683,7 @@
       "wind_direction_10m": 240.2552185059,
       "wind_gusts_10m": 45.3600006104,
       "visibility": 24140.0,
-      "uv_index": 1.75,
+      "uv_index": 1.6000000238,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 16.0,
       "city": "Adelaide"
@@ -2704,7 +2704,7 @@
       "wind_direction_10m": 244.397857666,
       "wind_gusts_10m": 40.6800003052,
       "visibility": 24140.0,
-      "uv_index": 1.0499999523,
+      "uv_index": 1.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 15.0,
       "city": "Adelaide"
@@ -2998,7 +2998,7 @@
       "wind_direction_10m": 226.5073699951,
       "wind_gusts_10m": 37.7999992371,
       "visibility": 24140.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.0,
       "sunshine_duration": 3015.5070800781,
       "precipitation_probability": 23.0,
       "city": "Adelaide"
@@ -3019,7 +3019,7 @@
       "wind_direction_10m": 227.8624725342,
       "wind_gusts_10m": 40.6800003052,
       "visibility": 24140.0,
-      "uv_index": 0.5,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 23.0,
       "city": "Adelaide"
@@ -3040,7 +3040,7 @@
       "wind_direction_10m": 229.0857086182,
       "wind_gusts_10m": 42.8399963379,
       "visibility": 24140.0,
-      "uv_index": 0.9499999881,
+      "uv_index": 0.5500000119,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 23.0,
       "city": "Adelaide"
@@ -3061,7 +3061,7 @@
       "wind_direction_10m": 231.0440826416,
       "wind_gusts_10m": 43.9199981689,
       "visibility": 24140.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.8999999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 23.0,
       "city": "Adelaide"
@@ -3082,7 +3082,7 @@
       "wind_direction_10m": 233.1300201416,
       "wind_gusts_10m": 44.639995575,
       "visibility": 24140.0,
-      "uv_index": 2.5,
+      "uv_index": 3.6500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 22.0,
       "city": "Adelaide"
@@ -3103,7 +3103,7 @@
       "wind_direction_10m": 234.4622344971,
       "wind_gusts_10m": 45.3600006104,
       "visibility": 24140.0,
-      "uv_index": 3.0999999046,
+      "uv_index": 4.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 20.0,
       "city": "Adelaide"
@@ -3124,7 +3124,7 @@
       "wind_direction_10m": 235.5391235352,
       "wind_gusts_10m": 46.7999992371,
       "visibility": 24140.0,
-      "uv_index": 3.4000000954,
+      "uv_index": 4.6999998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 19.0,
       "city": "Adelaide"
@@ -3145,7 +3145,7 @@
       "wind_direction_10m": 235.8138275146,
       "wind_gusts_10m": 48.2399978638,
       "visibility": 24140.0,
-      "uv_index": 3.4500000477,
+      "uv_index": 4.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 17.0,
       "city": "Adelaide"
@@ -3166,7 +3166,7 @@
       "wind_direction_10m": 234.3601074219,
       "wind_gusts_10m": 48.9599990845,
       "visibility": 24140.0,
-      "uv_index": 3.2000000477,
+      "uv_index": 3.1500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 16.0,
       "city": "Adelaide"
@@ -3187,7 +3187,7 @@
       "wind_direction_10m": 228.1450500488,
       "wind_gusts_10m": 48.2399978638,
       "visibility": 24140.0,
-      "uv_index": 2.4500000477,
+      "uv_index": 2.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 14.0,
       "city": "Adelaide"
@@ -3208,7 +3208,7 @@
       "wind_direction_10m": 219.9203338623,
       "wind_gusts_10m": 46.7999992371,
       "visibility": 24140.0,
-      "uv_index": 1.3999999762,
+      "uv_index": 1.1499999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 12.0,
       "city": "Adelaide"
@@ -3229,7 +3229,7 @@
       "wind_direction_10m": 212.6805419922,
       "wind_gusts_10m": 45.0,
       "visibility": 24140.0,
-      "uv_index": 0.6000000238,
+      "uv_index": 0.349999994,
       "sunshine_duration": 0.0,
       "precipitation_probability": 11.0,
       "city": "Adelaide"
@@ -3250,7 +3250,7 @@
       "wind_direction_10m": 207.4396362305,
       "wind_gusts_10m": 42.4799995422,
       "visibility": 24140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.0500000007,
       "sunshine_duration": 0.0,
       "precipitation_probability": 10.0,
       "city": "Adelaide"
@@ -3271,7 +3271,7 @@
       "wind_direction_10m": 201.8014678955,
       "wind_gusts_10m": 39.5999984741,
       "visibility": 24140.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 9.0,
       "city": "Adelaide"
@@ -3502,7 +3502,7 @@
       "wind_direction_10m": 189.4622497559,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.3000000119,
       "sunshine_duration": 2968.2253417969,
       "precipitation_probability": 15.0,
       "city": "Adelaide"
@@ -3523,7 +3523,7 @@
       "wind_direction_10m": 192.0947418213,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 0.6499999762,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 15.0,
       "city": "Adelaide"
@@ -3551,7 +3551,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 13.9101686478,
       "wind_gusts_10m_max": 29.1599998474,
-      "uv_index_max": 5.6999998093,
+      "uv_index_max": 6.0999999046,
       "sunrise": 0,
       "sunset": 0,
       "city": "Adelaide"
@@ -3577,7 +3577,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 15.6299724579,
       "wind_gusts_10m_max": 53.639995575,
-      "uv_index_max": 2.5499999523,
+      "uv_index_max": 3.25,
       "sunrise": 0,
       "sunset": 0,
       "city": "Adelaide"
@@ -3590,7 +3590,7 @@
       "rain_sum": 8.4000005722,
       "wind_speed_10m_max": 25.2924003601,
       "wind_gusts_10m_max": 59.0399971008,
-      "uv_index_max": 5.6500000954,
+      "uv_index_max": 4.9499998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Adelaide"
@@ -3603,7 +3603,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 26.407907486,
       "wind_gusts_10m_max": 61.5600013733,
-      "uv_index_max": 2.25,
+      "uv_index_max": 3.2000000477,
       "sunrise": 0,
       "sunset": 0,
       "city": "Adelaide"
@@ -3616,7 +3616,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 23.4774093628,
       "wind_gusts_10m_max": 48.9599990845,
-      "uv_index_max": 3.4500000477,
+      "uv_index_max": 4.75,
       "sunrise": 0,
       "sunset": 0,
       "city": "Adelaide"
