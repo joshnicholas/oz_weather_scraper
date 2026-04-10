@@ -37,7 +37,7 @@
       "wind_direction_10m": 341.5649414062,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 4.5,
+      "uv_index": 4.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -58,7 +58,7 @@
       "wind_direction_10m": 332.5256652832,
       "wind_gusts_10m": 24.1199989319,
       "visibility": 24140.0,
-      "uv_index": 4.3000001907,
+      "uv_index": 4.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Sydney"
@@ -79,7 +79,7 @@
       "wind_direction_10m": 342.8971862793,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 24140.0,
-      "uv_index": 4.1500000954,
+      "uv_index": 3.9500000477,
       "sunshine_duration": 3100.8659667969,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -100,7 +100,7 @@
       "wind_direction_10m": 346.5042419434,
       "wind_gusts_10m": 23.7599983215,
       "visibility": 24140.0,
-      "uv_index": 4.3499999046,
+      "uv_index": 4.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -121,7 +121,7 @@
       "wind_direction_10m": 5.1943497658,
       "wind_gusts_10m": 21.9599990845,
       "visibility": 24140.0,
-      "uv_index": 3.1500000954,
+      "uv_index": 3.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -142,7 +142,7 @@
       "wind_direction_10m": 52.5945777893,
       "wind_gusts_10m": 18.7199993134,
       "visibility": 24140.0,
-      "uv_index": 1.25,
+      "uv_index": 1.8500000238,
       "sunshine_duration": 235.2012786865,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -163,7 +163,7 @@
       "wind_direction_10m": 83.4181518555,
       "wind_gusts_10m": 21.2399997711,
       "visibility": 24140.0,
-      "uv_index": 0.6999999881,
+      "uv_index": 0.6499999762,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -982,7 +982,7 @@
       "wind_direction_10m": 286.6993103027,
       "wind_gusts_10m": 25.1999988556,
       "visibility": 24140.0,
-      "uv_index": 1.0,
+      "uv_index": 1.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2158,7 +2158,7 @@
       "wind_direction_10m": 128.1572723389,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 24140.0,
-      "uv_index": 2.25,
+      "uv_index": 2.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2473,7 +2473,7 @@
       "wind_direction_10m": 254.0545349121,
       "wind_gusts_10m": 5.0399999619,
       "visibility": 24140.0,
-      "uv_index": 0.0500000007,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 2288.0187988281,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2494,7 +2494,7 @@
       "wind_direction_10m": 262.8750915527,
       "wind_gusts_10m": 6.8399996758,
       "visibility": 24140.0,
-      "uv_index": 0.6499999762,
+      "uv_index": 1.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2515,7 +2515,7 @@
       "wind_direction_10m": 276.3400878906,
       "wind_gusts_10m": 9.720000267,
       "visibility": 24140.0,
-      "uv_index": 1.5,
+      "uv_index": 2.4500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 286.6993103027,
       "wind_gusts_10m": 12.2399997711,
       "visibility": 24140.0,
-      "uv_index": 2.4500000477,
+      "uv_index": 3.9500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2557,7 +2557,7 @@
       "wind_direction_10m": 298.6103515625,
       "wind_gusts_10m": 14.3999996185,
       "visibility": 24140.0,
-      "uv_index": 3.5999999046,
+      "uv_index": 4.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2578,7 +2578,7 @@
       "wind_direction_10m": 307.5686645508,
       "wind_gusts_10m": 16.1999988556,
       "visibility": 24140.0,
-      "uv_index": 4.8000001907,
+      "uv_index": 5.3000001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2620,7 +2620,7 @@
       "wind_direction_10m": 319.7637023926,
       "wind_gusts_10m": 16.9199981689,
       "visibility": 24140.0,
-      "uv_index": 5.3000001907,
+      "uv_index": 5.1999998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -2641,7 +2641,7 @@
       "wind_direction_10m": 326.3099060059,
       "wind_gusts_10m": 15.8400001526,
       "visibility": 24140.0,
-      "uv_index": 4.5500001907,
+      "uv_index": 4.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -3040,7 +3040,7 @@
       "wind_direction_10m": 295.2010803223,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24140.0,
-      "uv_index": 2.4000000954,
+      "uv_index": 2.4500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -3061,7 +3061,7 @@
       "wind_direction_10m": 285.2551574707,
       "wind_gusts_10m": 21.5999984741,
       "visibility": 24140.0,
-      "uv_index": 3.5499999523,
+      "uv_index": 3.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -3082,7 +3082,7 @@
       "wind_direction_10m": 275.906036377,
       "wind_gusts_10m": 25.9199981689,
       "visibility": 24140.0,
-      "uv_index": 4.75,
+      "uv_index": 4.8000001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Sydney"
@@ -3538,7 +3538,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 16.3750534058,
       "wind_gusts_10m_max": 37.4399986267,
-      "uv_index_max": 4.5,
+      "uv_index_max": 4.25,
       "sunrise": 0,
       "sunset": 0,
       "city": "Sydney"
