@@ -79,7 +79,7 @@
       "wind_direction_10m": 199.9832000732,
       "wind_gusts_10m": 22.3199977875,
       "visibility": 24140.0,
-      "uv_index": 5.0,
+      "uv_index": 4.9499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -541,7 +541,7 @@
       "wind_direction_10m": 99.7823410034,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 24140.0,
-      "uv_index": 1.7999999523,
+      "uv_index": 1.9500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -562,7 +562,7 @@
       "wind_direction_10m": 109.179107666,
       "wind_gusts_10m": 18.0,
       "visibility": 24140.0,
-      "uv_index": 2.5499999523,
+      "uv_index": 3.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -583,7 +583,7 @@
       "wind_direction_10m": 126.2539291382,
       "wind_gusts_10m": 15.4800004959,
       "visibility": 24140.0,
-      "uv_index": 4.9000000954,
+      "uv_index": 4.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -604,7 +604,7 @@
       "wind_direction_10m": 183.1797637939,
       "wind_gusts_10m": 12.5999994278,
       "visibility": 24140.0,
-      "uv_index": 5.8000001907,
+      "uv_index": 5.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -624,8 +624,8 @@
       "wind_speed_10m": 9.6932964325,
       "wind_direction_10m": 211.32862854,
       "wind_gusts_10m": 17.6399993896,
-      "visibility": 24140.0,
-      "uv_index": 6.0,
+      "visibility": 22800.0,
+      "uv_index": 2.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Perth"
@@ -646,7 +646,7 @@
       "wind_direction_10m": 220.6012115479,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 24140.0,
-      "uv_index": 5.5,
+      "uv_index": 0.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -667,7 +667,7 @@
       "wind_direction_10m": 210.6996459961,
       "wind_gusts_10m": 23.7599983215,
       "visibility": 24140.0,
-      "uv_index": 4.3499999046,
+      "uv_index": 3.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -709,7 +709,7 @@
       "wind_direction_10m": 202.1094970703,
       "wind_gusts_10m": 21.2399997711,
       "visibility": 24140.0,
-      "uv_index": 1.1499999762,
+      "uv_index": 1.2999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Perth"
@@ -730,7 +730,7 @@
       "wind_direction_10m": 200.9245758057,
       "wind_gusts_10m": 21.9599990845,
       "visibility": 24140.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.25,
       "sunshine_duration": 3171.466796875,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -834,7 +834,7 @@
       "wind_speed_10m": 10.1056814194,
       "wind_direction_10m": 184.0855407715,
       "wind_gusts_10m": 20.5199985504,
-      "visibility": 24060.0,
+      "visibility": 24140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 3.0,
@@ -1065,8 +1065,8 @@
       "wind_speed_10m": 8.9059076309,
       "wind_direction_10m": 194.0362701416,
       "wind_gusts_10m": 18.0,
-      "visibility": 19240.0,
-      "uv_index": 3.5,
+      "visibility": 24140.0,
+      "uv_index": 3.4000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Perth"
@@ -1086,8 +1086,8 @@
       "wind_speed_10m": 13.4939985275,
       "wind_direction_10m": 189.2109527588,
       "wind_gusts_10m": 27.0,
-      "visibility": 22020.0,
-      "uv_index": 4.8499999046,
+      "visibility": 24140.0,
+      "uv_index": 4.5500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Perth"
@@ -1107,8 +1107,8 @@
       "wind_speed_10m": 15.3158731461,
       "wind_direction_10m": 209.5777435303,
       "wind_gusts_10m": 28.7999992371,
-      "visibility": 20160.0,
-      "uv_index": 5.6500000954,
+      "visibility": 24140.0,
+      "uv_index": 5.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 5.0,
       "city": "Perth"
@@ -1128,8 +1128,8 @@
       "wind_speed_10m": 18.2786445618,
       "wind_direction_10m": 212.1249694824,
       "wind_gusts_10m": 31.3199977875,
-      "visibility": 21120.0,
-      "uv_index": 5.8000001907,
+      "visibility": 22240.0,
+      "uv_index": 5.8499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 7.0,
       "city": "Perth"
@@ -1149,8 +1149,8 @@
       "wind_speed_10m": 20.3168888092,
       "wind_direction_10m": 209.7447814941,
       "wind_gusts_10m": 34.5600013733,
-      "visibility": 19160.0,
-      "uv_index": 5.4000000954,
+      "visibility": 24140.0,
+      "uv_index": 5.1999998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 8.0,
       "city": "Perth"
@@ -1401,7 +1401,7 @@
       "wind_speed_10m": 11.3671092987,
       "wind_direction_10m": 169.0459747314,
       "wind_gusts_10m": 19.7999992371,
-      "visibility": 16340.0,
+      "visibility": 24140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
@@ -1422,7 +1422,7 @@
       "wind_speed_10m": 10.948972702,
       "wind_direction_10m": 170.5377502441,
       "wind_gusts_10m": 18.7199993134,
-      "visibility": 16020.0,
+      "visibility": 24140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
@@ -1570,7 +1570,7 @@
       "wind_direction_10m": 131.9871368408,
       "wind_gusts_10m": 18.7199993134,
       "visibility": 24140.0,
-      "uv_index": 3.4500000477,
+      "uv_index": 3.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -1591,7 +1591,7 @@
       "wind_direction_10m": 150.2552032471,
       "wind_gusts_10m": 18.0,
       "visibility": 24140.0,
-      "uv_index": 4.8000001907,
+      "uv_index": 4.8499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2032,7 +2032,7 @@
       "wind_direction_10m": 282.652557373,
       "wind_gusts_10m": 30.2399978638,
       "visibility": 24140.0,
-      "uv_index": 0.3000000119,
+      "uv_index": 0.349999994,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Perth"
@@ -2053,7 +2053,7 @@
       "wind_direction_10m": 276.8426818848,
       "wind_gusts_10m": 30.2399978638,
       "visibility": 24140.0,
-      "uv_index": 1.0,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 3.0,
       "city": "Perth"
@@ -2074,7 +2074,7 @@
       "wind_direction_10m": 272.3372497559,
       "wind_gusts_10m": 29.8799991608,
       "visibility": 24140.0,
-      "uv_index": 3.0,
+      "uv_index": 2.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Perth"
@@ -2095,7 +2095,7 @@
       "wind_direction_10m": 271.1690979004,
       "wind_gusts_10m": 30.2399978638,
       "visibility": 24140.0,
-      "uv_index": 2.2000000477,
+      "uv_index": 2.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Perth"
@@ -2116,7 +2116,7 @@
       "wind_direction_10m": 276.7097473145,
       "wind_gusts_10m": 32.0399971008,
       "visibility": 24140.0,
-      "uv_index": 2.5999999046,
+      "uv_index": 2.5499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Perth"
@@ -2137,7 +2137,7 @@
       "wind_direction_10m": 284.2811279297,
       "wind_gusts_10m": 34.2000007629,
       "visibility": 24140.0,
-      "uv_index": 2.25,
+      "uv_index": 1.9500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2158,7 +2158,7 @@
       "wind_direction_10m": 289.3348999023,
       "wind_gusts_10m": 36.3600006104,
       "visibility": 24140.0,
-      "uv_index": 5.3000001907,
+      "uv_index": 2.3499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2179,7 +2179,7 @@
       "wind_direction_10m": 290.2249450684,
       "wind_gusts_10m": 37.7999992371,
       "visibility": 24140.0,
-      "uv_index": 4.1500000954,
+      "uv_index": 2.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2200,7 +2200,7 @@
       "wind_direction_10m": 289.6539001465,
       "wind_gusts_10m": 39.2399978638,
       "visibility": 24140.0,
-      "uv_index": 2.7000000477,
+      "uv_index": 1.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2221,7 +2221,7 @@
       "wind_direction_10m": 289.057800293,
       "wind_gusts_10m": 39.5999984741,
       "visibility": 24140.0,
-      "uv_index": 1.2000000477,
+      "uv_index": 1.25,
       "sunshine_duration": 2789.4968261719,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2241,8 +2241,8 @@
       "wind_speed_10m": 20.6082305908,
       "wind_direction_10m": 289.3846130371,
       "wind_gusts_10m": 38.5199966431,
-      "visibility": 24140.0,
-      "uv_index": 0.200000003,
+      "visibility": 21360.0,
+      "uv_index": 0.150000006,
       "sunshine_duration": 759.6127929688,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -2262,7 +2262,7 @@
       "wind_speed_10m": 20.3932933807,
       "wind_direction_10m": 290.6744995117,
       "wind_gusts_10m": 36.3600006104,
-      "visibility": 24140.0,
+      "visibility": 16400.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 1.0,
@@ -2346,7 +2346,7 @@
       "wind_speed_10m": 23.8035964966,
       "wind_direction_10m": 273.468170166,
       "wind_gusts_10m": 39.9599990845,
-      "visibility": 15140.0,
+      "visibility": 24140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 38.0,
@@ -2367,7 +2367,7 @@
       "wind_speed_10m": 20.7804527283,
       "wind_direction_10m": 255.9637298584,
       "wind_gusts_10m": 39.2399978638,
-      "visibility": 13160.0,
+      "visibility": 24140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 50.0,
@@ -2388,7 +2388,7 @@
       "wind_speed_10m": 19.8816490173,
       "wind_direction_10m": 227.9357452393,
       "wind_gusts_10m": 37.0799980164,
-      "visibility": 24140.0,
+      "visibility": 14180.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 60.0,
@@ -2409,7 +2409,7 @@
       "wind_speed_10m": 21.0930500031,
       "wind_direction_10m": 207.4396362305,
       "wind_gusts_10m": 35.2799987793,
-      "visibility": 24140.0,
+      "visibility": 13800.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
       "precipitation_probability": 65.0,
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 161.0294952393,
       "wind_gusts_10m": 22.3199977875,
       "visibility": 24140.0,
-      "uv_index": 0.0500000007,
+      "uv_index": 0.150000006,
       "sunshine_duration": 1837.0695800781,
       "precipitation_probability": 30.0,
       "city": "Perth"
@@ -2557,7 +2557,7 @@
       "wind_direction_10m": 160.9064178467,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 24140.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 30.0,
       "city": "Perth"
@@ -2578,7 +2578,7 @@
       "wind_direction_10m": 165.9637298584,
       "wind_gusts_10m": 17.6399993896,
       "visibility": 24140.0,
-      "uv_index": 0.4499999881,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 28.0,
       "city": "Perth"
@@ -2599,7 +2599,7 @@
       "wind_direction_10m": 183.5762634277,
       "wind_gusts_10m": 16.1999988556,
       "visibility": 24140.0,
-      "uv_index": 0.8500000238,
+      "uv_index": 1.5499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 27.0,
       "city": "Perth"
@@ -2620,7 +2620,7 @@
       "wind_direction_10m": 205.2010955811,
       "wind_gusts_10m": 16.9199981689,
       "visibility": 24140.0,
-      "uv_index": 1.5499999523,
+      "uv_index": 2.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 25.0,
       "city": "Perth"
@@ -2641,7 +2641,7 @@
       "wind_direction_10m": 216.8699798584,
       "wind_gusts_10m": 18.359998703,
       "visibility": 24140.0,
-      "uv_index": 2.4000000954,
+      "uv_index": 4.1500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 22.0,
       "city": "Perth"
@@ -2662,7 +2662,7 @@
       "wind_direction_10m": 221.0089874268,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 24140.0,
-      "uv_index": 2.9000000954,
+      "uv_index": 4.9499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 19.0,
       "city": "Perth"
@@ -2683,7 +2683,7 @@
       "wind_direction_10m": 220.0301971436,
       "wind_gusts_10m": 20.5199985504,
       "visibility": 24140.0,
-      "uv_index": 2.8499999046,
+      "uv_index": 4.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 17.0,
       "city": "Perth"
@@ -2704,7 +2704,7 @@
       "wind_direction_10m": 216.5289459229,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 24140.0,
-      "uv_index": 2.4500000477,
+      "uv_index": 3.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 14.0,
       "city": "Perth"
@@ -2725,7 +2725,7 @@
       "wind_direction_10m": 211.263671875,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 24140.0,
-      "uv_index": 1.9500000477,
+      "uv_index": 2.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 11.0,
       "city": "Perth"
@@ -2746,7 +2746,7 @@
       "wind_direction_10m": 202.4794769287,
       "wind_gusts_10m": 20.5199985504,
       "visibility": 24140.0,
-      "uv_index": 1.2999999523,
+      "uv_index": 1.6499999762,
       "sunshine_duration": 2895.361328125,
       "precipitation_probability": 9.0,
       "city": "Perth"
@@ -2767,7 +2767,7 @@
       "wind_direction_10m": 191.3098907471,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 24140.0,
-      "uv_index": 0.6000000238,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 7.0,
       "city": "Perth"
@@ -3040,7 +3040,7 @@
       "wind_direction_10m": 117.8971786499,
       "wind_gusts_10m": 12.2399997711,
       "visibility": 24140.0,
-      "uv_index": 0.150000006,
+      "uv_index": 0.200000003,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3061,7 +3061,7 @@
       "wind_direction_10m": 118.3006668091,
       "wind_gusts_10m": 10.7999992371,
       "visibility": 24140.0,
-      "uv_index": 0.8999999762,
+      "uv_index": 1.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3082,7 +3082,7 @@
       "wind_direction_10m": 139.3987884521,
       "wind_gusts_10m": 9.0,
       "visibility": 24140.0,
-      "uv_index": 1.8999999762,
+      "uv_index": 2.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3103,7 +3103,7 @@
       "wind_direction_10m": 188.1300201416,
       "wind_gusts_10m": 8.6400003433,
       "visibility": 24140.0,
-      "uv_index": 2.9000000954,
+      "uv_index": 3.2999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3124,7 +3124,7 @@
       "wind_direction_10m": 224.9998931885,
       "wind_gusts_10m": 11.1599988937,
       "visibility": 24140.0,
-      "uv_index": 3.9500000477,
+      "uv_index": 4.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3145,7 +3145,7 @@
       "wind_direction_10m": 234.1622619629,
       "wind_gusts_10m": 15.4800004959,
       "visibility": 24140.0,
-      "uv_index": 4.9499998093,
+      "uv_index": 5.1500000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3166,7 +3166,7 @@
       "wind_direction_10m": 235.1754302979,
       "wind_gusts_10m": 18.7199993134,
       "visibility": 24140.0,
-      "uv_index": 5.4000000954,
+      "uv_index": 5.4499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Perth"
@@ -3551,7 +3551,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 16.3433666229,
       "wind_gusts_10m_max": 27.7199993134,
-      "uv_index_max": 6.0,
+      "uv_index_max": 5.75,
       "sunrise": 0,
       "sunset": 0,
       "city": "Perth"
@@ -3564,7 +3564,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 21.5759868622,
       "wind_gusts_10m_max": 36.3600006104,
-      "uv_index_max": 5.8000001907,
+      "uv_index_max": 5.8499999046,
       "sunrise": 0,
       "sunset": 0,
       "city": "Perth"
@@ -3590,7 +3590,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 23.8634090424,
       "wind_gusts_10m_max": 39.9599990845,
-      "uv_index_max": 5.3000001907,
+      "uv_index_max": 2.5499999523,
       "sunrise": 0,
       "sunset": 0,
       "city": "Perth"
@@ -3603,7 +3603,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 12.1816253662,
       "wind_gusts_10m_max": 22.3199977875,
-      "uv_index_max": 2.9000000954,
+      "uv_index_max": 4.9499998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Perth"
@@ -3616,7 +3616,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 10.9726200104,
       "wind_gusts_10m_max": 20.1599998474,
-      "uv_index_max": 5.4000000954,
+      "uv_index_max": 5.4499998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Perth"
