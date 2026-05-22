@@ -2244,7 +2244,7 @@
       "visibility": 66640.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 1.0,
       "city": "Perth"
     },
     {
@@ -2265,7 +2265,7 @@
       "visibility": 61720.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 3.0,
       "city": "Perth"
     },
     {
@@ -2286,7 +2286,7 @@
       "visibility": 56780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 4.0,
       "city": "Perth"
     },
     {
@@ -2307,7 +2307,7 @@
       "visibility": 56780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 5.0,
       "city": "Perth"
     },
     {
@@ -2328,7 +2328,7 @@
       "visibility": 56780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 5.0,
       "city": "Perth"
     },
     {
@@ -2349,7 +2349,7 @@
       "visibility": 56780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 6.0,
       "city": "Perth"
     },
     {
@@ -2370,7 +2370,7 @@
       "visibility": 58060.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 3.0,
+      "precipitation_probability": 8.0,
       "city": "Perth"
     },
     {
@@ -2391,7 +2391,7 @@
       "visibility": 59360.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 5.0,
+      "precipitation_probability": 12.0,
       "city": "Perth"
     },
     {
@@ -2412,7 +2412,7 @@
       "visibility": 60640.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 6.0,
+      "precipitation_probability": 14.0,
       "city": "Perth"
     },
     {
@@ -2433,7 +2433,7 @@
       "visibility": 60640.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 6.0,
+      "precipitation_probability": 15.0,
       "city": "Perth"
     },
     {
@@ -2454,7 +2454,7 @@
       "visibility": 60660.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 7.0,
+      "precipitation_probability": 16.0,
       "city": "Perth"
     },
     {
@@ -2475,7 +2475,7 @@
       "visibility": 60660.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 8.0,
+      "precipitation_probability": 16.0,
       "city": "Perth"
     },
     {
@@ -2496,7 +2496,7 @@
       "visibility": 59380.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 16.0,
       "city": "Perth"
     },
     {
@@ -2517,7 +2517,7 @@
       "visibility": 58100.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 17.0,
       "city": "Perth"
     },
     {
@@ -2538,7 +2538,7 @@
       "visibility": 56820.0,
       "uv_index": 0.0500000007,
       "sunshine_duration": 2999.1574707031,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 18.0,
       "city": "Perth"
     },
     {
@@ -2559,7 +2559,7 @@
       "visibility": 58100.0,
       "uv_index": 0.6499999762,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 20.0,
       "city": "Perth"
     },
     {
@@ -2580,7 +2580,7 @@
       "visibility": 59400.0,
       "uv_index": 1.4500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 21.0,
+      "precipitation_probability": 22.0,
       "city": "Perth"
     },
     {
@@ -2601,7 +2601,7 @@
       "visibility": 60680.0,
       "uv_index": 2.2000000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 25.0,
       "city": "Perth"
     },
     {
@@ -2622,7 +2622,7 @@
       "visibility": 59400.0,
       "uv_index": 2.9500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 28.0,
       "city": "Perth"
     },
     {
@@ -2643,7 +2643,7 @@
       "visibility": 58140.0,
       "uv_index": 3.6500000954,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 32.0,
+      "precipitation_probability": 31.0,
       "city": "Perth"
     },
     {
@@ -2664,7 +2664,7 @@
       "visibility": 56860.0,
       "uv_index": 3.9000000954,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 37.0,
+      "precipitation_probability": 33.0,
       "city": "Perth"
     },
     {
@@ -2685,7 +2685,7 @@
       "visibility": 38700.0,
       "uv_index": 3.4000000954,
       "sunshine_duration": 2168.7487792969,
-      "precipitation_probability": 40.0,
+      "precipitation_probability": 34.0,
       "city": "Perth"
     },
     {
@@ -2706,7 +2706,7 @@
       "visibility": 20540.0,
       "uv_index": 2.4000000954,
       "sunshine_duration": 1249.8240966797,
-      "precipitation_probability": 43.0,
+      "precipitation_probability": 33.0,
       "city": "Perth"
     },
     {
@@ -2727,7 +2727,7 @@
       "visibility": 2380.0,
       "uv_index": 1.5499999523,
       "sunshine_duration": 750.5166015625,
-      "precipitation_probability": 45.0,
+      "precipitation_probability": 33.0,
       "city": "Perth"
     },
     {
@@ -2748,7 +2748,7 @@
       "visibility": 5760.0,
       "uv_index": 0.8999999762,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 47.0,
+      "precipitation_probability": 32.0,
       "city": "Perth"
     },
     {
@@ -2769,7 +2769,7 @@
       "visibility": 9140.0,
       "uv_index": 0.349999994,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 48.0,
+      "precipitation_probability": 30.0,
       "city": "Perth"
     },
     {
@@ -2790,7 +2790,7 @@
       "visibility": 12520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 49.0,
+      "precipitation_probability": 31.0,
       "city": "Perth"
     },
     {
@@ -2811,7 +2811,7 @@
       "visibility": 11580.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 51.0,
+      "precipitation_probability": 35.0,
       "city": "Perth"
     },
     {
@@ -2832,7 +2832,7 @@
       "visibility": 10640.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 52.0,
+      "precipitation_probability": 41.0,
       "city": "Perth"
     },
     {
@@ -2853,7 +2853,7 @@
       "visibility": 9700.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 54.0,
+      "precipitation_probability": 47.0,
       "city": "Perth"
     },
     {
@@ -2874,7 +2874,7 @@
       "visibility": 11180.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 55.0,
+      "precipitation_probability": 52.0,
       "city": "Perth"
     },
     {
@@ -2916,7 +2916,7 @@
       "visibility": 14120.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 57.0,
+      "precipitation_probability": 59.0,
       "city": "Perth"
     },
     {
@@ -2937,7 +2937,7 @@
       "visibility": 4180.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 58.0,
+      "precipitation_probability": 60.0,
       "city": "Perth"
     },
     {
@@ -2958,7 +2958,7 @@
       "visibility": 4840.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 59.0,
+      "precipitation_probability": 60.0,
       "city": "Perth"
     },
     {
@@ -3000,7 +3000,7 @@
       "visibility": 6120.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 61.0,
+      "precipitation_probability": 60.0,
       "city": "Perth"
     },
     {
