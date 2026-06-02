@@ -8,19 +8,14 @@
     let { data } = $props();
     let selectedCity = $state('Melbourne');
 
-    // Pre-computed at build time in +page.js
     let today = $derived(data.today);
     let currentHour = $derived(data.currentHour);
 
-    // Gate chart rendering on mount — svelteplot needs the DOM for width measurement.
-    // This still works for prerendering (onMount fires during prerender) but avoids
-    // broken SSR in dev mode where there's no DOM.
     let mounted = $state(false);
     onMount(() => { mounted = true; });
 
     let cityData = $derived(data.cityData[selectedCity] ?? {});
 
-    // Generic function to process any variable's time series into day objects
     function processDays(entries, todayStr, curHour) {
         if (!todayStr || !entries || entries.length === 0) return [];
 
@@ -87,7 +82,6 @@
         return result;
     }
 
-    // Find the latest observation time (last entry that is in the past)
     let lastUpdated = $derived.by(() => {
         const entries = cityData.temperature_2m;
         if (!entries || entries.length === 0 || !today) return '';
@@ -110,7 +104,7 @@
     let cloudDays = $derived(processDays(cityData.cloud_cover, today, currentHour));
     let humidityDays = $derived(processDays(cityData.relative_humidity_2m, today, currentHour));
 
-    // Process precipitation probability (forecast-only, no historic)
+
     let precipProbData = $derived.by(() => {
         const entries = cityData.precipitation_probability;
         if (!entries || entries.length === 0 || !today) return [];
@@ -187,7 +181,7 @@
 
     .header {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 
     .last-updated {

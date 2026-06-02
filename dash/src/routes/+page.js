@@ -2,7 +2,7 @@ export const prerender = true;
 
 export async function load({ fetch }) {
     try {
-        // Fetch the city list and all city data
+
         const listRes = await fetch('/cities/_list.json');
         const cities = await listRes.json();
 
@@ -12,8 +12,6 @@ export async function load({ fetch }) {
             cityData[city] = await res.json();
         }
 
-        // Compute today/currentHour at build time (Melbourne timezone)
-        // The page rebuilds hourly so this stays fresh
         const now = new Date();
         const today = new Intl.DateTimeFormat('en-CA', {
             timeZone: 'Australia/Melbourne',

@@ -108,7 +108,7 @@
         </Plot>
     {:else}
         <div class="no-rain">
-            <p>No rain</p>
+            <p>Nada</p>
         </div>
     {/if}
 </div>
