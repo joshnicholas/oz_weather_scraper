@@ -37,7 +37,7 @@
       "wind_direction_10m": 28.6103687286,
       "wind_gusts_10m": 11.5199995041,
       "visibility": 740.0,
-      "uv_index": 2.2999999523,
+      "uv_index": 2.2000000477,
       "sunshine_duration": 0.0,
       "precipitation_probability": 5.0,
       "city": "Canberra"
@@ -58,7 +58,7 @@
       "wind_direction_10m": 355.9144592285,
       "wind_gusts_10m": 11.5199995041,
       "visibility": 4420.0,
-      "uv_index": 2.4500000477,
+      "uv_index": 2.5,
       "sunshine_duration": 0.0,
       "precipitation_probability": 4.0,
       "city": "Canberra"
@@ -79,7 +79,7 @@
       "wind_direction_10m": 20.5561275482,
       "wind_gusts_10m": 11.8799991608,
       "visibility": 45040.0,
-      "uv_index": 2.75,
+      "uv_index": 2.7999999523,
       "sunshine_duration": 0.0,
       "precipitation_probability": 4.0,
       "city": "Canberra"
@@ -100,7 +100,7 @@
       "wind_direction_10m": 29.7447948456,
       "wind_gusts_10m": 13.3199996948,
       "visibility": 44220.0,
-      "uv_index": 2.25,
+      "uv_index": 1.8999999762,
       "sunshine_duration": 0.0,
       "precipitation_probability": 3.0,
       "city": "Canberra"
@@ -121,7 +121,7 @@
       "wind_direction_10m": 355.9144592285,
       "wind_gusts_10m": 18.0,
       "visibility": 24660.0,
-      "uv_index": 1.1499999762,
+      "uv_index": 1.1000000238,
       "sunshine_duration": 2320.0629882812,
       "precipitation_probability": 1.0,
       "city": "Canberra"
@@ -142,7 +142,7 @@
       "wind_direction_10m": 339.5503540039,
       "wind_gusts_10m": 23.7599983215,
       "visibility": 12680.0,
-      "uv_index": 0.6499999762,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 1758.4526367188,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -499,7 +499,7 @@
       "wind_direction_10m": 339.0754394531,
       "wind_gusts_10m": 15.8400001526,
       "visibility": 380.0,
-      "uv_index": 0.6999999881,
+      "uv_index": 0.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -520,7 +520,7 @@
       "wind_direction_10m": 331.9276123047,
       "wind_gusts_10m": 18.0,
       "visibility": 760.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.3999999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -541,7 +541,7 @@
       "wind_direction_10m": 324.117767334,
       "wind_gusts_10m": 26.6399993896,
       "visibility": 1260.0,
-      "uv_index": 2.5,
+      "uv_index": 2.2999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -562,7 +562,7 @@
       "wind_direction_10m": 319.6107177734,
       "wind_gusts_10m": 36.719997406,
       "visibility": 2780.0,
-      "uv_index": 2.9000000954,
+      "uv_index": 2.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -583,7 +583,7 @@
       "wind_direction_10m": 318.0848999023,
       "wind_gusts_10m": 48.9599990845,
       "visibility": 32960.0,
-      "uv_index": 2.9000000954,
+      "uv_index": 2.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -604,7 +604,7 @@
       "wind_direction_10m": 319.2892456055,
       "wind_gusts_10m": 48.5999984741,
       "visibility": 17540.0,
-      "uv_index": 1.4500000477,
+      "uv_index": 2.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Canberra"
@@ -625,7 +625,7 @@
       "wind_direction_10m": 319.2795410156,
       "wind_gusts_10m": 47.8800010681,
       "visibility": 66360.0,
-      "uv_index": 1.4500000477,
+      "uv_index": 1.8500000238,
       "sunshine_duration": 3207.3579101562,
       "precipitation_probability": 5.0,
       "city": "Canberra"
@@ -646,7 +646,7 @@
       "wind_direction_10m": 324.057800293,
       "wind_gusts_10m": 41.0399971008,
       "visibility": 66420.0,
-      "uv_index": 0.9499999881,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 6.0,
       "city": "Canberra"
@@ -1003,7 +1003,7 @@
       "wind_direction_10m": 315.0000915527,
       "wind_gusts_10m": 52.5600013733,
       "visibility": 7420.0,
-      "uv_index": 0.3000000119,
+      "uv_index": 0.200000003,
       "sunshine_duration": 0.0,
       "precipitation_probability": 95.0,
       "city": "Canberra"
@@ -1024,7 +1024,7 @@
       "wind_direction_10m": 309.2558288574,
       "wind_gusts_10m": 50.3999977112,
       "visibility": 9040.0,
-      "uv_index": 0.3000000119,
+      "uv_index": 0.200000003,
       "sunshine_duration": 0.0,
       "precipitation_probability": 96.0,
       "city": "Canberra"
@@ -1045,7 +1045,7 @@
       "wind_direction_10m": 307.2664794922,
       "wind_gusts_10m": 48.2399978638,
       "visibility": 7920.0,
-      "uv_index": 0.5,
+      "uv_index": 0.400000006,
       "sunshine_duration": 1899.3846435547,
       "precipitation_probability": 92.0,
       "city": "Canberra"
@@ -1066,7 +1066,7 @@
       "wind_direction_10m": 308.8200683594,
       "wind_gusts_10m": 51.4799995422,
       "visibility": 10980.0,
-      "uv_index": 0.6000000238,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 0.0,
       "precipitation_probability": 85.0,
       "city": "Canberra"
@@ -1087,7 +1087,7 @@
       "wind_direction_10m": 307.4054260254,
       "wind_gusts_10m": 45.3600006104,
       "visibility": 9220.0,
-      "uv_index": 0.9499999881,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 76.0,
       "city": "Canberra"
@@ -1108,7 +1108,7 @@
       "wind_direction_10m": 310.7320251465,
       "wind_gusts_10m": 45.0,
       "visibility": 14160.0,
-      "uv_index": 0.349999994,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 63.0,
       "city": "Canberra"
@@ -1129,7 +1129,7 @@
       "wind_direction_10m": 313.1817016602,
       "wind_gusts_10m": 39.9599990845,
       "visibility": 38960.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "precipitation_probability": 47.0,
       "city": "Canberra"
@@ -1150,7 +1150,7 @@
       "wind_direction_10m": 308.7655334473,
       "wind_gusts_10m": 35.2799987793,
       "visibility": 63280.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "precipitation_probability": 33.0,
       "city": "Canberra"
@@ -1486,7 +1486,7 @@
       "wind_direction_10m": 341.2585449219,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 18020.0,
-      "uv_index": 0.0500000007,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
       "precipitation_probability": 10.0,
       "city": "Canberra"
@@ -1507,7 +1507,7 @@
       "wind_direction_10m": 329.7436523438,
       "wind_gusts_10m": 24.1199989319,
       "visibility": 17760.0,
-      "uv_index": 0.400000006,
+      "uv_index": 0.75,
       "sunshine_duration": 180.7340240479,
       "precipitation_probability": 12.0,
       "city": "Canberra"
@@ -1528,7 +1528,7 @@
       "wind_direction_10m": 313.5679626465,
       "wind_gusts_10m": 25.1999988556,
       "visibility": 13720.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.2999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 14.0,
       "city": "Canberra"
@@ -1549,7 +1549,7 @@
       "wind_direction_10m": 306.6898193359,
       "wind_gusts_10m": 28.0799999237,
       "visibility": 11020.0,
-      "uv_index": 2.0999999046,
+      "uv_index": 2.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 18.0,
       "city": "Canberra"
@@ -1570,7 +1570,7 @@
       "wind_direction_10m": 300.8156433105,
       "wind_gusts_10m": 29.8799991608,
       "visibility": 11880.0,
-      "uv_index": 2.25,
+      "uv_index": 2.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 22.0,
       "city": "Canberra"
@@ -1591,7 +1591,7 @@
       "wind_direction_10m": 303.4653930664,
       "wind_gusts_10m": 31.3199977875,
       "visibility": 11760.0,
-      "uv_index": 2.3499999046,
+      "uv_index": 3.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 24.0,
       "city": "Canberra"
@@ -1612,7 +1612,7 @@
       "wind_direction_10m": 305.9097900391,
       "wind_gusts_10m": 31.6800003052,
       "visibility": 11320.0,
-      "uv_index": 1.9500000477,
+      "uv_index": 2.8499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 21.0,
       "city": "Canberra"
@@ -1633,7 +1633,7 @@
       "wind_direction_10m": 300.5474853516,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 14700.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 2.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 15.0,
       "city": "Canberra"
@@ -1654,7 +1654,7 @@
       "wind_direction_10m": 309.5225830078,
       "wind_gusts_10m": 29.5199985504,
       "visibility": 46240.0,
-      "uv_index": 0.8999999762,
+      "uv_index": 1.0,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 10.0,
       "city": "Canberra"
@@ -1675,7 +1675,7 @@
       "wind_direction_10m": 337.9637145996,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 56320.0,
-      "uv_index": 0.150000006,
+      "uv_index": 0.200000003,
       "sunshine_duration": 0.0,
       "precipitation_probability": 6.0,
       "city": "Canberra"
@@ -2095,7 +2095,7 @@
       "wind_direction_10m": 302.0053405762,
       "wind_gusts_10m": 20.5199985504,
       "visibility": 33960.0,
-      "uv_index": 3.25,
+      "uv_index": 1.4500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 10.0,
       "city": "Canberra"
@@ -2116,7 +2116,7 @@
       "wind_direction_10m": 313.0908508301,
       "wind_gusts_10m": 21.2399997711,
       "visibility": 35400.0,
-      "uv_index": 2.4000000954,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 11.0,
       "city": "Canberra"
@@ -2137,7 +2137,7 @@
       "wind_direction_10m": 324.6051025391,
       "wind_gusts_10m": 21.2399997711,
       "visibility": 36860.0,
-      "uv_index": 1.5499999523,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 13.0,
       "city": "Canberra"
@@ -2158,7 +2158,7 @@
       "wind_direction_10m": 332.354095459,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 38300.0,
-      "uv_index": 0.8000000119,
+      "uv_index": 0.349999994,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 14.0,
       "city": "Canberra"
@@ -2179,7 +2179,7 @@
       "wind_direction_10m": 334.0256652832,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 46080.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 3215.8640136719,
       "precipitation_probability": 14.0,
       "city": "Canberra"
@@ -2494,7 +2494,7 @@
       "wind_direction_10m": 130.6012115479,
       "wind_gusts_10m": 10.0799999237,
       "visibility": 400.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 2591.3459472656,
       "precipitation_probability": 5.0,
       "city": "Canberra"
@@ -2515,7 +2515,7 @@
       "wind_direction_10m": 63.4350128174,
       "wind_gusts_10m": 10.7999992371,
       "visibility": 720.0,
-      "uv_index": 0.9499999881,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 4.0,
       "city": "Canberra"
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 18.4350528717,
       "wind_gusts_10m": 11.8799991608,
       "visibility": 1040.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.7999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 4.0,
       "city": "Canberra"
@@ -2557,7 +2557,7 @@
       "wind_direction_10m": 34.6952209473,
       "wind_gusts_10m": 14.3999996185,
       "visibility": 9840.0,
-      "uv_index": 2.3499999046,
+      "uv_index": 2.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 4.0,
       "city": "Canberra"
@@ -2578,7 +2578,7 @@
       "wind_direction_10m": 46.6365356445,
       "wind_gusts_10m": 16.9199981689,
       "visibility": 18640.0,
-      "uv_index": 3.0,
+      "uv_index": 3.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 5.0,
       "city": "Canberra"
@@ -2620,7 +2620,7 @@
       "wind_direction_10m": 360.0,
       "wind_gusts_10m": 20.5199985504,
       "visibility": 41260.0,
-      "uv_index": 2.9500000477,
+      "uv_index": 2.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 8.0,
       "city": "Canberra"
@@ -3019,7 +3019,7 @@
       "wind_direction_10m": 307.8750305176,
       "wind_gusts_10m": 13.3199996948,
       "visibility": 3400.0,
-      "uv_index": 0.8000000119,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 3051.1650390625,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -3040,7 +3040,7 @@
       "wind_direction_10m": 322.4313354492,
       "wind_gusts_10m": 12.9599990845,
       "visibility": 4020.0,
-      "uv_index": 1.3999999762,
+      "uv_index": 1.5499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -3061,7 +3061,7 @@
       "wind_direction_10m": 333.4350280762,
       "wind_gusts_10m": 13.3199996948,
       "visibility": 14300.0,
-      "uv_index": 2.0499999523,
+      "uv_index": 2.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -3082,7 +3082,7 @@
       "wind_direction_10m": 341.5649414062,
       "wind_gusts_10m": 14.0399999619,
       "visibility": 24560.0,
-      "uv_index": 2.75,
+      "uv_index": 2.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Canberra"
@@ -3103,7 +3103,7 @@
       "wind_direction_10m": 349.0459594727,
       "wind_gusts_10m": 15.1199989319,
       "visibility": 34840.0,
-      "uv_index": 3.0999999046,
+      "uv_index": 2.8499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Canberra"
@@ -3124,7 +3124,7 @@
       "wind_direction_10m": 355.2364501953,
       "wind_gusts_10m": 16.1999988556,
       "visibility": 45100.0,
-      "uv_index": 2.8499999046,
+      "uv_index": 2.5499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Canberra"
@@ -3145,7 +3145,7 @@
       "wind_direction_10m": 358.5312194824,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 55380.0,
-      "uv_index": 2.1500000954,
+      "uv_index": 1.8999999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Canberra"
@@ -3166,7 +3166,7 @@
       "wind_direction_10m": 2.9356200695,
       "wind_gusts_10m": 17.6399993896,
       "visibility": 65640.0,
-      "uv_index": 1.25,
+      "uv_index": 1.1000000238,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 2.0,
       "city": "Canberra"
@@ -3502,7 +3502,7 @@
       "wind_direction_10m": 160.9064178467,
       "wind_gusts_10m": 15.8400001526,
       "visibility": 53120.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 2568.4729003906,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -3523,7 +3523,7 @@
       "wind_direction_10m": 169.1145172119,
       "wind_gusts_10m": 16.9199981689,
       "visibility": 57160.0,
-      "uv_index": 0.8500000238,
+      "uv_index": 0.5,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Canberra"
@@ -3538,7 +3538,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 11.3342847824,
       "wind_gusts_10m_max": 24.4799995422,
-      "uv_index_max": 2.75,
+      "uv_index_max": 2.7999999523,
       "sunrise": 0,
       "sunset": 0,
       "city": "Canberra"
@@ -3551,7 +3551,7 @@
       "rain_sum": 2.0999999046,
       "wind_speed_10m_max": 25.3640365601,
       "wind_gusts_10m_max": 52.5600013733,
-      "uv_index_max": 2.9000000954,
+      "uv_index_max": 2.75,
       "sunrise": 0,
       "sunset": 0,
       "city": "Canberra"
@@ -3564,7 +3564,7 @@
       "rain_sum": 0.5,
       "wind_speed_10m_max": 21.6187419891,
       "wind_gusts_10m_max": 51.4799995422,
-      "uv_index_max": 0.9499999881,
+      "uv_index_max": 0.8500000238,
       "sunrise": 0,
       "sunset": 0,
       "city": "Canberra"
@@ -3577,7 +3577,7 @@
       "rain_sum": 0.7000000477,
       "wind_speed_10m_max": 12.8898096085,
       "wind_gusts_10m_max": 31.6800003052,
-      "uv_index_max": 2.3499999046,
+      "uv_index_max": 3.0,
       "sunrise": 0,
       "sunset": 0,
       "city": "Canberra"
@@ -3590,7 +3590,7 @@
       "rain_sum": 0.1000000015,
       "wind_speed_10m_max": 8.5343532562,
       "wind_gusts_10m_max": 21.2399997711,
-      "uv_index_max": 3.25,
+      "uv_index_max": 3.2000000477,
       "sunrise": 0,
       "sunset": 0,
       "city": "Canberra"
@@ -3616,7 +3616,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 7.0292248726,
       "wind_gusts_10m_max": 17.6399993896,
-      "uv_index_max": 3.0999999046,
+      "uv_index_max": 2.8499999046,
       "sunrise": 0,
       "sunset": 0,
       "city": "Canberra"
