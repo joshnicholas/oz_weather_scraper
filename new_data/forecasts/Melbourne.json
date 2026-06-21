@@ -18,7 +18,7 @@
       "visibility": 47400.0,
       "uv_index": 0.6000000238,
       "sunshine_duration": 3035.7893066406,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -669,7 +669,7 @@
       "visibility": 17640.0,
       "uv_index": 0.25,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 4.0,
       "city": "Melbourne"
     },
     {
@@ -690,7 +690,7 @@
       "visibility": 10580.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 6.0,
+      "precipitation_probability": 10.0,
       "city": "Melbourne"
     },
     {
@@ -711,7 +711,7 @@
       "visibility": 4520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 8.0,
+      "precipitation_probability": 14.0,
       "city": "Melbourne"
     },
     {
@@ -732,7 +732,7 @@
       "visibility": 6360.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 8.0,
+      "precipitation_probability": 15.0,
       "city": "Melbourne"
     },
     {
@@ -753,7 +753,7 @@
       "visibility": 11300.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 7.0,
+      "precipitation_probability": 14.0,
       "city": "Melbourne"
     },
     {
@@ -774,7 +774,7 @@
       "visibility": 42680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 6.0,
+      "precipitation_probability": 12.0,
       "city": "Melbourne"
     },
     {
@@ -795,7 +795,7 @@
       "visibility": 42700.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 4.0,
+      "precipitation_probability": 8.0,
       "city": "Melbourne"
     },
     {
@@ -816,7 +816,7 @@
       "visibility": 36600.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 3.0,
       "city": "Melbourne"
     },
     {
@@ -984,7 +984,7 @@
       "visibility": 38140.0,
       "uv_index": 0.0,
       "sunshine_duration": 103.9221343994,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -1005,7 +1005,7 @@
       "visibility": 43560.0,
       "uv_index": 0.200000003,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
@@ -1026,7 +1026,7 @@
       "visibility": 8780.0,
       "uv_index": 0.6000000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 4.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -1047,7 +1047,7 @@
       "visibility": 52640.0,
       "uv_index": 1.7000000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 6.0,
+      "precipitation_probability": 3.0,
       "city": "Melbourne"
     },
     {
@@ -1068,7 +1068,7 @@
       "visibility": 56660.0,
       "uv_index": 2.6500000954,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 9.0,
+      "precipitation_probability": 4.0,
       "city": "Melbourne"
     },
     {
@@ -1089,7 +1089,7 @@
       "visibility": 13160.0,
       "uv_index": 2.7999999523,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 6.0,
       "city": "Melbourne"
     },
     {
@@ -1110,7 +1110,7 @@
       "visibility": 8000.0,
       "uv_index": 2.5999999046,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 15.0,
+      "precipitation_probability": 10.0,
       "city": "Melbourne"
     },
     {
@@ -1131,7 +1131,7 @@
       "visibility": 7760.0,
       "uv_index": 1.8500000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 16.0,
       "city": "Melbourne"
     },
     {
@@ -1194,7 +1194,7 @@
       "visibility": 15280.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 23.0,
+      "precipitation_probability": 22.0,
       "city": "Melbourne"
     },
     {
@@ -1215,7 +1215,7 @@
       "visibility": 18760.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 24.0,
+      "precipitation_probability": 22.0,
       "city": "Melbourne"
     },
     {
@@ -1257,7 +1257,7 @@
       "visibility": 17140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 21.0,
+      "precipitation_probability": 24.0,
       "city": "Melbourne"
     },
     {
@@ -1278,7 +1278,7 @@
       "visibility": 18720.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 25.0,
       "city": "Melbourne"
     },
     {
@@ -1299,7 +1299,7 @@
       "visibility": 21000.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 26.0,
       "city": "Melbourne"
     },
     {
@@ -1320,7 +1320,7 @@
       "visibility": 47400.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 19.0,
+      "precipitation_probability": 27.0,
       "city": "Melbourne"
     },
     {
@@ -1341,7 +1341,7 @@
       "visibility": 47560.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 27.0,
       "city": "Melbourne"
     },
     {
@@ -1362,7 +1362,7 @@
       "visibility": 47560.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 21.0,
+      "precipitation_probability": 23.0,
       "city": "Melbourne"
     },
     {
@@ -1383,7 +1383,7 @@
       "visibility": 47520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 24.0,
+      "precipitation_probability": 18.0,
       "city": "Melbourne"
     },
     {
@@ -1404,7 +1404,7 @@
       "visibility": 47460.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 14.0,
       "city": "Melbourne"
     },
     {
@@ -1425,7 +1425,7 @@
       "visibility": 47560.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 14.0,
       "city": "Melbourne"
     },
     {
@@ -1446,7 +1446,7 @@
       "visibility": 47420.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 17.0,
       "city": "Melbourne"
     },
     {
@@ -1467,7 +1467,7 @@
       "visibility": 47560.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 18.0,
       "city": "Melbourne"
     },
     {
@@ -1488,7 +1488,7 @@
       "visibility": 47560.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 23.0,
+      "precipitation_probability": 16.0,
       "city": "Melbourne"
     },
     {
@@ -1509,7 +1509,7 @@
       "visibility": 47460.0,
       "uv_index": 0.200000003,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 19.0,
+      "precipitation_probability": 13.0,
       "city": "Melbourne"
     },
     {
@@ -1530,7 +1530,7 @@
       "visibility": 47400.0,
       "uv_index": 0.349999994,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 12.0,
       "city": "Melbourne"
     },
     {
@@ -1551,7 +1551,7 @@
       "visibility": 19360.0,
       "uv_index": 0.6999999881,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 21.0,
+      "precipitation_probability": 17.0,
       "city": "Melbourne"
     },
     {
@@ -1572,7 +1572,7 @@
       "visibility": 56740.0,
       "uv_index": 1.0,
       "sunshine_duration": 1194.3697509766,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 25.0,
       "city": "Melbourne"
     },
     {
@@ -1614,7 +1614,7 @@
       "visibility": 52720.0,
       "uv_index": 1.4500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 28.0,
       "city": "Melbourne"
     },
     {
@@ -1635,7 +1635,7 @@
       "visibility": 52720.0,
       "uv_index": 1.25,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 21.0,
+      "precipitation_probability": 23.0,
       "city": "Melbourne"
     },
     {
@@ -1656,7 +1656,7 @@
       "visibility": 40520.0,
       "uv_index": 0.5,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 16.0,
+      "precipitation_probability": 18.0,
       "city": "Melbourne"
     },
     {
@@ -1677,7 +1677,7 @@
       "visibility": 52720.0,
       "uv_index": 0.1000000015,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 11.0,
+      "precipitation_probability": 12.0,
       "city": "Melbourne"
     },
     {
@@ -1698,7 +1698,7 @@
       "visibility": 47600.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 5.0,
+      "precipitation_probability": 6.0,
       "city": "Melbourne"
     },
     {
@@ -1866,7 +1866,7 @@
       "visibility": 140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -1887,7 +1887,7 @@
       "visibility": 100.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 4.0,
       "city": "Melbourne"
     },
     {
@@ -1908,7 +1908,7 @@
       "visibility": 60.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 4.0,
       "city": "Melbourne"
     },
     {
@@ -1929,7 +1929,7 @@
       "visibility": 100.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 3.0,
       "city": "Melbourne"
     },
     {
@@ -1950,7 +1950,7 @@
       "visibility": 140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
@@ -2118,7 +2118,7 @@
       "visibility": 10200.0,
       "uv_index": 2.2999999523,
       "sunshine_duration": 402.8862609863,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
@@ -2139,7 +2139,7 @@
       "visibility": 13620.0,
       "uv_index": 1.7000000477,
       "sunshine_duration": 782.098815918,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -2160,7 +2160,7 @@
       "visibility": 17020.0,
       "uv_index": 0.9499999881,
       "sunshine_duration": 1410.7698974609,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -2181,7 +2181,7 @@
       "visibility": 23540.0,
       "uv_index": 0.3000000119,
       "sunshine_duration": 2442.017578125,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -2202,7 +2202,7 @@
       "visibility": 30080.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
@@ -2433,7 +2433,7 @@
       "visibility": 720.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2454,7 +2454,7 @@
       "visibility": 1040.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2475,7 +2475,7 @@
       "visibility": 1380.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2496,7 +2496,7 @@
       "visibility": 7180.0,
       "uv_index": 0.0500000007,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2517,7 +2517,7 @@
       "visibility": 12980.0,
       "uv_index": 0.5,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2538,7 +2538,7 @@
       "visibility": 18780.0,
       "uv_index": 1.1000000238,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2559,7 +2559,7 @@
       "visibility": 20720.0,
       "uv_index": 1.75,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 0.0,
       "city": "Melbourne"
     },
     {
@@ -2580,7 +2580,7 @@
       "visibility": 22640.0,
       "uv_index": 2.4000000954,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
@@ -2622,7 +2622,7 @@
       "visibility": 32280.0,
       "uv_index": 2.5,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 3.0,
       "city": "Melbourne"
     },
     {
@@ -2643,7 +2643,7 @@
       "visibility": 40000.0,
       "uv_index": 1.9500000477,
       "sunshine_duration": 1742.9670410156,
-      "precipitation_probability": 1.0,
+      "precipitation_probability": 5.0,
       "city": "Melbourne"
     },
     {
@@ -2664,7 +2664,7 @@
       "visibility": 47700.0,
       "uv_index": 1.2000000477,
       "sunshine_duration": 3176.8996582031,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 6.0,
       "city": "Melbourne"
     },
     {
@@ -2685,7 +2685,7 @@
       "visibility": 45940.0,
       "uv_index": 0.400000006,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 6.0,
       "city": "Melbourne"
     },
     {
@@ -2706,7 +2706,7 @@
       "visibility": 44200.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 5.0,
       "city": "Melbourne"
     },
     {
@@ -2727,7 +2727,7 @@
       "visibility": 42440.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 4.0,
       "city": "Melbourne"
     },
     {
@@ -2748,7 +2748,7 @@
       "visibility": 36640.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 3.0,
       "city": "Melbourne"
     },
     {
@@ -2769,7 +2769,7 @@
       "visibility": 30860.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 3.0,
       "city": "Melbourne"
     },
     {
@@ -2790,7 +2790,7 @@
       "visibility": 25060.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 2.0,
       "city": "Melbourne"
     },
     {
@@ -2811,7 +2811,7 @@
       "visibility": 16760.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
@@ -2832,7 +2832,7 @@
       "visibility": 8440.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 0.0,
+      "precipitation_probability": 1.0,
       "city": "Melbourne"
     },
     {
