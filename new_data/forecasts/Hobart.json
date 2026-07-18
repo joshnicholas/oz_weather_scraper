@@ -228,7 +228,7 @@
       "visibility": 42420.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 9.0,
+      "precipitation_probability": 8.0,
       "city": "Hobart"
     },
     {
@@ -249,7 +249,7 @@
       "visibility": 42420.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 7.0,
+      "precipitation_probability": 5.0,
       "city": "Hobart"
     },
     {
@@ -291,7 +291,7 @@
       "visibility": 42420.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 8.0,
+      "precipitation_probability": 14.0,
       "city": "Hobart"
     },
     {
@@ -312,7 +312,7 @@
       "visibility": 38700.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 10.0,
+      "precipitation_probability": 25.0,
       "city": "Hobart"
     },
     {
@@ -333,7 +333,7 @@
       "visibility": 21680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 33.0,
       "city": "Hobart"
     },
     {
@@ -354,7 +354,7 @@
       "visibility": 10780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 36.0,
       "city": "Hobart"
     },
     {
@@ -375,7 +375,7 @@
       "visibility": 38060.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 35.0,
       "city": "Hobart"
     },
     {
@@ -396,7 +396,7 @@
       "visibility": 33540.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 10.0,
+      "precipitation_probability": 31.0,
       "city": "Hobart"
     },
     {
@@ -417,7 +417,7 @@
       "visibility": 33540.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 7.0,
+      "precipitation_probability": 22.0,
       "city": "Hobart"
     },
     {
@@ -438,7 +438,7 @@
       "visibility": 33540.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 3.0,
+      "precipitation_probability": 9.0,
       "city": "Hobart"
     },
     {
@@ -499,7 +499,7 @@
       "wind_direction_10m": 299.7447814941,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 42400.0,
-      "uv_index": 0.349999994,
+      "uv_index": 0.3000000119,
       "sunshine_duration": 0.0,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -541,7 +541,7 @@
       "wind_direction_10m": 315.8550109863,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 8460.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.6000000238,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -562,7 +562,7 @@
       "wind_direction_10m": 321.709777832,
       "wind_gusts_10m": 24.1199989319,
       "visibility": 4640.0,
-      "uv_index": 1.7999999523,
+      "uv_index": 1.9500000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -583,7 +583,7 @@
       "wind_direction_10m": 324.7274780273,
       "wind_gusts_10m": 24.8400001526,
       "visibility": 5340.0,
-      "uv_index": 2.0,
+      "uv_index": 1.8999999762,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -604,7 +604,7 @@
       "wind_direction_10m": 321.1466064453,
       "wind_gusts_10m": 25.5599994659,
       "visibility": 6540.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.75,
       "sunshine_duration": 1812.2520751953,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -1024,7 +1024,7 @@
       "wind_direction_10m": 310.4621582031,
       "wind_gusts_10m": 27.0,
       "visibility": 59700.0,
-      "uv_index": 0.75,
+      "uv_index": 0.8000000119,
       "sunshine_duration": 200.8145141602,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -1045,7 +1045,7 @@
       "wind_direction_10m": 320.0425109863,
       "wind_gusts_10m": 26.6399993896,
       "visibility": 75360.0,
-      "uv_index": 1.2999999523,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 2086.4418945312,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -1066,7 +1066,7 @@
       "wind_direction_10m": 322.9070739746,
       "wind_gusts_10m": 27.359998703,
       "visibility": 75360.0,
-      "uv_index": 1.9500000477,
+      "uv_index": 1.7000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -1087,7 +1087,7 @@
       "wind_direction_10m": 316.9749145508,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 75360.0,
-      "uv_index": 2.0,
+      "uv_index": 2.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Hobart"
@@ -1108,7 +1108,7 @@
       "wind_direction_10m": 321.0090026855,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 59680.0,
-      "uv_index": 1.75,
+      "uv_index": 1.7999999523,
       "sunshine_duration": 2738.8837890625,
       "precipitation_probability": 1.0,
       "city": "Hobart"
@@ -1129,9 +1129,9 @@
       "wind_direction_10m": 335.6589050293,
       "wind_gusts_10m": 26.2800006866,
       "visibility": 55920.0,
-      "uv_index": 1.3500000238,
+      "uv_index": 1.2999999523,
       "sunshine_duration": 1359.1364746094,
-      "precipitation_probability": 2.0,
+      "precipitation_probability": 3.0,
       "city": "Hobart"
     },
     {
@@ -1150,7 +1150,7 @@
       "wind_direction_10m": 336.4477233887,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 52100.0,
-      "uv_index": 0.4499999881,
+      "uv_index": 0.6999999881,
       "sunshine_duration": 0.0,
       "precipitation_probability": 4.0,
       "city": "Hobart"
@@ -1171,9 +1171,9 @@
       "wind_direction_10m": 322.3522949219,
       "wind_gusts_10m": 22.6800003052,
       "visibility": 52080.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.0500000007,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 6.0,
+      "precipitation_probability": 5.0,
       "city": "Hobart"
     },
     {
@@ -1194,7 +1194,7 @@
       "visibility": 52080.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 8.0,
+      "precipitation_probability": 5.0,
       "city": "Hobart"
     },
     {
@@ -1215,7 +1215,7 @@
       "visibility": 52080.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 10.0,
+      "precipitation_probability": 6.0,
       "city": "Hobart"
     },
     {
@@ -1236,7 +1236,7 @@
       "visibility": 47780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 11.0,
+      "precipitation_probability": 7.0,
       "city": "Hobart"
     },
     {
@@ -1257,7 +1257,7 @@
       "visibility": 47780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 7.0,
       "city": "Hobart"
     },
     {
@@ -1278,7 +1278,7 @@
       "visibility": 47780.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 8.0,
       "city": "Hobart"
     },
     {
@@ -1299,7 +1299,7 @@
       "visibility": 19680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 9.0,
       "city": "Hobart"
     },
     {
@@ -1320,7 +1320,7 @@
       "visibility": 42320.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 11.0,
       "city": "Hobart"
     },
     {
@@ -1362,7 +1362,7 @@
       "visibility": 37040.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 14.0,
+      "precipitation_probability": 11.0,
       "city": "Hobart"
     },
     {
@@ -1383,7 +1383,7 @@
       "visibility": 26960.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 16.0,
+      "precipitation_probability": 10.0,
       "city": "Hobart"
     },
     {
@@ -1404,7 +1404,7 @@
       "visibility": 31520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 10.0,
       "city": "Hobart"
     },
     {
@@ -1425,7 +1425,7 @@
       "visibility": 33440.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 12.0,
       "city": "Hobart"
     },
     {
@@ -1446,7 +1446,7 @@
       "visibility": 13680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 16.0,
       "city": "Hobart"
     },
     {
@@ -1467,7 +1467,7 @@
       "visibility": 22680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 24.0,
+      "precipitation_probability": 18.0,
       "city": "Hobart"
     },
     {
@@ -1488,7 +1488,7 @@
       "visibility": 30300.0,
       "uv_index": 0.0,
       "sunshine_duration": 71.2573394775,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 17.0,
       "city": "Hobart"
     },
     {
@@ -1509,7 +1509,7 @@
       "visibility": 28460.0,
       "uv_index": 0.400000006,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 16.0,
       "city": "Hobart"
     },
     {
@@ -1528,9 +1528,9 @@
       "wind_direction_10m": 313.9191589355,
       "wind_gusts_10m": 18.7199993134,
       "visibility": 38600.0,
-      "uv_index": 1.1000000238,
+      "uv_index": 1.0499999523,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 14.0,
       "city": "Hobart"
     },
     {
@@ -1549,9 +1549,9 @@
       "wind_direction_10m": 322.1249694824,
       "wind_gusts_10m": 18.359998703,
       "visibility": 17880.0,
-      "uv_index": 1.75,
+      "uv_index": 1.6499999762,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 24.0,
+      "precipitation_probability": 13.0,
       "city": "Hobart"
     },
     {
@@ -1570,9 +1570,9 @@
       "wind_direction_10m": 341.5649414062,
       "wind_gusts_10m": 19.7999992371,
       "visibility": 20980.0,
-      "uv_index": 2.1500000954,
+      "uv_index": 1.9500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 12.0,
       "city": "Hobart"
     },
     {
@@ -1591,9 +1591,9 @@
       "wind_direction_10m": 344.0545349121,
       "wind_gusts_10m": 20.8800010681,
       "visibility": 30620.0,
-      "uv_index": 1.8500000238,
+      "uv_index": 2.0499999523,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 12.0,
       "city": "Hobart"
     },
     {
@@ -1612,9 +1612,9 @@
       "wind_direction_10m": 335.2248840332,
       "wind_gusts_10m": 23.0399990082,
       "visibility": 16720.0,
-      "uv_index": 1.7999999523,
+      "uv_index": 1.8500000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 16.0,
       "city": "Hobart"
     },
     {
@@ -1633,9 +1633,9 @@
       "wind_direction_10m": 336.8013916016,
       "wind_gusts_10m": 23.3999996185,
       "visibility": 13380.0,
-      "uv_index": 1.3999999762,
+      "uv_index": 1.2000000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 32.0,
+      "precipitation_probability": 21.0,
       "city": "Hobart"
     },
     {
@@ -1656,7 +1656,7 @@
       "visibility": 23900.0,
       "uv_index": 0.6000000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 35.0,
+      "precipitation_probability": 24.0,
       "city": "Hobart"
     },
     {
@@ -1677,7 +1677,7 @@
       "visibility": 20760.0,
       "uv_index": 0.150000006,
       "sunshine_duration": 2367.8698730469,
-      "precipitation_probability": 32.0,
+      "precipitation_probability": 23.0,
       "city": "Hobart"
     },
     {
@@ -1698,7 +1698,7 @@
       "visibility": 27840.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 27.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     },
     {
@@ -1719,7 +1719,7 @@
       "visibility": 10320.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 18.0,
       "city": "Hobart"
     },
     {
@@ -1740,7 +1740,7 @@
       "visibility": 13520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 19.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     },
     {
@@ -1761,7 +1761,7 @@
       "visibility": 14540.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 17.0,
+      "precipitation_probability": 23.0,
       "city": "Hobart"
     },
     {
@@ -1782,7 +1782,7 @@
       "visibility": 22940.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 16.0,
+      "precipitation_probability": 25.0,
       "city": "Hobart"
     },
     {
@@ -1803,7 +1803,7 @@
       "visibility": 12560.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 15.0,
+      "precipitation_probability": 24.0,
       "city": "Hobart"
     },
     {
@@ -1824,7 +1824,7 @@
       "visibility": 11020.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 14.0,
+      "precipitation_probability": 22.0,
       "city": "Hobart"
     },
     {
@@ -1845,7 +1845,7 @@
       "visibility": 40220.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 14.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     },
     {
@@ -1866,7 +1866,7 @@
       "visibility": 19160.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 15.0,
+      "precipitation_probability": 18.0,
       "city": "Hobart"
     },
     {
@@ -1887,7 +1887,7 @@
       "visibility": 12680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 17.0,
       "city": "Hobart"
     },
     {
@@ -1908,7 +1908,7 @@
       "visibility": 15380.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 16.0,
       "city": "Hobart"
     },
     {
@@ -1929,7 +1929,7 @@
       "visibility": 21740.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 17.0,
       "city": "Hobart"
     },
     {
@@ -1950,7 +1950,7 @@
       "visibility": 14440.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 23.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     },
     {
@@ -1971,7 +1971,7 @@
       "visibility": 36080.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 22.0,
       "city": "Hobart"
     },
     {
@@ -1992,7 +1992,7 @@
       "visibility": 36100.0,
       "uv_index": 0.0,
       "sunshine_duration": 45.03956604,
-      "precipitation_probability": 26.0,
+      "precipitation_probability": 22.0,
       "city": "Hobart"
     },
     {
@@ -2011,9 +2011,9 @@
       "wind_direction_10m": 315.6030273438,
       "wind_gusts_10m": 32.7600021362,
       "visibility": 38140.0,
-      "uv_index": 0.25,
+      "uv_index": 0.3000000119,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 28.0,
+      "precipitation_probability": 21.0,
       "city": "Hobart"
     },
     {
@@ -2032,9 +2032,9 @@
       "wind_direction_10m": 317.6630554199,
       "wind_gusts_10m": 38.5199966431,
       "visibility": 20660.0,
-      "uv_index": 0.8999999762,
+      "uv_index": 1.1000000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 31.0,
+      "precipitation_probability": 24.0,
       "city": "Hobart"
     },
     {
@@ -2053,9 +2053,9 @@
       "wind_direction_10m": 309.5361022949,
       "wind_gusts_10m": 38.8800010681,
       "visibility": 12460.0,
-      "uv_index": 1.6000000238,
+      "uv_index": 1.1000000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 38.0,
+      "precipitation_probability": 33.0,
       "city": "Hobart"
     },
     {
@@ -2074,7 +2074,7 @@
       "wind_direction_10m": 286.9553833008,
       "wind_gusts_10m": 47.8800010681,
       "visibility": 8380.0,
-      "uv_index": 2.0999999046,
+      "uv_index": 0.5500000119,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 46.0,
       "city": "Hobart"
@@ -2095,9 +2095,9 @@
       "wind_direction_10m": 304.2869262695,
       "wind_gusts_10m": 47.5199966431,
       "visibility": 31300.0,
-      "uv_index": 0.8500000238,
+      "uv_index": 2.4500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 51.0,
+      "precipitation_probability": 55.0,
       "city": "Hobart"
     },
     {
@@ -2116,9 +2116,9 @@
       "wind_direction_10m": 292.5670471191,
       "wind_gusts_10m": 39.9599990845,
       "visibility": 17260.0,
-      "uv_index": 2.0499999523,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 52.0,
+      "precipitation_probability": 59.0,
       "city": "Hobart"
     },
     {
@@ -2137,9 +2137,9 @@
       "wind_direction_10m": 287.488067627,
       "wind_gusts_10m": 38.8800010681,
       "visibility": 12760.0,
-      "uv_index": 0.4499999881,
+      "uv_index": 1.6000000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 50.0,
+      "precipitation_probability": 59.0,
       "city": "Hobart"
     },
     {
@@ -2158,9 +2158,9 @@
       "wind_direction_10m": 282.5288085938,
       "wind_gusts_10m": 37.4399986267,
       "visibility": 18660.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 45.0,
+      "precipitation_probability": 55.0,
       "city": "Hobart"
     },
     {
@@ -2179,9 +2179,9 @@
       "wind_direction_10m": 289.3846130371,
       "wind_gusts_10m": 34.5600013733,
       "visibility": 18700.0,
-      "uv_index": 0.150000006,
+      "uv_index": 0.200000003,
       "sunshine_duration": 3424.6254882812,
-      "precipitation_probability": 36.0,
+      "precipitation_probability": 45.0,
       "city": "Hobart"
     },
     {
@@ -2202,7 +2202,7 @@
       "visibility": 18760.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 31.0,
       "city": "Hobart"
     },
     {
@@ -2223,7 +2223,7 @@
       "visibility": 18800.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     },
     {
@@ -2244,7 +2244,7 @@
       "visibility": 26040.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 17.0,
+      "precipitation_probability": 13.0,
       "city": "Hobart"
     },
     {
@@ -2265,7 +2265,7 @@
       "visibility": 33300.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 9.0,
       "city": "Hobart"
     },
     {
@@ -2286,7 +2286,7 @@
       "visibility": 40540.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 8.0,
       "city": "Hobart"
     },
     {
@@ -2307,7 +2307,7 @@
       "visibility": 35520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 23.0,
+      "precipitation_probability": 12.0,
       "city": "Hobart"
     },
     {
@@ -2328,7 +2328,7 @@
       "visibility": 30480.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 24.0,
+      "precipitation_probability": 18.0,
       "city": "Hobart"
     },
     {
@@ -2370,7 +2370,7 @@
       "visibility": 20200.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 28.0,
+      "precipitation_probability": 30.0,
       "city": "Hobart"
     },
     {
@@ -2391,7 +2391,7 @@
       "visibility": 14960.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 32.0,
+      "precipitation_probability": 35.0,
       "city": "Hobart"
     },
     {
@@ -2412,7 +2412,7 @@
       "visibility": 9700.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 35.0,
+      "precipitation_probability": 39.0,
       "city": "Hobart"
     },
     {
@@ -2433,7 +2433,7 @@
       "visibility": 11660.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 36.0,
+      "precipitation_probability": 41.0,
       "city": "Hobart"
     },
     {
@@ -2454,7 +2454,7 @@
       "visibility": 13620.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 36.0,
+      "precipitation_probability": 41.0,
       "city": "Hobart"
     },
     {
@@ -2475,7 +2475,7 @@
       "visibility": 15580.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 35.0,
+      "precipitation_probability": 41.0,
       "city": "Hobart"
     },
     {
@@ -2496,7 +2496,7 @@
       "visibility": 18420.0,
       "uv_index": 0.0500000007,
       "sunshine_duration": 735.0803222656,
-      "precipitation_probability": 33.0,
+      "precipitation_probability": 41.0,
       "city": "Hobart"
     },
     {
@@ -2517,7 +2517,7 @@
       "visibility": 21240.0,
       "uv_index": 0.4499999881,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 30.0,
+      "precipitation_probability": 41.0,
       "city": "Hobart"
     },
     {
@@ -2536,9 +2536,9 @@
       "wind_direction_10m": 316.5765075684,
       "wind_gusts_10m": 40.6800003052,
       "visibility": 24080.0,
-      "uv_index": 1.1499999762,
+      "uv_index": 1.2000000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 29.0,
+      "precipitation_probability": 43.0,
       "city": "Hobart"
     },
     {
@@ -2557,9 +2557,9 @@
       "wind_direction_10m": 305.8377380371,
       "wind_gusts_10m": 45.719997406,
       "visibility": 25500.0,
-      "uv_index": 1.7999999523,
+      "uv_index": 1.3500000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 33.0,
+      "precipitation_probability": 47.0,
       "city": "Hobart"
     },
     {
@@ -2578,9 +2578,9 @@
       "wind_direction_10m": 294.6637878418,
       "wind_gusts_10m": 52.1999969482,
       "visibility": 26940.0,
-      "uv_index": 2.3499999046,
+      "uv_index": 2.4500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 38.0,
+      "precipitation_probability": 52.0,
       "city": "Hobart"
     },
     {
@@ -2599,9 +2599,9 @@
       "wind_direction_10m": 290.0631713867,
       "wind_gusts_10m": 56.8800010681,
       "visibility": 28360.0,
-      "uv_index": 2.5499999523,
+      "uv_index": 1.2999999523,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 43.0,
+      "precipitation_probability": 57.0,
       "city": "Hobart"
     },
     {
@@ -2620,9 +2620,9 @@
       "wind_direction_10m": 291.8014831543,
       "wind_gusts_10m": 58.6799964905,
       "visibility": 22960.0,
-      "uv_index": 2.2999999523,
+      "uv_index": 1.9500000477,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 46.0,
+      "precipitation_probability": 60.0,
       "city": "Hobart"
     },
     {
@@ -2641,9 +2641,9 @@
       "wind_direction_10m": 296.7787780762,
       "wind_gusts_10m": 58.6799964905,
       "visibility": 17580.0,
-      "uv_index": 1.3500000238,
+      "uv_index": 0.8999999762,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 47.0,
+      "precipitation_probability": 63.0,
       "city": "Hobart"
     },
     {
@@ -2664,7 +2664,7 @@
       "visibility": 12180.0,
       "uv_index": 0.8500000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 47.0,
+      "precipitation_probability": 65.0,
       "city": "Hobart"
     },
     {
@@ -2685,7 +2685,7 @@
       "visibility": 11940.0,
       "uv_index": 0.200000003,
       "sunshine_duration": 3479.9169921875,
-      "precipitation_probability": 45.0,
+      "precipitation_probability": 68.0,
       "city": "Hobart"
     },
     {
@@ -2706,7 +2706,7 @@
       "visibility": 11720.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 41.0,
+      "precipitation_probability": 70.0,
       "city": "Hobart"
     },
     {
@@ -2727,7 +2727,7 @@
       "visibility": 11480.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 39.0,
+      "precipitation_probability": 71.0,
       "city": "Hobart"
     },
     {
@@ -2748,7 +2748,7 @@
       "visibility": 10140.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 40.0,
+      "precipitation_probability": 70.0,
       "city": "Hobart"
     },
     {
@@ -2769,7 +2769,7 @@
       "visibility": 8820.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 42.0,
+      "precipitation_probability": 68.0,
       "city": "Hobart"
     },
     {
@@ -2790,7 +2790,7 @@
       "visibility": 7480.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 43.0,
+      "precipitation_probability": 63.0,
       "city": "Hobart"
     },
     {
@@ -2811,7 +2811,7 @@
       "visibility": 13680.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 41.0,
+      "precipitation_probability": 55.0,
       "city": "Hobart"
     },
     {
@@ -2832,7 +2832,7 @@
       "visibility": 19900.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 37.0,
+      "precipitation_probability": 44.0,
       "city": "Hobart"
     },
     {
@@ -2874,7 +2874,7 @@
       "visibility": 31740.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 36.0,
+      "precipitation_probability": 28.0,
       "city": "Hobart"
     },
     {
@@ -2895,7 +2895,7 @@
       "visibility": 37400.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 38.0,
+      "precipitation_probability": 22.0,
       "city": "Hobart"
     },
     {
@@ -2916,7 +2916,7 @@
       "visibility": 43040.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 39.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     },
     {
@@ -2937,7 +2937,7 @@
       "visibility": 43040.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 39.0,
+      "precipitation_probability": 22.0,
       "city": "Hobart"
     },
     {
@@ -2958,7 +2958,7 @@
       "visibility": 43060.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 38.0,
+      "precipitation_probability": 28.0,
       "city": "Hobart"
     },
     {
@@ -2979,7 +2979,7 @@
       "visibility": 43060.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 39.0,
+      "precipitation_probability": 33.0,
       "city": "Hobart"
     },
     {
@@ -3000,7 +3000,7 @@
       "visibility": 31020.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 44.0,
+      "precipitation_probability": 37.0,
       "city": "Hobart"
     },
     {
@@ -3019,9 +3019,9 @@
       "wind_direction_10m": 322.5945739746,
       "wind_gusts_10m": 33.8399963379,
       "visibility": 18980.0,
-      "uv_index": 0.150000006,
+      "uv_index": 0.1000000015,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 51.0,
+      "precipitation_probability": 40.0,
       "city": "Hobart"
     },
     {
@@ -3040,9 +3040,9 @@
       "wind_direction_10m": 319.3987731934,
       "wind_gusts_10m": 37.4399986267,
       "visibility": 6940.0,
-      "uv_index": 0.3000000119,
+      "uv_index": 0.200000003,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 57.0,
+      "precipitation_probability": 45.0,
       "city": "Hobart"
     },
     {
@@ -3061,9 +3061,9 @@
       "wind_direction_10m": 316.7898864746,
       "wind_gusts_10m": 43.5600013733,
       "visibility": 6100.0,
-      "uv_index": 0.400000006,
+      "uv_index": 0.25,
       "sunshine_duration": 84.2629623413,
-      "precipitation_probability": 60.0,
+      "precipitation_probability": 51.0,
       "city": "Hobart"
     },
     {
@@ -3082,9 +3082,9 @@
       "wind_direction_10m": 314.6255493164,
       "wind_gusts_10m": 50.3999977112,
       "visibility": 5240.0,
-      "uv_index": 0.5,
+      "uv_index": 0.3000000119,
       "sunshine_duration": 442.1239318848,
-      "precipitation_probability": 62.0,
+      "precipitation_probability": 59.0,
       "city": "Hobart"
     },
     {
@@ -3103,9 +3103,9 @@
       "wind_direction_10m": 313.5679626465,
       "wind_gusts_10m": 55.4399986267,
       "visibility": 4400.0,
-      "uv_index": 0.6000000238,
+      "uv_index": 0.4499999881,
       "sunshine_duration": 572.9782104492,
-      "precipitation_probability": 63.0,
+      "precipitation_probability": 65.0,
       "city": "Hobart"
     },
     {
@@ -3124,9 +3124,9 @@
       "wind_direction_10m": 313.2643432617,
       "wind_gusts_10m": 57.2399978638,
       "visibility": 6580.0,
-      "uv_index": 0.75,
+      "uv_index": 0.6499999762,
       "sunshine_duration": 261.9808959961,
-      "precipitation_probability": 63.0,
+      "precipitation_probability": 70.0,
       "city": "Hobart"
     },
     {
@@ -3145,9 +3145,9 @@
       "wind_direction_10m": 314.3260498047,
       "wind_gusts_10m": 56.8800010681,
       "visibility": 8740.0,
-      "uv_index": 0.8000000119,
+      "uv_index": 0.8500000238,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 63.0,
+      "precipitation_probability": 74.0,
       "city": "Hobart"
     },
     {
@@ -3168,7 +3168,7 @@
       "visibility": 10920.0,
       "uv_index": 0.6000000238,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 61.0,
+      "precipitation_probability": 76.0,
       "city": "Hobart"
     },
     {
@@ -3187,9 +3187,9 @@
       "wind_direction_10m": 302.3474121094,
       "wind_gusts_10m": 49.3199996948,
       "visibility": 11580.0,
-      "uv_index": 0.200000003,
+      "uv_index": 0.150000006,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 57.0,
+      "precipitation_probability": 74.0,
       "city": "Hobart"
     },
     {
@@ -3210,7 +3210,7 @@
       "visibility": 12260.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 52.0,
+      "precipitation_probability": 70.0,
       "city": "Hobart"
     },
     {
@@ -3231,7 +3231,7 @@
       "visibility": 12920.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 47.0,
+      "precipitation_probability": 65.0,
       "city": "Hobart"
     },
     {
@@ -3252,7 +3252,7 @@
       "visibility": 10580.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 42.0,
+      "precipitation_probability": 60.0,
       "city": "Hobart"
     },
     {
@@ -3273,7 +3273,7 @@
       "visibility": 8260.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 36.0,
+      "precipitation_probability": 55.0,
       "city": "Hobart"
     },
     {
@@ -3294,7 +3294,7 @@
       "visibility": 5920.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 31.0,
+      "precipitation_probability": 51.0,
       "city": "Hobart"
     },
     {
@@ -3315,7 +3315,7 @@
       "visibility": 5960.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 27.0,
+      "precipitation_probability": 48.0,
       "city": "Hobart"
     },
     {
@@ -3336,7 +3336,7 @@
       "visibility": 5980.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 25.0,
+      "precipitation_probability": 46.0,
       "city": "Hobart"
     },
     {
@@ -3357,7 +3357,7 @@
       "visibility": 6020.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 22.0,
+      "precipitation_probability": 44.0,
       "city": "Hobart"
     },
     {
@@ -3378,7 +3378,7 @@
       "visibility": 6060.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 20.0,
+      "precipitation_probability": 42.0,
       "city": "Hobart"
     },
     {
@@ -3399,7 +3399,7 @@
       "visibility": 6080.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 18.0,
+      "precipitation_probability": 40.0,
       "city": "Hobart"
     },
     {
@@ -3420,7 +3420,7 @@
       "visibility": 6120.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 16.0,
+      "precipitation_probability": 37.0,
       "city": "Hobart"
     },
     {
@@ -3441,7 +3441,7 @@
       "visibility": 9520.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 14.0,
+      "precipitation_probability": 34.0,
       "city": "Hobart"
     },
     {
@@ -3462,7 +3462,7 @@
       "visibility": 12940.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 12.0,
+      "precipitation_probability": 30.0,
       "city": "Hobart"
     },
     {
@@ -3483,7 +3483,7 @@
       "visibility": 16340.0,
       "uv_index": 0.0,
       "sunshine_duration": 0.0,
-      "precipitation_probability": 11.0,
+      "precipitation_probability": 26.0,
       "city": "Hobart"
     },
     {
@@ -3502,9 +3502,9 @@
       "wind_direction_10m": 310.4859313965,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 19740.0,
-      "uv_index": 0.0,
+      "uv_index": 0.0500000007,
       "sunshine_duration": 673.7633056641,
-      "precipitation_probability": 10.0,
+      "precipitation_probability": 23.0,
       "city": "Hobart"
     },
     {
@@ -3523,9 +3523,9 @@
       "wind_direction_10m": 309.8055114746,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 23160.0,
-      "uv_index": 0.0500000007,
+      "uv_index": 0.6000000238,
       "sunshine_duration": 3600.0,
-      "precipitation_probability": 9.0,
+      "precipitation_probability": 20.0,
       "city": "Hobart"
     }
   ],
@@ -3551,7 +3551,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 12.6474819183,
       "wind_gusts_10m_max": 34.9199981689,
-      "uv_index_max": 2.0,
+      "uv_index_max": 1.9500000477,
       "sunrise": 0,
       "sunset": 0,
       "city": "Hobart"
@@ -3564,7 +3564,7 @@
       "rain_sum": 0.0,
       "wind_speed_10m_max": 11.079873085,
       "wind_gusts_10m_max": 30.5999984741,
-      "uv_index_max": 2.0,
+      "uv_index_max": 2.0499999523,
       "sunrise": 0,
       "sunset": 0,
       "city": "Hobart"
@@ -3577,7 +3577,7 @@
       "rain_sum": 0.7000000477,
       "wind_speed_10m_max": 15.6806755066,
       "wind_gusts_10m_max": 41.3999977112,
-      "uv_index_max": 2.1500000954,
+      "uv_index_max": 2.0499999523,
       "sunrise": 0,
       "sunset": 0,
       "city": "Hobart"
@@ -3590,7 +3590,7 @@
       "rain_sum": 0.9000000954,
       "wind_speed_10m_max": 16.0240440369,
       "wind_gusts_10m_max": 47.8800010681,
-      "uv_index_max": 2.0999999046,
+      "uv_index_max": 2.4500000477,
       "sunrise": 0,
       "sunset": 0,
       "city": "Hobart"
@@ -3603,7 +3603,7 @@
       "rain_sum": 2.0,
       "wind_speed_10m_max": 22.2945823669,
       "wind_gusts_10m_max": 61.5600013733,
-      "uv_index_max": 2.5499999523,
+      "uv_index_max": 2.4500000477,
       "sunrise": 0,
       "sunset": 0,
       "city": "Hobart"
@@ -3616,7 +3616,7 @@
       "rain_sum": 9.3000011444,
       "wind_speed_10m_max": 20.3710384369,
       "wind_gusts_10m_max": 57.2399978638,
-      "uv_index_max": 0.8000000119,
+      "uv_index_max": 0.8500000238,
       "sunrise": 0,
       "sunset": 0,
       "city": "Hobart"
