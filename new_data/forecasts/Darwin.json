@@ -541,7 +541,7 @@
       "wind_direction_10m": 83.0471343994,
       "wind_gusts_10m": 37.4399986267,
       "visibility": 42440.0,
-      "uv_index": 5.3000001907,
+      "uv_index": 5.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Darwin"
@@ -688,7 +688,7 @@
       "wind_direction_10m": 10.3486289978,
       "wind_gusts_10m": 46.4399986267,
       "visibility": 34640.0,
-      "uv_index": 2.25,
+      "uv_index": 2.2999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 7.0,
       "city": "Darwin"
@@ -982,7 +982,7 @@
       "wind_direction_10m": 107.7005157471,
       "wind_gusts_10m": 27.0,
       "visibility": 23440.0,
-      "uv_index": 0.1000000015,
+      "uv_index": 0.150000006,
       "sunshine_duration": 1265.8776855469,
       "precipitation_probability": 49.0,
       "city": "Darwin"
@@ -1066,7 +1066,7 @@
       "wind_direction_10m": 73.1785125732,
       "wind_gusts_10m": 25.9199981689,
       "visibility": 16180.0,
-      "uv_index": 7.0500001907,
+      "uv_index": 7.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 1.0,
       "city": "Darwin"
@@ -1507,7 +1507,7 @@
       "wind_direction_10m": 106.0600585938,
       "wind_gusts_10m": 29.1599998474,
       "visibility": 31600.0,
-      "uv_index": 1.2999999523,
+      "uv_index": 1.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 5.0,
       "city": "Darwin"
@@ -2053,7 +2053,7 @@
       "wind_direction_10m": 31.5042228699,
       "wind_gusts_10m": 23.0399990082,
       "visibility": 34640.0,
-      "uv_index": 5.4499998093,
+      "uv_index": 5.4000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 0.0,
       "city": "Darwin"
@@ -2116,7 +2116,7 @@
       "wind_direction_10m": 323.7810668945,
       "wind_gusts_10m": 38.5199966431,
       "visibility": 13460.0,
-      "uv_index": 8.5,
+      "uv_index": 8.5500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 20.0,
       "city": "Darwin"
@@ -2515,7 +2515,7 @@
       "wind_direction_10m": 31.263677597,
       "wind_gusts_10m": 17.2800006866,
       "visibility": 24500.0,
-      "uv_index": 1.25,
+      "uv_index": 1.2999999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 12.0,
       "city": "Darwin"
@@ -2536,7 +2536,7 @@
       "wind_direction_10m": 1.8475708961,
       "wind_gusts_10m": 18.359998703,
       "visibility": 31580.0,
-      "uv_index": 3.2000000477,
+      "uv_index": 3.0499999523,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 6.0,
       "city": "Darwin"
@@ -2557,7 +2557,7 @@
       "wind_direction_10m": 347.0053710938,
       "wind_gusts_10m": 21.9599990845,
       "visibility": 27860.0,
-      "uv_index": 5.4499998093,
+      "uv_index": 4.9499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 6.0,
       "city": "Darwin"
@@ -2578,7 +2578,7 @@
       "wind_direction_10m": 341.5649414062,
       "wind_gusts_10m": 27.0,
       "visibility": 24140.0,
-      "uv_index": 7.0999999046,
+      "uv_index": 6.8499999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 9.0,
       "city": "Darwin"
@@ -2599,7 +2599,7 @@
       "wind_direction_10m": 340.407623291,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 20420.0,
-      "uv_index": 8.1499996185,
+      "uv_index": 8.1999998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 16.0,
       "city": "Darwin"
@@ -2620,7 +2620,7 @@
       "wind_direction_10m": 345.5296630859,
       "wind_gusts_10m": 31.3199977875,
       "visibility": 25160.0,
-      "uv_index": 8.5500001907,
+      "uv_index": 7.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 31.0,
       "city": "Darwin"
@@ -2641,7 +2641,7 @@
       "wind_direction_10m": 353.4537963867,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 29880.0,
-      "uv_index": 5.9000000954,
+      "uv_index": 7.8000001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 49.0,
       "city": "Darwin"
@@ -2662,7 +2662,7 @@
       "wind_direction_10m": 353.9910888672,
       "wind_gusts_10m": 30.5999984741,
       "visibility": 34620.0,
-      "uv_index": 2.0499999523,
+      "uv_index": 6.4499998093,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 59.0,
       "city": "Darwin"
@@ -2683,7 +2683,7 @@
       "wind_direction_10m": 336.3706054688,
       "wind_gusts_10m": 30.9600009918,
       "visibility": 34620.0,
-      "uv_index": 4.3000001907,
+      "uv_index": 4.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 53.0,
       "city": "Darwin"
@@ -2704,7 +2704,7 @@
       "wind_direction_10m": 309.9363098145,
       "wind_gusts_10m": 31.3199977875,
       "visibility": 34620.0,
-      "uv_index": 1.2999999523,
+      "uv_index": 1.2000000477,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 38.0,
       "city": "Darwin"
@@ -2725,7 +2725,7 @@
       "wind_direction_10m": 290.9735717773,
       "wind_gusts_10m": 31.6800003052,
       "visibility": 34620.0,
-      "uv_index": 0.400000006,
+      "uv_index": 0.200000003,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 24.0,
       "city": "Darwin"
@@ -3040,7 +3040,7 @@
       "wind_direction_10m": 161.564956665,
       "wind_gusts_10m": 20.1599998474,
       "visibility": 28480.0,
-      "uv_index": 3.4000000954,
+      "uv_index": 3.25,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 14.0,
       "city": "Darwin"
@@ -3061,7 +3061,7 @@
       "wind_direction_10m": 345.9637145996,
       "wind_gusts_10m": 22.6800003052,
       "visibility": 30520.0,
-      "uv_index": 5.4000000954,
+      "uv_index": 4.9000000954,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 17.0,
       "city": "Darwin"
@@ -3082,7 +3082,7 @@
       "wind_direction_10m": 350.7890625,
       "wind_gusts_10m": 25.1999988556,
       "visibility": 32580.0,
-      "uv_index": 6.6500000954,
+      "uv_index": 6.0500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 23.0,
       "city": "Darwin"
@@ -3103,7 +3103,7 @@
       "wind_direction_10m": 348.6900939941,
       "wind_gusts_10m": 27.7199993134,
       "visibility": 34620.0,
-      "uv_index": 7.1500000954,
+      "uv_index": 6.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 29.0,
       "city": "Darwin"
@@ -3124,7 +3124,7 @@
       "wind_direction_10m": 343.2172851562,
       "wind_gusts_10m": 29.8799991608,
       "visibility": 34620.0,
-      "uv_index": 6.8499999046,
+      "uv_index": 7.0500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 37.0,
       "city": "Darwin"
@@ -3145,7 +3145,7 @@
       "wind_direction_10m": 335.2248840332,
       "wind_gusts_10m": 31.3199977875,
       "visibility": 34620.0,
-      "uv_index": 6.3000001907,
+      "uv_index": 6.5999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 47.0,
       "city": "Darwin"
@@ -3166,7 +3166,7 @@
       "wind_direction_10m": 324.9404907227,
       "wind_gusts_10m": 32.3999977112,
       "visibility": 34620.0,
-      "uv_index": 5.3499999046,
+      "uv_index": 5.5500001907,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 51.0,
       "city": "Darwin"
@@ -3187,7 +3187,7 @@
       "wind_direction_10m": 302.9052429199,
       "wind_gusts_10m": 32.3999977112,
       "visibility": 32780.0,
-      "uv_index": 4.0500001907,
+      "uv_index": 4.0999999046,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 48.0,
       "city": "Darwin"
@@ -3523,7 +3523,7 @@
       "wind_direction_10m": 22.0113391876,
       "wind_gusts_10m": 25.1999988556,
       "visibility": 27980.0,
-      "uv_index": 1.6499999762,
+      "uv_index": 1.75,
       "sunshine_duration": 3600.0,
       "precipitation_probability": 4.0,
       "city": "Darwin"
@@ -3590,7 +3590,7 @@
       "rain_sum": 1.4000000954,
       "wind_speed_10m_max": 15.8410215378,
       "wind_gusts_10m_max": 38.5199966431,
-      "uv_index_max": 8.5,
+      "uv_index_max": 8.5500001907,
       "sunrise": 0,
       "sunset": 0,
       "city": "Darwin"
@@ -3603,7 +3603,7 @@
       "rain_sum": 1.1000000238,
       "wind_speed_10m_max": 12.8154430389,
       "wind_gusts_10m_max": 33.4799995422,
-      "uv_index_max": 8.5500001907,
+      "uv_index_max": 8.1999998093,
       "sunrise": 0,
       "sunset": 0,
       "city": "Darwin"
@@ -3616,7 +3616,7 @@
       "rain_sum": 0.1000000015,
       "wind_speed_10m_max": 13.1498594284,
       "wind_gusts_10m_max": 32.3999977112,
-      "uv_index_max": 7.1500000954,
+      "uv_index_max": 7.0500001907,
       "sunrise": 0,
       "sunset": 0,
       "city": "Darwin"
