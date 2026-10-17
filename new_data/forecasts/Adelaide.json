@@ -3532,7 +3532,7 @@
   "daily": [
     {
       "time": "2026-10-17 00:00:00+00:00",
-      "temperature_2m_max": 25.9874992371,
+      "temperature_2m_max": 25.8374996185,
       "temperature_2m_min": 18.2875003815,
       "precipitation_sum": 0.1000000015,
       "rain_sum": 0.1000000015,
@@ -3545,7 +3545,7 @@
     },
     {
       "time": "2026-10-18 00:00:00+00:00",
-      "temperature_2m_max": 29.0375003815,
+      "temperature_2m_max": 28.9874992371,
       "temperature_2m_min": 20.8874988556,
       "precipitation_sum": 0.0,
       "rain_sum": 0.0,
@@ -3558,10 +3558,10 @@
     },
     {
       "time": "2026-10-19 00:00:00+00:00",
-      "temperature_2m_max": 26.2374992371,
+      "temperature_2m_max": 26.1374988556,
       "temperature_2m_min": 18.1374988556,
-      "precipitation_sum": 3.8999998569,
-      "rain_sum": 0.9999999404,
+      "precipitation_sum": 3.6999998093,
+      "rain_sum": 0.7999999523,
       "wind_speed_10m_max": 15.836930275,
       "wind_gusts_10m_max": 36.3600006104,
       "uv_index_max": 7.75,
@@ -3572,9 +3572,9 @@
     {
       "time": "2026-10-20 00:00:00+00:00",
       "temperature_2m_max": 22.7374992371,
-      "temperature_2m_min": 15.4874992371,
-      "precipitation_sum": 8.7000017166,
-      "rain_sum": 2.6999995708,
+      "temperature_2m_min": 15.5374994278,
+      "precipitation_sum": 8.9000015259,
+      "rain_sum": 2.8999996185,
       "wind_speed_10m_max": 16.5834598541,
       "wind_gusts_10m_max": 46.0799980164,
       "uv_index_max": 5.9499998093,
@@ -3584,8 +3584,8 @@
     },
     {
       "time": "2026-10-21 00:00:00+00:00",
-      "temperature_2m_max": 19.9874992371,
-      "temperature_2m_min": 10.4375,
+      "temperature_2m_max": 19.7875003815,
+      "temperature_2m_min": 10.6875,
       "precipitation_sum": 0.0,
       "rain_sum": 0.0,
       "wind_speed_10m_max": 18.0619907379,
@@ -3597,8 +3597,8 @@
     },
     {
       "time": "2026-10-22 00:00:00+00:00",
-      "temperature_2m_max": 24.5874996185,
-      "temperature_2m_min": 17.4375,
+      "temperature_2m_max": 23.1374988556,
+      "temperature_2m_min": 17.4874992371,
       "precipitation_sum": 0.0,
       "rain_sum": 0.0,
       "wind_speed_10m_max": 12.3257284164,
@@ -3610,8 +3610,8 @@
     },
     {
       "time": "2026-10-23 00:00:00+00:00",
-      "temperature_2m_max": 26.6875,
-      "temperature_2m_min": 12.7874994278,
+      "temperature_2m_max": 26.5375003815,
+      "temperature_2m_min": 12.9375,
       "precipitation_sum": 0.0,
       "rain_sum": 0.0,
       "wind_speed_10m_max": 15.3802595139,
